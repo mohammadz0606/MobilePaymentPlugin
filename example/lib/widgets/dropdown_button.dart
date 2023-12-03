@@ -8,7 +8,7 @@ class CustomDropdownButton extends StatelessWidget {
     this.onChanged,
   });
 
-  final String selectedTextValue;
+  final dynamic selectedTextValue;
   final List<DropdownMenuItem> items;
   final Function(dynamic)? onChanged;
 

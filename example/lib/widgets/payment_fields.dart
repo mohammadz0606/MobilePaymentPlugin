@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:sts_one_pay/sts_one_pay.dart';
 
 import '../one_pay_provider.dart';
 import 'dropdown_button.dart';
@@ -129,16 +130,16 @@ class PaymentFields extends StatelessWidget {
                 provider.onChangeLang(value);
               },
               items: const [
-                DropdownMenuItem<String>(
-                  value: 'ar',
+                DropdownMenuItem<Language>(
+                  value: Language.ar,
                   child: Text('Arabic'),
                 ),
-                DropdownMenuItem<String>(
-                  value: 'en',
+                DropdownMenuItem<Language>(
+                  value: Language.en,
                   child: Text('English'),
                 ),
-                DropdownMenuItem<String>(
-                  value: 'tr',
+                DropdownMenuItem<Language>(
+                  value: Language.tr,
                   child: Text('Turkish'),
                 ),
               ],
@@ -151,12 +152,12 @@ class PaymentFields extends StatelessWidget {
                 log(value.toString());
               },
               items: const [
-                DropdownMenuItem<String>(
-                  value: 'sale',
+                DropdownMenuItem<PaymentType>(
+                  value: PaymentType.sale,
                   child: Text('Sale'),
                 ),
-                DropdownMenuItem<String>(
-                  value: 'preAuth',
+                DropdownMenuItem<PaymentType>(
+                  value: PaymentType.preAuth,
                   child: Text('PreAuth'),
                 ),
               ],

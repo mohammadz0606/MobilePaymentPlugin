@@ -1,7 +1,6 @@
 package com.example.sts_one_pay_example
 
 import android.widget.Toast
-import androidx.core.view.WindowCompat
 import com.edesign.paymentsdk.version2.*
 import com.edesign.paymentsdk.version2.CardType.*
 import io.flutter.embedding.android.FlutterActivity
@@ -12,7 +11,6 @@ import com.google.gson.Gson
 
 class MainActivity : FlutterActivity(), PaymentResultListener {
     private val cannel = "samples.flutter.dev/payment"
-
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -31,17 +29,16 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
     }
 
     private fun paymentMethod(params: Map<String, Any>) {
-        WindowCompat.setDecorFitsSystemWindows(window, false)
         val request = OpenPaymentRequest()
         request.paymentType = params["paymentType"] as String
         PaymentType.PREAUTH.name
-        request.add("AuthenticationToken", "MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh")
+        request.add("AuthenticationToken", params["authenticationToken"] as String)
         request.add("TransactionID", params["transactionId"] as String)
-        request.add("MerchantID", "AirrchipMerchant")
+        request.add("MerchantID", params["merchantID"] as String)
         request.add("ClientIPaddress", "3.7.21.24")
         request.add("Amount", params["amount"] as String)
         request.add("Currency", params["currency"] as String)
-        request.add("PaymentDescription", "Sample Payment")
+        request.add("PaymentDescription", params["paymentDescription"] as String)
         request.add("AgreementID", "")
         request.add("AgreementType", "")
         request.add("Language", params["langCode"] as String)

@@ -1,10 +1,8 @@
 import 'dart:developer' as log;
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
-import 'one_pay_model.dart';
+import 'package:sts_one_pay/sts_one_pay.dart';
+import 'package:sts_one_pay/sts_one_pay_platform_interface.dart';
+import 'package:sts_one_pay/sts_one_pay_method_channel.dart';
 
 class PayOneProvider extends ChangeNotifier {
   String amount = '';
@@ -16,40 +14,32 @@ class PayOneProvider extends ChangeNotifier {
   bool shouldTokenizeCard = true;
   bool isCardScanEnable = true;
   bool isSaveCardEnable = true;
-  String selectedLangVale = 'ar';
-  String selectedPaymentTypeTypeValue = 'sale';
+  Language selectedLangVale = Language.ar;
+  PaymentType selectedPaymentTypeTypeValue = PaymentType.sale;
 
-  final MethodChannel _channel =
-      const MethodChannel('samples.flutter.dev/payment');
+  final StsOnePayPlatform _methodChannelStsOnePay = MethodChannelStsOnePay();
 
   Future<void> openPaymentPage() async {
     try {
-      OnePayModel onePayModel = OnePayModel(
-        amount: amount,
-        tokens: tokensList,
-        currency: currency,
-        transactionId:
-            transactionId.isEmpty ? _generateTransactionId() : transactionId,
-        isThreeDSSecure: isThreeDSSecure,
-        shouldTokenizeCard: shouldTokenizeCard,
-        isCardScanEnable: isCardScanEnable,
-        isSaveCardEnable: isSaveCardEnable,
-        langCode: selectedLangVale,
-        paymentType: selectedPaymentTypeTypeValue,
+      await _methodChannelStsOnePay.openPaymentPage(
+        StsOnePay(
+          authenticationToken: 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
+          merchantID: 'AirrchipMerchant',
+          amount: amount,
+          tokens: tokensList,
+          currency: currency,
+          transactionId: transactionId,
+          isThreeDSSecure: isThreeDSSecure,
+          shouldTokenizeCard: shouldTokenizeCard,
+          isCardScanEnable: isCardScanEnable,
+          isSaveCardEnable: isSaveCardEnable,
+          langCode: selectedLangVale,
+          paymentType: selectedPaymentTypeTypeValue,
+        ),
       );
-      await _channel.invokeMethod(
-        'paymentMethod',
-        onePayModel.toJson(),
-      );
-    } on PlatformException catch (e) {
-      log.log(e.message.toString());
+    } catch (e) {
+      log.log(e.toString());
     }
-  }
-
-  String _generateTransactionId() {
-    int timestamp = DateTime.now().millisecondsSinceEpoch;
-    int random = Random().nextInt(999999);
-    return (timestamp + random).toString();
   }
 
   void onChangeAmount(String value) {
@@ -92,12 +82,12 @@ class PayOneProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void onChangeLang(String value) {
+  void onChangeLang(Language value) {
     selectedLangVale = value;
     notifyListeners();
   }
 
-  void onChangePaymentTypeType(String value) {
+  void onChangePaymentTypeType(PaymentType value) {
     selectedPaymentTypeTypeValue = value;
     notifyListeners();
   }
