@@ -40,9 +40,7 @@ class HomeStsOnePayExample extends StatelessWidget {
                     return SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                        onPressed: () async {
-                          await provider.openPaymentPage();
-                        },
+                        onPressed: () async => await provider.openPaymentPage(),
                         child: const Text('Pay Now'),
                       ),
                     );

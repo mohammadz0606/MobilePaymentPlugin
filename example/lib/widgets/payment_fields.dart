@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:sts_one_pay/sts_one_pay.dart';
+import 'package:sts_one_pay/models/sts_one_pay.dart';
 
 import '../one_pay_provider.dart';
 import 'dropdown_button.dart';
@@ -92,9 +92,7 @@ class PaymentFields extends StatelessWidget {
             ),
             SwitchListTile.adaptive(
               value: provider.isCardScanEnable,
-              onChanged: (value) {
-                provider.onChangeCardScanEnable(value);
-              },
+              onChanged: (value) => provider.onChangeCardScanEnable(value),
               title: Text(
                 'Is Card scan enable',
                 style: TextStyle(
@@ -104,9 +102,7 @@ class PaymentFields extends StatelessWidget {
             ),
             SwitchListTile.adaptive(
               value: provider.isSaveCardEnable,
-              onChanged: (value) {
-                provider.onChangeSaveCardEnable(value);
-              },
+              onChanged: (value) => provider.onChangeSaveCardEnable(value),
               title: Text(
                 'Is Save Card Enabled',
                 style: TextStyle(
@@ -116,9 +112,7 @@ class PaymentFields extends StatelessWidget {
             ),
             CustomDropdownButton(
               selectedTextValue: provider.selectedLangVale,
-              onChanged: (value) {
-                provider.onChangeLang(value);
-              },
+              onChanged: (value) => provider.onChangeLang(value),
               items: const [
                 DropdownMenuItem<Language>(
                   value: Language.ar,

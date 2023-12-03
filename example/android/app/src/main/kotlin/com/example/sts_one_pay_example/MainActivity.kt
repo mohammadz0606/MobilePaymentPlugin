@@ -1,10 +1,18 @@
 package com.example.sts_one_pay_example
 
 import android.widget.Toast
+import com.edesign.paymentsdk.Inquiry.InquiryRequest
+import com.edesign.paymentsdk.Inquiry.InquiryResponse
 import com.edesign.paymentsdk.Refund.RefundRequest
 import com.edesign.paymentsdk.Refund.RefundResponse
 import com.edesign.paymentsdk.version2.*
 import com.edesign.paymentsdk.version2.CardType.*
+import com.edesign.paymentsdk.version2.completion.CompletionCallback
+import com.edesign.paymentsdk.version2.completion.CompletionRequest
+import com.edesign.paymentsdk.version2.completion.CompletionResponse
+import com.edesign.paymentsdk.version2.completion.SmartRouteCompletionService
+import com.edesign.paymentsdk.version2.inquiry.InquiryCallback
+import com.edesign.paymentsdk.version2.inquiry.SmartRouteInquiryService
 import com.edesign.paymentsdk.version2.refund.RefundCallback
 import com.edesign.paymentsdk.version2.refund.SmartRouteRefundService
 import io.flutter.embedding.android.FlutterActivity
@@ -29,6 +37,14 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
                 }
                 "refund" -> {
                     refund()
+                    result.success(null)
+                }
+                "completion" -> {
+                    completion()
+                    result.success(null)
+                }
+                "inquiry" -> {
+                    inquiry()
                     result.success(null)
                 }
                 else -> {
@@ -110,6 +126,61 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
             request,
             object : RefundCallback {
                 override fun onResponse(response: RefundResponse) {
+                    Toast.makeText(
+                        applicationContext,
+                        "Response: \n" + Gson().toJson(response),
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            },
+        )
+    }
+
+    private fun completion() {
+        val request = CompletionRequest()
+        request.setPaymentAuthenticationToken(
+            "AuthenticationToken",
+            "MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh"
+        )
+        request.add("MessageID", "5")
+        request.add("MerchantID", "AirrchipMerchant")
+        request.add("TransactionID", System.currentTimeMillis().toString())
+        request.add("CurrencyISOCode", "682")
+        request.add("Amount", "5000")
+        request.add("OriginalTransactionID", "")
+//      request.add("Version","1.0")
+        val paymentService = SmartRouteCompletionService(this)
+        paymentService.process(
+            request,
+            object : CompletionCallback {
+                override fun onResponse(response: CompletionResponse) {
+                    Toast.makeText(
+                        applicationContext,
+                        "Response: \n" + Gson().toJson(response),
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            },
+        )
+    }
+
+    private fun inquiry() {
+        val request = InquiryRequest()
+        request.setPaymentAuthenticationToken(
+            "AuthenticationToken",
+            "MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh"
+        )
+        request.add("MessageID", "2")
+        request.add("MerchantID", "AirrchipMerchant")
+        request.add(
+            "OriginalTransactionID", ""
+        )
+        request.add("Version", "1.0")
+        val paymentService = SmartRouteInquiryService(this)
+        paymentService.process(
+            request,
+            object : InquiryCallback {
+                override fun onResponse(response: InquiryResponse) {
                     Toast.makeText(
                         applicationContext,
                         "Response: \n" + Gson().toJson(response),

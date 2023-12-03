@@ -39,23 +39,21 @@ class OtherAPIStsOnePayExample extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                        onPressed: () async {},
+                        onPressed: () async => provider.completion(),
                         child: const Text('Completion'),
                       ),
                     ),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () async {
-                          await provider.refund();
-                        },
+                        onPressed: () async => await provider.refund(),
                         child: const Text('Refund'),
                       ),
                     ),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () async => await provider.inquiry(),
                         child: const Text('Inquiry'),
                       ),
                     ),

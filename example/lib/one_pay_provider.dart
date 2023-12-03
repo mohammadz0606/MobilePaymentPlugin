@@ -1,6 +1,6 @@
 import 'dart:developer' as log;
 import 'package:flutter/material.dart';
-import 'package:sts_one_pay/sts_one_pay.dart';
+import 'package:sts_one_pay/models/sts_one_pay.dart';
 import 'package:sts_one_pay/sts_one_pay_platform_interface.dart';
 import 'package:sts_one_pay/sts_one_pay_method_channel.dart';
 
@@ -43,10 +43,26 @@ class PayOneProvider extends ChangeNotifier {
     }
   }
 
-  Future<void> refund() async{
-    try{
-     await _methodChannelStsOnePay.refund();
-    }catch (e) {
+  Future<void> refund() async {
+    try {
+      await _methodChannelStsOnePay.refund();
+    } catch (e) {
+      log.log(e.toString());
+    }
+  }
+
+  Future<void> completion() async {
+    try {
+      await _methodChannelStsOnePay.completion();
+    } catch (e) {
+      log.log(e.toString());
+    }
+  }
+
+  Future<void> inquiry() async {
+    try {
+      await _methodChannelStsOnePay.inquiry();
+    } catch (e) {
       log.log(e.toString());
     }
   }

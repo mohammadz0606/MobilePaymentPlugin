@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/services.dart';
-import 'package:sts_one_pay/sts_one_pay.dart';
+import 'package:sts_one_pay/models/sts_one_pay.dart';
 
 import 'sts_one_pay_platform_interface.dart';
 
@@ -27,6 +27,28 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   Future<void> refund() async {
     try {
       await _channel.invokeMethod('refund');
+    } on PlatformException catch (e) {
+      log(e.message.toString());
+    } catch (e) {
+      log(e.toString());
+    }
+  }
+
+  @override
+  Future<void> completion() async {
+    try {
+      await _channel.invokeMethod('completion');
+    } on PlatformException catch (e) {
+      log(e.message.toString());
+    } catch (e) {
+      log(e.toString());
+    }
+  }
+
+  @override
+  Future<void> inquiry() async {
+    try {
+      await _channel.invokeMethod('inquiry');
     } on PlatformException catch (e) {
       log(e.message.toString());
     } catch (e) {
