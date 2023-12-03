@@ -62,6 +62,8 @@ class ExampleStsOnePay extends StatelessWidget {
           ),
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ButtonStyle(
+              backgroundColor:
+                  MaterialStateProperty.all(const Color(0xff007A8A)),
               shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),

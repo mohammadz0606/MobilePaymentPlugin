@@ -1,8 +1,12 @@
 package com.example.sts_one_pay_example
 
 import android.widget.Toast
+import com.edesign.paymentsdk.Refund.RefundRequest
+import com.edesign.paymentsdk.Refund.RefundResponse
 import com.edesign.paymentsdk.version2.*
 import com.edesign.paymentsdk.version2.CardType.*
+import com.edesign.paymentsdk.version2.refund.RefundCallback
+import com.edesign.paymentsdk.version2.refund.SmartRouteRefundService
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
@@ -18,11 +22,18 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
             flutterEngine.dartExecutor.binaryMessenger,
             cannel
         ).setMethodCallHandler { call, result ->
-            if (call.method == "paymentMethod") {
-                paymentMethod(call.arguments as Map<String, Any>)
-                result.success(null)
-            } else {
-                result.notImplemented()
+            when (call.method) {
+                "paymentMethod" -> {
+                    paymentMethod(call.arguments as Map<String, Any>)
+                    result.success(null)
+                }
+                "refund" -> {
+                    refund()
+                    result.success(null)
+                }
+                else -> {
+                    result.notImplemented()
+                }
             }
 
         }
@@ -76,6 +87,37 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
 
     override fun onResponse(a: MutableMap<String, String>) {
         Toast.makeText(this, Gson().toJson(a), Toast.LENGTH_LONG).show()
+    }
+
+
+    private fun refund() {
+        val request = RefundRequest()
+        request.setPaymentAuthenticationToken(
+            "AuthenticationToken",
+            "MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh"
+        )
+        request.add("MessageID", "4")
+        request.add("MerchantID", "AirrchipMerchant")
+        request.add("TransactionID", System.currentTimeMillis().toString())
+        request.add("CurrencyISOCode", "682")
+        request.add("Amount", "5000")
+        request.add(
+            "OriginalTransactionID", ""
+        )
+        request.add("Version", "1.0")
+        val paymentService = SmartRouteRefundService(this)
+        paymentService.process(
+            request,
+            object : RefundCallback {
+                override fun onResponse(response: RefundResponse) {
+                    Toast.makeText(
+                        applicationContext,
+                        "Response: \n" + Gson().toJson(response),
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            },
+        )
     }
 }
 

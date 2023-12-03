@@ -43,6 +43,14 @@ class PayOneProvider extends ChangeNotifier {
     }
   }
 
+  Future<void> refund() async{
+    try{
+     await _methodChannelStsOnePay.refund();
+    }catch (e) {
+      log.log(e.toString());
+    }
+  }
+
   void onChangeAmount(String value) {
     amount = value.trim();
     notifyListeners();

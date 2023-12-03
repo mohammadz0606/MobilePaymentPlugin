@@ -46,7 +46,9 @@ class OtherAPIStsOnePayExample extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () async {
+                          await provider.refund();
+                        },
                         child: const Text('Refund'),
                       ),
                     ),

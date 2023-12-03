@@ -22,4 +22,15 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
       log(e.toString());
     }
   }
+
+  @override
+  Future<void> refund() async {
+    try {
+      await _channel.invokeMethod('refund');
+    } on PlatformException catch (e) {
+      log(e.message.toString());
+    } catch (e) {
+      log(e.toString());
+    }
+  }
 }
