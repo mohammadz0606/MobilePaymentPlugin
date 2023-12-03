@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:sts_one_pay_example/home.dart';
+import 'package:sts_one_pay_example/screens/home.dart';
 
 import 'one_pay_provider.dart';
 

@@ -15,20 +15,21 @@ class StsOnePay {
   final PaymentType? paymentType;
   final String? paymentDescription;
 
-  StsOnePay(
-      {required this.authenticationToken,
-      required this.merchantID,
-      required this.amount,
-      this.tokens,
-      required this.currency,
-      required this.transactionId,
-      this.isThreeDSSecure = true,
-      this.shouldTokenizeCard = true,
-      this.isCardScanEnable = true,
-      this.isSaveCardEnable = true,
-      this.langCode = Language.en,
-      this.paymentType = PaymentType.sale,
-      this.paymentDescription = 'Sample Payment'});
+  StsOnePay({
+    required this.authenticationToken,
+    required this.merchantID,
+    required this.amount,
+    this.tokens,
+    required this.currency,
+    required this.transactionId,
+    this.isThreeDSSecure = true,
+    this.shouldTokenizeCard = true,
+    this.isCardScanEnable = true,
+    this.isSaveCardEnable = true,
+    this.langCode = Language.en,
+    this.paymentType = PaymentType.sale,
+    this.paymentDescription = 'Sample Payment',
+  });
 
   Map<String, dynamic> toJson() {
     return {

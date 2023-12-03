@@ -21,9 +21,7 @@ class PaymentFields extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomTextField(
-              onChanged: (value) {
-                provider.onChangeAmount(value);
-              },
+              onChanged: (value) => provider.onChangeAmount(value),
               keyboardType:
                   const TextInputType.numberWithOptions(decimal: false),
               inputFormatters: [
@@ -36,9 +34,7 @@ class PaymentFields extends StatelessWidget {
             ),
             const NoteText(text: '* Amount without dot'),
             CustomTextField(
-              onChanged: (value) {
-                provider.onChangeToken(value);
-              },
+              onChanged: (value) => provider.onChangeToken(value),
               keyboardType: TextInputType.multiline,
               hintText: 'Token',
               maxLines: null,
@@ -46,9 +42,7 @@ class PaymentFields extends StatelessWidget {
             ),
             const NoteText(text: 'Tokens separated by comma (,) if multi'),
             CustomTextField(
-              onChanged: (value) {
-                provider.onChangeCurrency(value);
-              },
+              onChanged: (value) => provider.onChangeCurrency(value),
               keyboardType:
                   const TextInputType.numberWithOptions(decimal: false),
               inputFormatters: [
@@ -61,9 +55,7 @@ class PaymentFields extends StatelessWidget {
             ),
             const NoteText(text: 'Currency code (Only one currency)'),
             CustomTextField(
-              onChanged: (value) {
-                provider.onChangeTransactionId(value);
-              },
+              onChanged: (value) => provider.onChangeTransactionId(value),
               keyboardType:
                   const TextInputType.numberWithOptions(decimal: false),
               inputFormatters: [
@@ -78,9 +70,7 @@ class PaymentFields extends StatelessWidget {
                 text: 'Transaction ID (Keep empty for auto generation)'),
             SwitchListTile.adaptive(
               value: provider.isThreeDSSecure,
-              onChanged: (value) {
-                provider.onChangeThreeDSSecure(value);
-              },
+              onChanged: (value) => provider.onChangeThreeDSSecure(value),
               title: Text(
                 'Is 3DS Secure',
                 style: TextStyle(

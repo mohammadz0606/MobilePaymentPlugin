@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'one_pay_provider.dart';
-import 'widgets/payment_fields.dart';
+import '../one_pay_provider.dart';
+import '../widgets/other_api_fields.dart';
 
-class HomeStsOnePayExample extends StatelessWidget {
-  const HomeStsOnePayExample({super.key});
+class OtherAPIStsOnePayExample extends StatelessWidget {
+  const OtherAPIStsOnePayExample({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("StsOnePayDemo"),
+        title: const Text('Other API'),
       ),
       body: Column(
         children: [
@@ -23,7 +23,7 @@ class HomeStsOnePayExample extends StatelessWidget {
             child: SingleChildScrollView(
               padding: EdgeInsets.symmetric(horizontal: 15),
               physics: ClampingScrollPhysics(),
-              child: PaymentFields(),
+              child: OtherApiFields(),
             ),
           ),
           Container(
@@ -39,17 +39,22 @@ class HomeStsOnePayExample extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                        onPressed: () async {
-                          await provider.openPaymentPage();
-                        },
-                        child: const Text('Pay Now'),
+                        onPressed: () async {},
+                        child: const Text('Completion'),
                       ),
                     ),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: const Text('Other API'),
+                        child: const Text('Refund'),
+                      ),
+                    ),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text('Inquiry'),
                       ),
                     ),
                   ],
@@ -62,16 +67,3 @@ class HomeStsOnePayExample extends StatelessWidget {
     );
   }
 }
-
-/*SizedBox(
-            height: MediaQuery.of(context).size.height * 0.09,
-            width: double.infinity,
-            child: Card(
-              margin: EdgeInsets.zero,
-              child: Image.asset(
-                'assets/images/ic_launcher-playstore.png',
-                fit: BoxFit.fitHeight,
-                height: 300,
-              ),
-            ),
-          ),*/

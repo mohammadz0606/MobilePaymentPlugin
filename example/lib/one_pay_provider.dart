@@ -6,6 +6,7 @@ import 'package:sts_one_pay/sts_one_pay_method_channel.dart';
 
 class PayOneProvider extends ChangeNotifier {
   String amount = '';
+  String amountOtherAPI = '';
   String tokensText = '';
   String currency = '';
   String transactionId = '';
@@ -44,6 +45,11 @@ class PayOneProvider extends ChangeNotifier {
 
   void onChangeAmount(String value) {
     amount = value.trim();
+    notifyListeners();
+  }
+
+  void onChangeAmountOtherAPI(String value) {
+    amountOtherAPI = value.trim();
     notifyListeners();
   }
 
