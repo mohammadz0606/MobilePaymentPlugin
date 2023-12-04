@@ -84,7 +84,7 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
         //optional param
         //request.addOptional("ItemID", "Item1")
         //request.addOptional("Quantity", "1")
-        //request.addOptional("Version", "1.0")
+        request.addOptional("Version", params["version"] as String)
         request.addOptional("FrameworkInfo", "Android 7.0")
         request.add("Tokens", params["tokens"] as List<String>)
         val checkout = Checkout(this, this)

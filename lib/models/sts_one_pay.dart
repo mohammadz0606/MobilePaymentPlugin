@@ -1,27 +1,28 @@
-import 'dart:math';
+import '../sts_one_pay_platform_interface.dart';
 
 class StsOnePay {
   final String merchantID;
   final String authenticationToken;
   final String amount;
-  final List<String>? tokens;
+  final List<String> tokens;
   final String currency;
   final String transactionId;
-  final bool? isThreeDSSecure;
-  final bool? shouldTokenizeCard;
-  final bool? isCardScanEnable;
-  final bool? isSaveCardEnable;
-  final Language? langCode;
-  final PaymentType? paymentType;
-  final String? paymentDescription;
+  final bool isThreeDSSecure;
+  final bool shouldTokenizeCard;
+  final bool isCardScanEnable;
+  final bool isSaveCardEnable;
+  final Language langCode;
+  final PaymentType paymentType;
+  final String paymentDescription;
+  final String version;
 
   StsOnePay({
     required this.authenticationToken,
     required this.merchantID,
     required this.amount,
-    this.tokens,
+    this.tokens = const [],
     required this.currency,
-    required this.transactionId,
+    this.transactionId = '',
     this.isThreeDSSecure = true,
     this.shouldTokenizeCard = true,
     this.isCardScanEnable = true,
@@ -29,7 +30,8 @@ class StsOnePay {
     this.langCode = Language.en,
     this.paymentType = PaymentType.sale,
     this.paymentDescription = 'Sample Payment',
-  });
+    this.version = '1.0',
+  }) : assert(double.parse(amount) > 0);
 
   Map<String, dynamic> toJson() {
     return {
@@ -39,22 +41,17 @@ class StsOnePay {
       "tokens": tokens,
       "currency": currency.trim(),
       "transactionId": transactionId.isEmpty
-          ? _generateTransactionId()
+          ? StsOnePayPlatform.generateTransactionId()
           : transactionId.trim(),
       "isThreeDSSecure": isThreeDSSecure,
       "shouldTokenizeCard": shouldTokenizeCard,
       "isCardScanEnable": isCardScanEnable,
       "isSaveCardEnable": isSaveCardEnable,
-      "langCode": langCode?.name ?? Language.en.name,
-      "paymentType": paymentType?.name ?? PaymentType.sale.name,
+      "langCode": langCode.name,
+      "paymentType": paymentType.name,
       "paymentDescription": paymentDescription,
+      "version": version,
     };
-  }
-
-  String _generateTransactionId() {
-    int timestamp = DateTime.now().millisecondsSinceEpoch;
-    int random = Random().nextInt(999999);
-    return (timestamp + random).toString();
   }
 }
 
@@ -67,4 +64,15 @@ enum Language {
 enum PaymentType {
   sale,
   preAuth,
+}
+
+enum CardType {
+  visa,
+  mastercard,
+  amex,
+  diners,
+  union,
+  jcb,
+  discover,
+  mada,
 }

@@ -1,8 +1,10 @@
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 
+import 'models/other_api.dart';
 import 'sts_one_pay_platform_interface.dart';
 
 class MethodChannelStsOnePay extends StsOnePayPlatform {
@@ -12,10 +14,16 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   @override
   Future<void> openPaymentPage(StsOnePay stsOnePay) async {
     try {
-      await _channel.invokeMethod(
-        'paymentMethod',
-        stsOnePay.toJson(),
-      );
+      if (Platform.isAndroid) {
+        await _channel.invokeMethod(
+          'paymentMethod',
+          stsOnePay.toJson(),
+        );
+      } else if (Platform.isIOS) {
+        /// implement ios method
+      } else {
+        /// throw custom error
+      }
     } on PlatformException catch (e) {
       log(e.message.toString());
     } catch (e) {
@@ -24,9 +32,18 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   }
 
   @override
-  Future<void> refund() async {
+  Future<void> refund(OtherAPI otherAPI) async {
     try {
-      await _channel.invokeMethod('refund');
+      if (Platform.isAndroid) {
+        await _channel.invokeMethod(
+          'refund',
+          otherAPI.toJson(),
+        );
+      } else if (Platform.isIOS) {
+        /// implement ios method
+      } else {
+        /// throw custom error
+      }
     } on PlatformException catch (e) {
       log(e.message.toString());
     } catch (e) {
@@ -35,9 +52,18 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   }
 
   @override
-  Future<void> completion() async {
+  Future<void> completion(OtherAPI otherAPI) async {
     try {
-      await _channel.invokeMethod('completion');
+      if (Platform.isAndroid) {
+        await _channel.invokeMethod(
+          'completion',
+          otherAPI.toJson(),
+        );
+      } else if (Platform.isIOS) {
+        /// implement ios method
+      } else {
+        /// throw custom error
+      }
     } on PlatformException catch (e) {
       log(e.message.toString());
     } catch (e) {
@@ -46,9 +72,18 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   }
 
   @override
-  Future<void> inquiry() async {
+  Future<void> inquiry(OtherAPI otherAPI) async {
     try {
-      await _channel.invokeMethod('inquiry');
+      if (Platform.isAndroid) {
+        await _channel.invokeMethod(
+          'inquiry',
+          otherAPI.toJson(),
+        );
+      } else if (Platform.isIOS) {
+        /// implement ios method
+      } else {
+        /// throw custom error
+      }
     } on PlatformException catch (e) {
       log(e.message.toString());
     } catch (e) {

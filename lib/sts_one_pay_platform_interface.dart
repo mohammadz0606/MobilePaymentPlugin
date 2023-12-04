@@ -1,11 +1,21 @@
+import 'dart:math';
+
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 
+import 'models/other_api.dart';
+
 abstract class StsOnePayPlatform {
+  static String generateTransactionId() {
+    int timestamp = DateTime.now().millisecondsSinceEpoch;
+    int random = Random().nextInt(999999);
+    return (timestamp + random).toString();
+  }
+
   Future<void> openPaymentPage(StsOnePay stsOnePay);
 
-  Future<void> refund();
+  Future<void> refund(OtherAPI otherAPI);
 
-  Future<void> completion();
+  Future<void> completion(OtherAPI otherAPI);
 
-  Future<void> inquiry();
+  Future<void> inquiry(OtherAPI otherAPI);
 }

@@ -67,7 +67,8 @@ class PaymentFields extends StatelessWidget {
               textInputAction: TextInputAction.done,
             ),
             const NoteText(
-                text: 'Transaction ID (Keep empty for auto generation)'),
+              text: 'Transaction ID (Keep empty for auto generation)',
+            ),
             SwitchListTile.adaptive(
               value: provider.isThreeDSSecure,
               onChanged: (value) => provider.onChangeThreeDSSecure(value),

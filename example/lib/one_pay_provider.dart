@@ -9,7 +9,9 @@ class PayOneProvider extends ChangeNotifier {
   String amountOtherAPI = '';
   String tokensText = '';
   String currency = '';
+  String currencyOtherAPI = '';
   String transactionId = '';
+  String originalTransactionID = '';
   List<String> tokensList = [];
   bool isThreeDSSecure = true;
   bool shouldTokenizeCard = true;
@@ -45,7 +47,7 @@ class PayOneProvider extends ChangeNotifier {
 
   Future<void> refund() async {
     try {
-      await _methodChannelStsOnePay.refund();
+     // await _methodChannelStsOnePay.refund();
     } catch (e) {
       log.log(e.toString());
     }
@@ -53,7 +55,7 @@ class PayOneProvider extends ChangeNotifier {
 
   Future<void> completion() async {
     try {
-      await _methodChannelStsOnePay.completion();
+      //await _methodChannelStsOnePay.completion();
     } catch (e) {
       log.log(e.toString());
     }
@@ -61,7 +63,7 @@ class PayOneProvider extends ChangeNotifier {
 
   Future<void> inquiry() async {
     try {
-      await _methodChannelStsOnePay.inquiry();
+    //  await _methodChannelStsOnePay.inquiry();
     } catch (e) {
       log.log(e.toString());
     }
@@ -87,8 +89,18 @@ class PayOneProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onChangeCurrencyOtherAPI(String value) {
+    currencyOtherAPI = value.trim();
+    notifyListeners();
+  }
+
   void onChangeTransactionId(String value) {
     transactionId = value.trim();
+    notifyListeners();
+  }
+
+  void onChangeOriginalTransactionID(String value) {
+    originalTransactionID = value.trim();
     notifyListeners();
   }
 
