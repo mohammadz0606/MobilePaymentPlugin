@@ -10,7 +10,7 @@ class OtherAPI {
   final String originalTransactionID;
   final String version;
 
-  const OtherAPI({
+  OtherAPI({
     this.authenticationToken = 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
     this.messageID = '5',
     this.merchantID = 'AirrchipMerchant',
@@ -19,7 +19,7 @@ class OtherAPI {
     required this.amount,
     required this.originalTransactionID,
     this.version = '1.0',
-  });
+  }) : assert(double.parse(amount) > 0);
 
   Map<String, dynamic> toJson() {
     return {
