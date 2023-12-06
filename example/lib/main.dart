@@ -46,6 +46,7 @@ class ExampleStsOnePay extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
+              foregroundColor:  MaterialStateProperty.all(const Color(0xff007A8A)),
               shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
