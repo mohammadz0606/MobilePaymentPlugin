@@ -1,3 +1,4 @@
+import '../sts_one_pay_errors_handler.dart';
 import '../sts_one_pay_platform_interface.dart';
 
 class StsOnePay {
@@ -17,8 +18,8 @@ class StsOnePay {
   final String version;
 
   StsOnePay({
-    required this.authenticationToken,
-    required this.merchantID,
+    this.authenticationToken = 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
+    this.merchantID = 'AirrchipMerchant',
     required this.amount,
     this.tokens = const [],
     required this.currency,
@@ -31,7 +32,7 @@ class StsOnePay {
     this.paymentType = PaymentType.sale,
     this.paymentDescription = 'Sample Payment',
     this.version = '1.0',
-  }) : assert(double.parse(amount) > 0);
+  }) : assert(StsOnePayErrorHandler.amount(amount));
 
   Map<String, dynamic> toJson() {
     return {
@@ -49,7 +50,7 @@ class StsOnePay {
       "isSaveCardEnable": isSaveCardEnable,
       "langCode": langCode.name,
       "paymentType": paymentType.name,
-      "paymentDescription": paymentDescription,
+      "paymentDescription": paymentDescription.trim(),
       "version": version,
     };
   }

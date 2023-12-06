@@ -22,12 +22,9 @@ class PaymentFields extends StatelessWidget {
           children: [
             CustomTextField(
               onChanged: (value) => provider.onChangeAmount(value),
-              keyboardType:
-                  const TextInputType.numberWithOptions(decimal: false),
+              keyboardType: const TextInputType.numberWithOptions(decimal: false),
               inputFormatters: [
-                FilteringTextInputFormatter.allow(
-                  RegExp(r'^\d+\.?\d{0,2}'),
-                ),
+                FilteringTextInputFormatter.digitsOnly,
               ],
               hintText: 'Amount',
               textInputAction: TextInputAction.next,
@@ -56,12 +53,9 @@ class PaymentFields extends StatelessWidget {
             const NoteText(text: 'Currency code (Only one currency)'),
             CustomTextField(
               onChanged: (value) => provider.onChangeTransactionId(value),
-              keyboardType:
-                  const TextInputType.numberWithOptions(decimal: false),
+              keyboardType: const TextInputType.numberWithOptions(decimal: false),
               inputFormatters: [
-                FilteringTextInputFormatter.allow(
-                  RegExp(r'^\d+\.?\d{0,2}'),
-                ),
+                FilteringTextInputFormatter.digitsOnly,
               ],
               hintText: 'Transaction ID',
               textInputAction: TextInputAction.done,

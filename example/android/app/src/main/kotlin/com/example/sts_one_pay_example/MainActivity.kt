@@ -36,15 +36,15 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
                     result.success(null)
                 }
                 "refund" -> {
-                    refund()
+                    refund(call.arguments as Map<String, Any>)
                     result.success(null)
                 }
                 "completion" -> {
-                    completion()
+                    completion(call.arguments as Map<String, Any>)
                     result.success(null)
                 }
                 "inquiry" -> {
-                    inquiry()
+                    inquiry(call.arguments as Map<String, Any>)
                     result.success(null)
                 }
                 else -> {
@@ -106,21 +106,21 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
     }
 
 
-    private fun refund() {
+    private fun refund(params: Map<String, Any>) {
         val request = RefundRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
-            "MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh"
+            params["authenticationToken"] as String
         )
-        request.add("MessageID", "4")
-        request.add("MerchantID", "AirrchipMerchant")
-        request.add("TransactionID", System.currentTimeMillis().toString())
-        request.add("CurrencyISOCode", "682")
-        request.add("Amount", "5000")
+        request.add("MessageID", params["messageID"] as String)
+        request.add("MerchantID", params["merchantID"] as String)
+        request.add("TransactionID", params["transactionID"] as String)
+        request.add("CurrencyISOCode", params["currencyISOCode"] as String)
+        request.add("Amount", params["amount"] as String)
         request.add(
-            "OriginalTransactionID", ""
+            "OriginalTransactionID", params["originalTransactionID"] as String
         )
-        request.add("Version", "1.0")
+        request.add("Version", params["version"] as String)
         val paymentService = SmartRouteRefundService(this)
         paymentService.process(
             request,
@@ -136,19 +136,21 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
         )
     }
 
-    private fun completion() {
+    private fun completion(params: Map<String, Any>) {
         val request = CompletionRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
-            "MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh"
+            params["authenticationToken"] as String
         )
-        request.add("MessageID", "5")
-        request.add("MerchantID", "AirrchipMerchant")
-        request.add("TransactionID", System.currentTimeMillis().toString())
-        request.add("CurrencyISOCode", "682")
-        request.add("Amount", "5000")
-        request.add("OriginalTransactionID", "")
-//      request.add("Version","1.0")
+        request.add("MessageID", params["messageID"] as String)
+        request.add("MerchantID", params["merchantID"] as String)
+        request.add("TransactionID", params["transactionID"] as String)
+        request.add("CurrencyISOCode", params["currencyISOCode"] as String)
+        request.add("Amount", params["amount"] as String)
+        request.add(
+            "OriginalTransactionID", params["originalTransactionID"] as String
+        )
+        request.add("Version", params["version"] as String)
         val paymentService = SmartRouteCompletionService(this)
         paymentService.process(
             request,
@@ -164,18 +166,21 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
         )
     }
 
-    private fun inquiry() {
+    private fun inquiry(params: Map<String, Any>) {
         val request = InquiryRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
-            "MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh"
+            params["authenticationToken"] as String
         )
-        request.add("MessageID", "2")
-        request.add("MerchantID", "AirrchipMerchant")
+        request.add("MessageID", params["messageID"] as String)
+        request.add("MerchantID", params["merchantID"] as String)
+        request.add("TransactionID", params["transactionID"] as String)
+        request.add("CurrencyISOCode", params["currencyISOCode"] as String)
+        request.add("Amount", params["amount"] as String)
         request.add(
-            "OriginalTransactionID", ""
+            "OriginalTransactionID", params["originalTransactionID"] as String
         )
-        request.add("Version", "1.0")
+        request.add("Version", params["version"] as String)
         val paymentService = SmartRouteInquiryService(this)
         paymentService.process(
             request,

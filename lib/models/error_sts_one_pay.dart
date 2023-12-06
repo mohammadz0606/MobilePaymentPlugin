@@ -1,5 +1,5 @@
 class ErrorStsOnePay implements Exception {
-  final String code;
+  final int code;
   final String message;
 
   const ErrorStsOnePay({

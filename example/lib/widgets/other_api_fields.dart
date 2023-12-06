@@ -18,12 +18,9 @@ class OtherApiFields extends StatelessWidget {
           children: [
             CustomTextField(
               onChanged: (value) => provider.onChangeOriginalTransactionID(value),
-              keyboardType:
-                  const TextInputType.numberWithOptions(decimal: false),
+              keyboardType: const TextInputType.numberWithOptions(decimal: false),
               inputFormatters: [
-                FilteringTextInputFormatter.allow(
-                  RegExp(r'^\d+\.?\d{0,2}'),
-                ),
+                FilteringTextInputFormatter.digitsOnly,
               ],
               hintText: 'Original TransactionID',
               textInputAction: TextInputAction.next,
@@ -31,12 +28,9 @@ class OtherApiFields extends StatelessWidget {
             const SizedBox(height: 20),
             CustomTextField(
               onChanged: (value) => provider.onChangeAmountOtherAPI(value),
-              keyboardType:
-                  const TextInputType.numberWithOptions(decimal: false),
+              keyboardType: const TextInputType.numberWithOptions(decimal: false),
               inputFormatters: [
-                FilteringTextInputFormatter.allow(
-                  RegExp(r'^\d+\.?\d{0,2}'),
-                ),
+                FilteringTextInputFormatter.digitsOnly,
               ],
               hintText: 'Amount',
               textInputAction: TextInputAction.next,
@@ -44,12 +38,9 @@ class OtherApiFields extends StatelessWidget {
             const NoteText(text: '* Amount without dot'),
             CustomTextField(
               onChanged: (value) => provider.onChangeCurrencyOtherAPI(value),
-              keyboardType:
-                  const TextInputType.numberWithOptions(decimal: false),
+              keyboardType: const TextInputType.numberWithOptions(decimal: false),
               inputFormatters: [
-                FilteringTextInputFormatter.allow(
-                  RegExp(r'^\d+\.?\d{0,2}'),
-                ),
+                FilteringTextInputFormatter.digitsOnly,
               ],
               hintText: 'Currency',
               textInputAction: TextInputAction.done,

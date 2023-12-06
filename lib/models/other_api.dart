@@ -1,3 +1,4 @@
+import '../sts_one_pay_errors_handler.dart';
 import '../sts_one_pay_platform_interface.dart';
 
 class OtherAPI {
@@ -19,7 +20,7 @@ class OtherAPI {
     required this.amount,
     required this.originalTransactionID,
     this.version = '1.0',
-  }) : assert(double.parse(amount) > 0);
+  }) : assert(StsOnePayErrorHandler.amount(amount));
 
   Map<String, dynamic> toJson() {
     return {
@@ -28,8 +29,8 @@ class OtherAPI {
       "merchantID": merchantID,
       "transactionID": transactionID.isEmpty
           ? StsOnePayPlatform.generateTransactionId()
-          : transactionID,
-      "currencyISOCode": currencyISOCode,
+          : transactionID.trim(),
+      "currencyISOCode": currencyISOCode.trim(),
       "amount": amount,
       "originalTransactionID": originalTransactionID,
       "version": version,

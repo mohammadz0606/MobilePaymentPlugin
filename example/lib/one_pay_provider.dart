@@ -1,5 +1,7 @@
 import 'dart:developer' as log;
 import 'package:flutter/material.dart';
+import 'package:sts_one_pay/models/error_sts_one_pay.dart';
+import 'package:sts_one_pay/models/other_api.dart';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 import 'package:sts_one_pay/sts_one_pay_platform_interface.dart';
 import 'package:sts_one_pay/sts_one_pay_method_channel.dart';
@@ -26,8 +28,6 @@ class PayOneProvider extends ChangeNotifier {
     try {
       await _methodChannelStsOnePay.openPaymentPage(
         StsOnePay(
-          authenticationToken: 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
-          merchantID: 'AirrchipMerchant',
           amount: amount,
           tokens: tokensList,
           currency: currency,
@@ -40,6 +40,9 @@ class PayOneProvider extends ChangeNotifier {
           paymentType: selectedPaymentTypeTypeValue,
         ),
       );
+    } on ErrorStsOnePay catch (e) {
+      log.log(e.code.toString());
+      log.log(e.message);
     } catch (e) {
       log.log(e.toString());
     }
@@ -47,7 +50,13 @@ class PayOneProvider extends ChangeNotifier {
 
   Future<void> refund() async {
     try {
-     // await _methodChannelStsOnePay.refund();
+      await _methodChannelStsOnePay.refund(
+        OtherAPI(
+          amount: amountOtherAPI,
+          currencyISOCode: currencyOtherAPI,
+          originalTransactionID: originalTransactionID,
+        ),
+      );
     } catch (e) {
       log.log(e.toString());
     }
@@ -55,7 +64,13 @@ class PayOneProvider extends ChangeNotifier {
 
   Future<void> completion() async {
     try {
-      //await _methodChannelStsOnePay.completion();
+      await _methodChannelStsOnePay.completion(
+        OtherAPI(
+          amount: amountOtherAPI,
+          currencyISOCode: currencyOtherAPI,
+          originalTransactionID: originalTransactionID,
+        ),
+      );
     } catch (e) {
       log.log(e.toString());
     }
@@ -63,7 +78,13 @@ class PayOneProvider extends ChangeNotifier {
 
   Future<void> inquiry() async {
     try {
-    //  await _methodChannelStsOnePay.inquiry();
+      await _methodChannelStsOnePay.inquiry(
+        OtherAPI(
+          amount: amountOtherAPI,
+          currencyISOCode: currencyOtherAPI,
+          originalTransactionID: originalTransactionID,
+        ),
+      );
     } catch (e) {
       log.log(e.toString());
     }
