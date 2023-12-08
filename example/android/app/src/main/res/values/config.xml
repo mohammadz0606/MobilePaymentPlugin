@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:override="true"
+    tools:ignore="MissingDefaultResource">
+    <color name="color_primary">#717C7D</color>
+    <color name="text_color">#717C7D</color>
+    <color name="hint_text_color">#4D717C7D</color>
+    <color name="payment_type_selected_color">#515A5A</color>
+    <color name="card_border_color">#50515A5A</color>
+    <color name="payment_type_unselected_color">#FFFFFF</color>
+    <color name="button_color">#717C7D</color>
+    <color name="submission_failed_card">#80F7F4F4</color>
+    <color name="submission_failed_image_bg">#80D9D9D9</color>
+    <color name="validation_error">#EB001B</color>
+    <array name="saved_card_color_gradient_top">
+        <item>#00A7B5</item>
+        <item>#15B078</item>
+    </array>
+    <array name="saved_card_color_gradient_bottom">
+        <item>#155778</item>
+        <item>#02744B</item>
+    </array>
+</resources>

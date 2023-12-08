@@ -35,8 +35,6 @@ pluginManagement {
     }
 }*/
 include ":app"
-include ':payment_sdk'
-include ':3ds-sdk'
 
 apply from: "${settings.ext.flutterSdkPath}/packages/flutter_tools/gradle/app_plugin_loader.gradle"
 
