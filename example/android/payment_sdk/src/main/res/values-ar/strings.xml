@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">StsPayment</string>
+    <string name="payment_successful">تمت عملية الدفع بنجاح</string>
+    <string name="your_payment_has_failed">فشلت عملية الدفع</string>
+    <string name="cards">بطاقة دفع</string>
+    <string name="submission_failed">خطأ في الإدخال</string>
+    <string name="multiple_entries_are_invalid_or_do_not_match_with_the_required_format">يرجى التحقق من صحة البيانات المدخلة</string>
+    <string name="card_number">رقم البطاقة</string>
+    <string name="this_card_number_is_invalid">رقم البطاقة غير صحيح</string>
+    <string name="expiry_date">تاريخ انتهاء البطاقة</string>
+    <string name="card_expiry_date_is_invalid">تاريخ انتهاء البطاقة غير صحيح</string>
+    <string name="security_code">رمز الحماية</string>
+    <string name="invalid_security_code">رمز الأمان غير صحيح</string>
+    <string name="card_holder_name">الاسم على البطاقة</string>
+    <string name="enter_your_name_mentioned_on_card">يرجى ادخال الاسم على البطاقة</string>
+    <string name="save_this_card_for_future_use">احفظ هذه البطاقة لاستخدامها في المستقبل</string>
+    <string name="total_amount">المبلغ الإجمالي</string>
+    <string name="pay_now">إدفع %s</string>
+    <string name="payment_method">اختر طريقة الدفع</string>
+    <string name="select_your_card">اختر بطاقة الدفع</string>
+    <string name="an_error_occured_while_scanning_nthe_card">خطأ أثناء مسح البطاقة</string>
+    <string name="try_again">حاول مرة أخرى</string>
+    <string name="card_scanning">مسح البطاقة</string>
+    <string name="scan_card">مسح البطاقة</string>
+    <string name="your_card_details_will_be_automatically_fetched">سوف تحصل تلقائيا على جميع التفاصيل.</string>
+    <string name="place_your_front_side_of_your_card_nin_the_scanning_area">ضع الجانب الأمامي من بطاقتك في منطقة المسح</string>
+    <string name="get_details">احصل على التفاصيل</string>
+    <string name="transaction_number_n">رقم الحركة : %s</string>
+    <string name="saved_cards">حفظ البطاقة</string>
+    <string name="card_number_tooltip"> أدخل الرقم المؤلف من 16 أو 19 رقمًا الموجود في الجهة الأمامية من بطاقتك.</string>
+    <string name="card_expiry_tooltip"> أدخل تاريخ انتهاء الصلاحية الموجود في الجهة الأمامية من بطاقتك.</string>
+    <string name="security_code_tooltip">أدخل الرمز السري المكوّن من 3 أو 4 أرقام الموجود في الجهة الخلفية أو الأمامية من بطاقتك.</string>
+    <string name="card_holder_tooltip">أدخل اسم صاحب البطاقة الموجود في الجهة الأمامية من بطاقتك.</string>
+    <string name="please_enter_cvv">ادخل رمز الأمان</string>
+    <string name="cvv_desc_label">رمز الأمان هو رقم على بطاقة الدفع و مكون من ثلاثة او اربعة ارقام </string>
+    <string name="str_continue">اكمل</string>
+    <string name="pay_using_another_card">ادفع باستخدام بطاقة أخرى</string>
+    <string name="save_amp_pay_via_cards">احفظ وادفع عن طريق البطاقة</string>
+    <string name="enter_security_code">أدخل رمز الأمان</string>
+    <string name="enter_card_number">ادخل رقم البطاقة</string>
+    <string name="enter_card_expiry_date">ادخل تاريخ انتهاء البطاقة</string>
+    <string name="enter_cardholder_name">ادخل الاسم على البطاقة</string>
+    <string name="enter_a_security_code">ادخل رمز الأمان</string>
+    <string name="no_cards_found">لا توجد بطاقات محفوظة</string>
+
+
+</resources>

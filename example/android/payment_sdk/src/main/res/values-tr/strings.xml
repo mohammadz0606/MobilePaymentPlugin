@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">StsPayment</string>
+    <string name="payment_successful">Ödeme Başarılı</string>
+    <string name="your_payment_has_failed">Ödeme işlemi başarısız oldu</string>
+    <string name="cards">Kart</string>
+    <string name="submission_failed">Giriş Başarısız</string>
+    <string name="multiple_entries_are_invalid_or_do_not_match_with_the_required_format">Birden çok giriş geçersiz veya gereken biçimle eşleşmiyor.</string>
+    <string name="card_number">Card Kart Numarası</string>
+    <string name="this_card_number_is_invalid">Bu kart numarası geçersiz</string>
+    <string name="expiry_date">Son Kullanma Tarihi</string>
+    <string name="card_expiry_date_is_invalid">Son kullanma tarihi geçerli değildir</string>
+    <string name="security_code">Güvenlik Kodu</string>
+    <string name="invalid_security_code">Geçersiz Güvenlik Kodu</string>
+    <string name="card_holder_name">Kart Sahibinin Adı</string>
+    <string name="enter_your_name_mentioned_on_card">Kartta belirtilen adınızı girin</string>
+    <string name="save_this_card_for_future_use">Sonraki Kullanımlar İçin Bu Kartı Saklayın</string>
+    <string name="total_amount">Toplam Tutar :</string>
+    <string name="pay_now">Ödemek %s</string>
+    <string name="payment_method">Ödeme Yöntemini Seç</string>
+    <string name="select_your_card">Kartınızı seçin</string>
+    <string name="saved_cards">Kartı kaydedin</string>
+    <string name="an_error_occured_while_scanning_nthe_card">Kart taranırken bir\nhata oluştu</string>
+    <string name="try_again">Tekrar deneyin</string>
+    <string name="card_scanning">Kart Tarama</string>
+    <string name="scan_card">Kartı Tara</string>
+    <string name="your_card_details_will_be_automatically_fetched">Kart bilgileriniz otomatik olarak getirilecek</string>
+    <string name="place_your_front_side_of_your_card_nin_the_scanning_area">Kartınızın ön tarafını tarama alanına yerleştirin</string>
+    <string name="get_details">Ayrıntıları Alın</string>
+
+
+    <string name="transaction_number_n">İşlem Numarası: %s</string>
+    <string name="card_number_tooltip">Kartınızın ön yüzündeki 16 veya 19 haneli numarayı girin.</string>
+    <string name="card_expiry_tooltip">Kartınızın ön yüzüne son kullanma tarihini girin. Genellikle AA/YY biçimindedir.</string>
+    <string name="security_code_tooltip">Kartınızın ön veya arka yüzünde bulunan 3 veya 4 haneli kodu giriniz.</string>
+    <string name="card_holder_tooltip">Kartınızın ön yüzünde kart sahibi olarak yazan kişinin adını giriniz.</string>
+    <string name="please_enter_cvv">Lütfen güvenlik kodunu girin</string>
+    <string name="cvv_desc_label">Güvenlik Kodu, kredi ve banka kartlarında bulunan üç veya dört haneli bir koddur.</string>
+    <string name="str_continue">Devam etmek</string>
+    <string name="pay_using_another_card">Başka Kart Kullanarak Öde</string>
+    <string name="save_amp_pay_via_cards">Kaydet ve Kartlarla Öde</string>
+    <string name="enter_security_code">Güvenlik kodunu gir</string>
+    <string name="enter_card_number">Boş Kart Numarası</string>
+    <string name="enter_card_expiry_date">Boş Geçerlilik Tarihi</string>
+    <string name="enter_cardholder_name">Boş Kart Numarası</string>
+    <string name="enter_a_security_code">Boş Güvenlik Kodu</string>
+    <string name="no_cards_found">Kayitli Kart Yok</string>
+
+
+</resources>
