@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../helper/dialogs.dart';
 import '../one_pay_provider.dart';
 import '../widgets/payment_fields.dart';
 import 'other_api.dart';
@@ -40,7 +41,17 @@ class HomeStsOnePayExample extends StatelessWidget {
                     return SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                        onPressed: () async => await provider.openPaymentPage(),
+                        onPressed: () async {
+                          await provider.openPaymentPage(
+                            onError: (code, error) {
+                              showCustomDialog(
+                                context,
+                                title: 'Code:$code',
+                                description: error,
+                              );
+                            },
+                          );
+                        },
                         child: const Text('Pay Now'),
                       ),
                     );

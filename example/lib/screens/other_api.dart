@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../helper/dialogs.dart';
 import '../one_pay_provider.dart';
 import '../widgets/other_api_fields.dart';
 
@@ -39,21 +40,51 @@ class OtherAPIStsOnePayExample extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                        onPressed: () async => provider.completion(),
+                        onPressed: () async {
+                          await provider.completion(
+                            onError: (code, error) {
+                              showCustomDialog(
+                                context,
+                                title: 'Code:$code',
+                                description: error,
+                              );
+                            },
+                          );
+                        },
                         child: const Text('Completion'),
                       ),
                     ),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () async => await provider.refund(),
+                        onPressed: () async {
+                          await provider.refund(
+                            onError: (code, error) {
+                              showCustomDialog(
+                                context,
+                                title: 'Code:$code',
+                                description: error,
+                              );
+                            },
+                          );
+                        },
                         child: const Text('Refund'),
                       ),
                     ),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () async => await provider.inquiry(),
+                        onPressed: () async {
+                          await provider.inquiry(
+                            onError: (code, error) {
+                              showCustomDialog(
+                                context,
+                                title: 'Code:$code',
+                                description: error,
+                              );
+                            },
+                          );
+                        },
                         child: const Text('Inquiry'),
                       ),
                     ),

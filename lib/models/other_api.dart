@@ -20,7 +20,13 @@ class OtherAPI {
     required this.amount,
     required this.originalTransactionID,
     this.version = '1.0',
-  }) : assert(StsOnePayErrorHandler.amount(amount));
+  }) : assert(
+          StsOnePayErrorHandler.amount(amount) &&
+              StsOnePayErrorHandler.authenticationToken(authenticationToken) &&
+              StsOnePayErrorHandler.transactionId(transactionID) &&
+              StsOnePayErrorHandler.currency(currencyISOCode) &&
+              StsOnePayErrorHandler.merchantID(merchantID),
+        );
 
   Map<String, dynamic> toJson() {
     return {

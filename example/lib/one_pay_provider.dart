@@ -24,7 +24,9 @@ class PayOneProvider extends ChangeNotifier {
 
   final StsOnePayPlatform _methodChannelStsOnePay = MethodChannelStsOnePay();
 
-  Future<void> openPaymentPage() async {
+  Future<void> openPaymentPage({
+    required Function(String code, String error) onError,
+  }) async {
     try {
       await _methodChannelStsOnePay.openPaymentPage(
         StsOnePay(
@@ -43,12 +45,15 @@ class PayOneProvider extends ChangeNotifier {
     } on ErrorStsOnePay catch (e) {
       log.log(e.code.toString());
       log.log(e.message);
+      onError(e.code.toString(), e.message);
     } catch (e) {
       log.log(e.toString());
     }
   }
 
-  Future<void> refund() async {
+  Future<void> refund({
+    required Function(String code, String error) onError,
+  }) async {
     try {
       await _methodChannelStsOnePay.refund(
         OtherAPI(
@@ -57,12 +62,18 @@ class PayOneProvider extends ChangeNotifier {
           originalTransactionID: originalTransactionID,
         ),
       );
+    } on ErrorStsOnePay catch (e) {
+      log.log(e.code.toString());
+      log.log(e.message);
+      onError(e.code.toString(), e.message);
     } catch (e) {
       log.log(e.toString());
     }
   }
 
-  Future<void> completion() async {
+  Future<void> completion({
+    required Function(String code, String error) onError,
+  }) async {
     try {
       await _methodChannelStsOnePay.completion(
         OtherAPI(
@@ -71,12 +82,18 @@ class PayOneProvider extends ChangeNotifier {
           originalTransactionID: originalTransactionID,
         ),
       );
+    } on ErrorStsOnePay catch (e) {
+      log.log(e.code.toString());
+      log.log(e.message);
+      onError(e.code.toString(), e.message);
     } catch (e) {
       log.log(e.toString());
     }
   }
 
-  Future<void> inquiry() async {
+  Future<void> inquiry({
+    required Function(String code, String error) onError,
+  }) async {
     try {
       await _methodChannelStsOnePay.inquiry(
         OtherAPI(
@@ -85,6 +102,10 @@ class PayOneProvider extends ChangeNotifier {
           originalTransactionID: originalTransactionID,
         ),
       );
+    } on ErrorStsOnePay catch (e) {
+      log.log(e.code.toString());
+      log.log(e.message);
+      onError(e.code.toString(), e.message);
     } catch (e) {
       log.log(e.toString());
     }
@@ -136,7 +157,7 @@ class PayOneProvider extends ChangeNotifier {
   }
 
   void onChangeCardScanEnable(bool value) {
-    isSaveCardEnable = value;
+    isCardScanEnable = value;
     notifyListeners();
   }
 

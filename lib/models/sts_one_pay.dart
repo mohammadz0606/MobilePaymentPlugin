@@ -16,6 +16,7 @@ class StsOnePay {
   final PaymentType paymentType;
   final String paymentDescription;
   final String version;
+  final String frameworkInfo;
 
   StsOnePay({
     this.authenticationToken = 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
@@ -32,7 +33,14 @@ class StsOnePay {
     this.paymentType = PaymentType.sale,
     this.paymentDescription = 'Sample Payment',
     this.version = '1.0',
-  }) : assert(StsOnePayErrorHandler.amount(amount));
+    this.frameworkInfo = 'Android 7.0',
+  }) : assert(
+          StsOnePayErrorHandler.amount(amount) &&
+              StsOnePayErrorHandler.authenticationToken(authenticationToken) &&
+              StsOnePayErrorHandler.transactionId(transactionId) &&
+              StsOnePayErrorHandler.currency(currency) &&
+              StsOnePayErrorHandler.merchantID(merchantID),
+        );
 
   Map<String, dynamic> toJson() {
     return {
@@ -52,6 +60,7 @@ class StsOnePay {
       "paymentType": paymentType.name,
       "paymentDescription": paymentDescription.trim(),
       "version": version,
+      "frameworkInfo": frameworkInfo,
     };
   }
 }

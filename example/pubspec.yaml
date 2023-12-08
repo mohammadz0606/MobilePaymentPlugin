@@ -16,6 +16,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
 
   sts_one_pay:
     # When depending on this package from a real application you should use:
@@ -29,6 +30,11 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   provider: ^6.1.1
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/ic_launcher-playstore.png"
 
 dev_dependencies:
   integration_test:

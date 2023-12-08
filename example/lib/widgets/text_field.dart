@@ -47,6 +47,7 @@ class CustomTextField extends StatelessWidget {
       readOnly: readOnly ?? false,
       inputFormatters: inputFormatters,
       focusNode: focusNode,
+      cursorColor: Theme.of(context).primaryColor,
       enableInteractiveSelection: true,
       autofocus: autofocus ?? false,
       textInputAction: textInputAction,
