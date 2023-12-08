@@ -11,8 +11,8 @@ Future<void> showCustomDialog(
     builder: (context) {
       return AlertDialog(
         title: Text(title),
-        titleTextStyle: TextStyle(
-          color: Theme.of(context).primaryColor,
+        titleTextStyle: const TextStyle(
+          color: Colors.red,
           fontWeight: FontWeight.w600,
           fontSize: 20,
         ),

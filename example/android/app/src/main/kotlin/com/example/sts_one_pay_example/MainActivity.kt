@@ -79,6 +79,12 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
             arrayListOf<String>(
                 VISA.name,
                 MASTERCARD.name,
+                AMEX.name,
+                DINERS.name,
+                UNION.name,
+                JCB.name,
+                DISCOVER.name,
+                MADA.name,
             ),
         )
         //optional param
