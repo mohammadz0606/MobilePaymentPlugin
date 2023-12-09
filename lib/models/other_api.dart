@@ -12,6 +12,7 @@ class OtherAPI {
   final String version;
 
   OtherAPI({
+    /// Development mode
     this.authenticationToken = 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
     this.messageID = '5',
     this.merchantID = 'AirrchipMerchant',
