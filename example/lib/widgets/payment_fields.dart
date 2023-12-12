@@ -22,7 +22,8 @@ class PaymentFields extends StatelessWidget {
           children: [
             CustomTextField(
               onChanged: (value) => provider.onChangeAmount(value),
-              keyboardType: const TextInputType.numberWithOptions(decimal: false),
+              keyboardType:
+                  const TextInputType.numberWithOptions(decimal: false),
               inputFormatters: [
                 FilteringTextInputFormatter.digitsOnly,
               ],
@@ -53,7 +54,8 @@ class PaymentFields extends StatelessWidget {
             const NoteText(text: 'Currency code (Only one currency)'),
             CustomTextField(
               onChanged: (value) => provider.onChangeTransactionId(value),
-              keyboardType: const TextInputType.numberWithOptions(decimal: false),
+              keyboardType:
+                  const TextInputType.numberWithOptions(decimal: false),
               inputFormatters: [
                 FilteringTextInputFormatter.digitsOnly,
               ],
@@ -140,6 +142,27 @@ class PaymentFields extends StatelessWidget {
                   child: Text('PreAuth'),
                 ),
               ],
+            ),
+            const NoteText(
+              text: 'Cards Type',
+            ),
+            ListView.builder(
+              itemCount: provider.cardsType.length,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (context, index) {
+                var card = provider.cardsType[index];
+                return CheckboxListTile.adaptive(
+                  value: provider.cardsSelected.contains(card),
+                  onChanged: (value) {
+                    provider.onChangedCheckboxCardsType(
+                      value: value!,
+                      cardType: card,
+                    );
+                  },
+                  title: Text(card.name.toUpperCase()),
+                );
+              },
             ),
           ],
         );

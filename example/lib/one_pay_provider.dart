@@ -21,6 +21,20 @@ class PayOneProvider extends ChangeNotifier {
   bool isSaveCardEnable = true;
   Language selectedLangVale = Language.ar;
   PaymentType selectedPaymentTypeTypeValue = PaymentType.sale;
+  final List<CardType> cardsType = [
+    CardType.visa,
+    CardType.mastercard,
+    CardType.amex,
+    CardType.diners,
+    CardType.union,
+    CardType.jcb,
+    CardType.discover,
+    CardType.mada,
+  ];
+  List<CardType> cardsSelected = [
+    CardType.mastercard,
+    CardType.visa,
+  ];
 
   final StsOnePayPlatform _methodChannelStsOnePay = MethodChannelStsOnePay();
 
@@ -40,6 +54,7 @@ class PayOneProvider extends ChangeNotifier {
           isSaveCardEnable: isSaveCardEnable,
           langCode: selectedLangVale,
           paymentType: selectedPaymentTypeTypeValue,
+          cardsType: cardsSelected,
         ),
       );
     } on ErrorStsOnePay catch (e) {
@@ -173,6 +188,18 @@ class PayOneProvider extends ChangeNotifier {
 
   void onChangePaymentTypeType(PaymentType value) {
     selectedPaymentTypeTypeValue = value;
+    notifyListeners();
+  }
+
+  void onChangedCheckboxCardsType({
+    required bool value,
+    required CardType cardType,
+  }) {
+    if (value) {
+      cardsSelected.add(cardType);
+    } else {
+      cardsSelected.remove(cardType);
+    }
     notifyListeners();
   }
 }

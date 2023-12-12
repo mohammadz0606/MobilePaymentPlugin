@@ -1,4 +1,5 @@
 import 'models/error_sts_one_pay.dart';
+import 'models/sts_one_pay.dart';
 
 abstract class StsOnePayErrorHandler {
   static bool amount(String amount) {
@@ -60,12 +61,28 @@ abstract class StsOnePayErrorHandler {
   }
 
   static bool currency(String currency) {
-    if(currency.isEmpty){
+    if (currency.isEmpty) {
       throw const ErrorStsOnePay(
         code: 2007,
         message: 'currency is empty',
       );
+    } else if (currency.length != 3) {
+      throw const ErrorStsOnePay(
+        code: 2008,
+        message: 'currency consists of only 3 length',
+      );
     }
     return true;
   }
+
+  static bool cardsType(List<CardType> cards) {
+    if(cards.isEmpty){
+      throw const ErrorStsOnePay(
+        code: 2009,
+        message: 'You must choose the card types',
+      );
+    }
+    return true;
+  }
+
 }

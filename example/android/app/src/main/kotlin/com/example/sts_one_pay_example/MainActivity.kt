@@ -76,16 +76,7 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
         request.add("PaymentMethod", arrayListOf<String>(PaymentMethod.Cards.name))
         request.add(
             "CardType",
-            arrayListOf<String>(
-                VISA.name,
-                MASTERCARD.name,
-                AMEX.name,
-                DINERS.name,
-                UNION.name,
-                JCB.name,
-                DISCOVER.name,
-                MADA.name,
-            ),
+            params["cardsType"] as List<String>,
         )
         //optional param
         //request.addOptional("ItemID", "Item1")

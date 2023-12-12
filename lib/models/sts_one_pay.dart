@@ -17,29 +17,35 @@ class StsOnePay {
   final String paymentDescription;
   final String version;
   final String frameworkInfo;
+  final List<CardType> cardsType;
 
-  StsOnePay({
-    this.authenticationToken = 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
-    this.merchantID = 'AirrchipMerchant',
-    required this.amount,
-    this.tokens = const [],
-    required this.currency,
-    this.transactionId = '',
-    this.isThreeDSSecure = true,
-    this.shouldTokenizeCard = true,
-    this.isCardScanEnable = true,
-    this.isSaveCardEnable = true,
-    this.langCode = Language.en,
-    this.paymentType = PaymentType.sale,
-    this.paymentDescription = 'Sample Payment',
-    this.version = '1.0',
-    this.frameworkInfo = 'Android 7.0',
-  }) : assert(
+  StsOnePay(
+      {this.authenticationToken = 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
+      this.merchantID = 'AirrchipMerchant',
+      required this.amount,
+      this.tokens = const [],
+      required this.currency,
+      this.transactionId = '',
+      this.isThreeDSSecure = true,
+      this.shouldTokenizeCard = true,
+      this.isCardScanEnable = true,
+      this.isSaveCardEnable = true,
+      this.langCode = Language.en,
+      this.paymentType = PaymentType.sale,
+      this.paymentDescription = 'Sample Payment',
+      this.version = '1.0',
+      this.frameworkInfo = 'Android 7.0',
+      this.cardsType = const [
+        CardType.mastercard,
+        CardType.visa,
+      ]})
+      : assert(
           StsOnePayErrorHandler.amount(amount) &&
               StsOnePayErrorHandler.authenticationToken(authenticationToken) &&
               StsOnePayErrorHandler.transactionId(transactionId) &&
               StsOnePayErrorHandler.currency(currency) &&
-              StsOnePayErrorHandler.merchantID(merchantID),
+              StsOnePayErrorHandler.merchantID(merchantID) &&
+              StsOnePayErrorHandler.cardsType(cardsType),
         );
 
   Map<String, dynamic> toJson() {
@@ -61,6 +67,7 @@ class StsOnePay {
       "paymentDescription": paymentDescription.trim(),
       "version": version,
       "frameworkInfo": frameworkInfo,
+      "cardsType": cardsType.map<String>((cardType) => cardType.name).toList(),
     };
   }
 }
