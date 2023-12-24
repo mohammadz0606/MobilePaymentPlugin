@@ -1,0 +1,12 @@
+BaseURL=https://demo.stspayone.com/
+PaymentEndPoint=SmartRoutePaymentSPGWEB/SRMsgHandler
+ApproveEndPoint=SmartRoutePaymentSPGWEB/SRMsgHandler
+InquiryEndPoint=SmartRoutePaymentSPGWEB/SRMsgHandler
+RefundEndPoint=SmartRoutePaymentSPGWEB/SRMsgHandler
+CompletionEndPoint=SmartRoutePaymentSPGWEB/SRMsgHandler
+CardTypeEndPoint=SmartRoutePaymentSPGWEB/SRMsgHandler
+SavedCardEndPoint=SmartRoutePaymentSPGWEB/SRMsgHandler
+ThreeDSVersionEndPoint=SmartRoutePaymentSPGWEB/SRMsgHandler
+ByPassSecureHashValidationForResponse=N
+Production=false
+Timeout=60
