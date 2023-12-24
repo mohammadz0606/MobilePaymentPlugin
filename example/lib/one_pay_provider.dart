@@ -14,7 +14,6 @@ class PayOneProvider extends ChangeNotifier {
   String currencyOtherAPI = '';
   String transactionId = '';
   String originalTransactionID = '';
-  List<String> tokensList = [];
   bool isThreeDSSecure = true;
   bool shouldTokenizeCard = true;
   bool isCardScanEnable = true;
@@ -42,10 +41,12 @@ class PayOneProvider extends ChangeNotifier {
     required Function(String code, String error) onError,
   }) async {
     try {
+      List<String> tokens = tokensText.split(',');
       await _methodChannelStsOnePay.openPaymentPage(
         StsOnePay(
           amount: amount,
-          tokens: tokensList,
+          tokens:
+              tokensText.isNotEmpty ? tokens.map((e) => e.trim()).toList() : [],
           currency: currency,
           transactionId: transactionId,
           isThreeDSSecure: isThreeDSSecure,
