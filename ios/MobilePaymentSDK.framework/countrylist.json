@@ -1,0 +1,1433 @@
+[
+    {
+        "name": "Afghanistan Afghani",
+        "alpha-2": "AF",
+        "alpha-3": "AFN",
+        "UN Code": "971",
+        "currency_decimal_format": 2,
+        "currency_code": "AFN",
+        "locale": "ps_AF"
+    },
+    {
+        "name": "Albania Lek",
+        "alpha-2": "AL",
+        "alpha-3": "ALL",
+        "UN Code": "8",
+        "currency_decimal_format": 2,
+        "currency_code": "ALL",
+        "locale": "sq_AL"
+    },
+    {
+        "name": "Algeria Algerian Dinar",
+        "alpha-2": "DZ",
+        "alpha-3": "DZD",
+        "UN Code": "12",
+        "currency_decimal_format": 2,
+        "currency_code": "DZD",
+        "locale": "ar_DZ"
+    },
+    {
+        "name": "Angola New Kwanza",
+        "alpha-2": "AO",
+        "alpha-3": "AOA",
+        "UN Code": "973",
+        "currency_decimal_format": 2,
+        "currency_code": "AOA",
+        "locale": "pt"
+    },
+    {
+        "name": "Anguilla East Caribbean Dollar",
+        "alpha-2": "VC",
+        "alpha-3": "XCD",
+        "UN Code": "951",
+        "currency_decimal_format": 2,
+        "currency_code": "XCD",
+        "locale": "en"
+    },
+    {
+        "name": "Argentina Argentine Peso",
+        "alpha-2": "AR",
+        "alpha-3": "ARS",
+        "UN Code": "32",
+        "currency_decimal_format": 2,
+        "currency_code": "ARS",
+        "locale": "es_AR"
+    },
+    {
+        "name": "Armenia Armenian Dram",
+        "alpha-2": "AM",
+        "alpha-3": "AMD",
+        "UN Code": "51",
+        "currency_decimal_format": 2,
+        "currency_code": "AMD",
+        "locale": "hy_AM"
+    },
+    {
+        "name": "Aruba Aruban Guilder",
+        "alpha-2": "AW",
+        "alpha-3": "AWG",
+        "UN Code": "533",
+        "currency_decimal_format": 2,
+        "currency_code": "AWG",
+        "locale": "nl"
+    },
+    {
+        "name": "Australia Australian Dollar",
+        "alpha-2": "TV",
+        "alpha-3": "AUD",
+        "UN Code": "36",
+        "currency_decimal_format": 2,
+        "currency_code": "AUD",
+        "locale": "en"
+    },
+    {
+        "name": "Azerbaijan Azerbaijanian Manat",
+        "alpha-2": "AZ",
+        "alpha-3": "AZM",
+        "UN Code": "31",
+        "currency_decimal_format": 2,
+        "currency_code": "AZM",
+        "locale": "az_Cyrl_AZ"
+    },
+    {
+        "name": "Bahamas Bahamian Dollar",
+        "alpha-2": "BS",
+        "alpha-3": "BSD",
+        "UN Code": "44",
+        "currency_decimal_format": 2,
+        "currency_code": "BSD",
+        "locale": "en"
+    },
+    {
+        "name": "Bahrain Bahraini Dinar",
+        "alpha-2": "BH",
+        "alpha-3": "BHD",
+        "UN Code": "48",
+        "currency_decimal_format": 3,
+        "currency_code": "BHD",
+        "locale": "ar_BH"
+    },
+    {
+        "name": "Bangladesh Taka",
+        "alpha-2": "BD",
+        "alpha-3": "BDT",
+        "UN Code": "50",
+        "currency_decimal_format": 2,
+        "currency_code": "BDT",
+        "locale": "bn_BD"
+    },
+    {
+        "name": "Barbados Barbados Dollar",
+        "alpha-2": "BB",
+        "alpha-3": "BBD",
+        "UN Code": "52",
+        "currency_decimal_format": 2,
+        "currency_code": "BBD",
+        "locale": "en"
+    },
+    {
+        "name": "Belarus Belarussian Ruble",
+        "alpha-2": "BY",
+        "alpha-3": "BYR",
+        "UN Code": "974",
+        "currency_decimal_format": 2,
+        "currency_code": "BYR",
+        "locale": "be_BY"
+    },
+    {
+        "name": "Belize Belize Dollar",
+        "alpha-2": "BZ",
+        "alpha-3": "BZD",
+        "UN Code": "84",
+        "currency_decimal_format": 2,
+        "currency_code": "BZD",
+        "locale": "en_BZ"
+    },
+    {
+        "name": "Bermuda Bermudian Dollar",
+        "alpha-2": "BM",
+        "alpha-3": "BMD",
+        "UN Code": "60",
+        "currency_decimal_format": 2,
+        "currency_code": "BMD",
+        "locale": "en"
+    },
+    {
+        "name": "Ngultrum",
+        "alpha-2": "BT",
+        "alpha-3": "BTN",
+        "UN Code": "64",
+        "currency_decimal_format": 2,
+        "currency_code": "BTN",
+        "locale": "dz"
+    },
+    {
+        "name": "Bosnia and Herzegovina Convertible Marks",
+        "alpha-2": "BA",
+        "alpha-3": "BAM",
+        "UN Code": "977",
+        "currency_decimal_format": 2,
+        "currency_code": "BAM",
+        "locale": "bs_BA"
+    },
+    {
+        "name": "Botswana Pula",
+        "alpha-2": "BW",
+        "alpha-3": "BWP",
+        "UN Code": "72",
+        "currency_decimal_format": 2,
+        "currency_code": "BWP",
+        "locale": "en_BW"
+    },
+    {
+        "name": "Brazil Brazilian Real",
+        "alpha-2": "BR",
+        "alpha-3": "BRL",
+        "UN Code": "986",
+        "currency_decimal_format": 2,
+        "currency_code": "BRL",
+        "locale": "pt_BR"
+    },
+    {
+        "name": "Brunei Darussalam Brunei Dollar",
+        "alpha-2": "BN",
+        "alpha-3": "BND",
+        "UN Code": "96",
+        "currency_decimal_format": 2,
+        "currency_code": "BND",
+        "locale": "ms_BN"
+    },
+    {
+        "name": "Bulgarian LEV",
+        "alpha-2": "BG",
+        "alpha-3": "BGN",
+        "UN Code": "975",
+        "currency_decimal_format": 2,
+        "currency_code": "BGN",
+        "locale": "bg_BG"
+    },
+    {
+        "name": "Burundi Burundi Franc",
+        "alpha-2": "BI",
+        "alpha-3": "BIF",
+        "UN Code": "108",
+        "currency_decimal_format": 2,
+        "currency_code": "BIF",
+        "locale": "fr_BI"
+    },
+    {
+        "name": "Cambodia Riel",
+        "alpha-2": "KH",
+        "alpha-3": "KHR",
+        "UN Code": "116",
+        "currency_decimal_format": 2,
+        "currency_code": "KHR",
+        "locale": "km_KH"
+    },
+    {
+        "name": "Canada Canadian Dollar",
+        "alpha-2": "CA",
+        "alpha-3": "CAD",
+        "UN Code": "124",
+        "currency_decimal_format": 2,
+        "currency_code": "CAD",
+        "locale": "en_CA"
+    },
+    {
+        "name": "Cape Verde Cape Verde Escudo",
+        "alpha-2": "CV",
+        "alpha-3": "CVE",
+        "UN Code": "132",
+        "currency_decimal_format": 2,
+        "currency_code": "CVE",
+        "locale": "kea_CV"
+    },
+    {
+        "name": "Cayman Islands Cayman Islands Dollar",
+        "alpha-2": "KY",
+        "alpha-3": "KYD",
+        "UN Code": "136",
+        "currency_decimal_format": 2,
+        "currency_code": "KYD",
+        "locale": "en"
+    },
+    {
+        "name": "Central African Republic CFA Franc BEAC",
+        "alpha-2": "GA",
+        "alpha-3": "XAF",
+        "UN Code": "950",
+        "currency_decimal_format": 2,
+        "currency_code": "XAF",
+        "locale": "fr_GA"
+    },
+    {
+        "name": "Chile Chilean Peso",
+        "alpha-2": "CL",
+        "alpha-3": "CLP",
+        "UN Code": "152",
+        "currency_decimal_format": 2,
+        "currency_code": "CLP",
+        "locale": "es_CL"
+    },
+    {
+        "name": "China Yuan Renminbi",
+        "alpha-2": "CN",
+        "alpha-3": "CNY",
+        "UN Code": "156",
+        "currency_decimal_format": 2,
+        "currency_code": "CNY",
+        "locale": "zh_CN"
+    },
+    {
+        "name": "Colombia Colombian Peso",
+        "alpha-2": "CO",
+        "alpha-3": "COP",
+        "UN Code": "170",
+        "currency_decimal_format": 2,
+        "currency_code": "COP",
+        "locale": "es_CO"
+    },
+    {
+        "name": "Comoros Comoro Franc",
+        "alpha-2": "KM",
+        "alpha-3": "KMF",
+        "UN Code": "174",
+        "currency_decimal_format": 2,
+        "currency_code": "KMF",
+        "locale": "fr_KM"
+    },
+    {
+        "name": "Congo, The Democratic Republic Of Franc Congolais",
+        "alpha-2": "CD",
+        "alpha-3": "CDF",
+        "UN Code": "976",
+        "currency_decimal_format": 2,
+        "currency_code": "CDF",
+        "locale": "fr_CD"
+    },
+    {
+        "name": "Costa Rica Costa Rican Colon",
+        "alpha-2": "CR",
+        "alpha-3": "CRC",
+        "UN Code": "188",
+        "currency_decimal_format": 2,
+        "currency_code": "CRC",
+        "locale": "es_CR"
+    },
+    {
+        "name": "Croatia Kuna",
+        "alpha-2": "HR",
+        "alpha-3": "HRK",
+        "UN Code": "191",
+        "currency_decimal_format": 2,
+        "currency_code": "HRK",
+        "locale": "hr_HR"
+    },
+    {
+        "name": "Cuba Cuban Peso",
+        "alpha-2": "",
+        "alpha-3": "CUC",
+        "UN Code": "931",
+        "currency_decimal_format": 2,
+        "currency_code": "CUC",
+        "locale": ""
+    },
+    {
+        "name": "Czech Republic Czech Koruna",
+        "alpha-2": "CZ",
+        "alpha-3": "CZK",
+        "UN Code": "203",
+        "currency_decimal_format": 2,
+        "currency_code": "CZK",
+        "locale": "cs_CZ"
+    },
+    {
+        "name": "Denmark Danish Krone",
+        "alpha-2": "GL",
+        "alpha-3": "DKK",
+        "UN Code": "208",
+        "currency_decimal_format": 2,
+        "currency_code": "DKK",
+        "locale": "kl_GL"
+    },
+    {
+        "name": "Djibouti Djibouti Franc",
+        "alpha-2": "DJ",
+        "alpha-3": "DJF",
+        "UN Code": "262",
+        "currency_decimal_format": 2,
+        "currency_code": "DJF",
+        "locale": "fr_DJ"
+    },
+    {
+        "name": "Dominican Republic Dominican Peso",
+        "alpha-2": "DO",
+        "alpha-3": "DOP",
+        "UN Code": "214",
+        "currency_decimal_format": 2,
+        "currency_code": "DOP",
+        "locale": "es_DO"
+    },
+    {
+        "name": "Egypt Egyptian Pound",
+        "alpha-2": "EG",
+        "alpha-3": "EGP",
+        "UN Code": "818",
+        "currency_decimal_format": 2,
+        "currency_code": "EGP",
+        "locale": "ar_EG"
+    },
+    {
+        "name": "Eritrea Nakfa",
+        "alpha-2": "ER",
+        "alpha-3": "ERN",
+        "UN Code": "232",
+        "currency_decimal_format": 2,
+        "currency_code": "ERN",
+        "locale": "ti_ER"
+    },
+    {
+        "name": "Ethiopia Ethiopian Birr",
+        "alpha-2": "ET",
+        "alpha-3": "ETB",
+        "UN Code": "230",
+        "currency_decimal_format": 2,
+        "currency_code": "ETB",
+        "locale": "am_ET"
+    },
+    {
+        "name": "Falkland Islands (Malvinas) Pound",
+        "alpha-2": "FK",
+        "alpha-3": "FKP",
+        "UN Code": "238",
+        "currency_decimal_format": 2,
+        "currency_code": "FKP",
+        "locale": "en"
+    },
+    {
+        "name": "Fiji Fiji Dollar",
+        "alpha-2": "FJ",
+        "alpha-3": "FJD",
+        "UN Code": "242",
+        "currency_decimal_format": 2,
+        "currency_code": "FJD",
+        "locale": "en"
+    },
+    {
+        "name": "French Polynesia CFP Franc",
+        "alpha-2": "WF",
+        "alpha-3": "XPF",
+        "UN Code": "953",
+        "currency_decimal_format": 2,
+        "currency_code": "XPF",
+        "locale": "fr"
+    },
+    {
+        "name": "Gambia Dalasi",
+        "alpha-2": "GM",
+        "alpha-3": "GMD",
+        "UN Code": "270",
+        "currency_decimal_format": 2,
+        "currency_code": "GMD",
+        "locale": "en"
+    },
+    {
+        "name": "Georgia Lari",
+        "alpha-2": "GE",
+        "alpha-3": "GEL",
+        "UN Code": "981",
+        "currency_decimal_format": 2,
+        "currency_code": "GEL",
+        "locale": "ka_GE"
+    },
+    {
+        "name": "Ghana Cedi",
+        "alpha-2": "",
+        "alpha-3": "GHS",
+        "UN Code": "936",
+        "currency_decimal_format": 2,
+        "currency_code": "GHS",
+        "locale": ""
+    },
+    {
+        "name": "Gibraltar Gibraltar Pound",
+        "alpha-2": "GI",
+        "alpha-3": "GIP",
+        "UN Code": "292",
+        "currency_decimal_format": 2,
+        "currency_code": "GIP",
+        "locale": "en"
+    },
+    {
+        "name": "Guatemala Quetzal",
+        "alpha-2": "GT",
+        "alpha-3": "GTQ",
+        "UN Code": "320",
+        "currency_decimal_format": 2,
+        "currency_code": "GTQ",
+        "locale": "es_GT"
+    },
+    {
+        "name": "Guinea Guinea Franc",
+        "alpha-2": "GN",
+        "alpha-3": "GNF",
+        "UN Code": "324",
+        "currency_decimal_format": 2,
+        "currency_code": "GNF",
+        "locale": "fr_GN"
+    },
+    {
+        "name": "CFA Franc BCEAO",
+        "alpha-2": "TG",
+        "alpha-3": "XOF",
+        "UN Code": "952",
+        "currency_decimal_format": 2,
+        "currency_code": "XOF",
+        "locale": "fr_TG"
+    },
+    {
+        "name": "Guyana Guyana Dollar",
+        "alpha-2": "GY",
+        "alpha-3": "GYD",
+        "UN Code": "328",
+        "currency_decimal_format": 2,
+        "currency_code": "GYD",
+        "locale": "en"
+    },
+    {
+        "name": "Haiti Gourde",
+        "alpha-2": "HT",
+        "alpha-3": "HTG",
+        "UN Code": "332",
+        "currency_decimal_format": 2,
+        "currency_code": "HTG",
+        "locale": "fr"
+    },
+    {
+        "name": "US Dollar",
+        "alpha-2": "US",
+        "alpha-3": "USD",
+        "UN Code": "840",
+        "currency_decimal_format": 2,
+        "currency_code": "USD",
+        "locale": "en_US"
+    },
+    {
+        "name": "Honduras Lempira",
+        "alpha-2": "HN",
+        "alpha-3": "HNL",
+        "UN Code": "340",
+        "currency_decimal_format": 2,
+        "currency_code": "HNL",
+        "locale": "es_HN"
+    },
+    {
+        "name": "Hong Kong Hong Kong Dollar",
+        "alpha-2": "HK",
+        "alpha-3": "HKD",
+        "UN Code": "344",
+        "currency_decimal_format": 2,
+        "currency_code": "HKD",
+        "locale": "en_HK"
+    },
+    {
+        "name": "Hungary Forint",
+        "alpha-2": "HU",
+        "alpha-3": "HUF",
+        "UN Code": "348",
+        "currency_decimal_format": 2,
+        "currency_code": "HUF",
+        "locale": "hu_HU"
+    },
+    {
+        "name": "Iceland Iceland Krona",
+        "alpha-2": "IS",
+        "alpha-3": "ISK",
+        "UN Code": "352",
+        "currency_decimal_format": 2,
+        "currency_code": "ISK",
+        "locale": "is_IS"
+    },
+    {
+        "name": "India Indian Rupee",
+        "alpha-2": "IN",
+        "alpha-3": "INR",
+        "UN Code": "356",
+        "currency_decimal_format": 2,
+        "currency_code": "INR",
+        "locale": "hi_IN"
+    },
+    {
+        "name": "Indonesia Rupiah",
+        "alpha-2": "ID",
+        "alpha-3": "IDR",
+        "UN Code": "360",
+        "currency_decimal_format": 2,
+        "currency_code": "IDR",
+        "locale": "id_ID"
+    },
+    {
+        "name": "Iran (Islamic Republic Of) Iranian Rial",
+        "alpha-2": "IR",
+        "alpha-3": "IRR",
+        "UN Code": "364",
+        "currency_decimal_format": 2,
+        "currency_code": "IRR",
+        "locale": "fa_IR"
+    },
+    {
+        "name": "Iraq Iraqi Dinar",
+        "alpha-2": "IQ",
+        "alpha-3": "IQD",
+        "UN Code": "368",
+        "currency_decimal_format": 3,
+        "currency_code": "IQD",
+        "locale": "ar_IQ"
+    },
+    {
+        "name": "Jamaica Jamaican Dollar",
+        "alpha-2": "JM",
+        "alpha-3": "JMD",
+        "UN Code": "388",
+        "currency_decimal_format": 2,
+        "currency_code": "JMD",
+        "locale": "en_JM"
+    },
+    {
+        "name": "Japan Yen",
+        "alpha-2": "JP",
+        "alpha-3": "JPY",
+        "UN Code": "392",
+        "currency_decimal_format": 2,
+        "currency_code": "JPY",
+        "locale": "ja_JP"
+    },
+    {
+        "name": "Jordan Jordanian Dinar",
+        "alpha-2": "JO",
+        "alpha-3": "JOD",
+        "UN Code": "400",
+        "currency_decimal_format": 3,
+        "currency_code": "JOD",
+        "locale": "ar_JO"
+    },
+    {
+        "name": "Kazakhstan Tenge",
+        "alpha-2": "KZ",
+        "alpha-3": "KZT",
+        "UN Code": "398",
+        "currency_decimal_format": 2,
+        "currency_code": "KZT",
+        "locale": "kk_Cyrl_KZ"
+    },
+    {
+        "name": "Kenya Kenyan Shilling",
+        "alpha-2": "KE",
+        "alpha-3": "KES",
+        "UN Code": "404",
+        "currency_decimal_format": 2,
+        "currency_code": "KES",
+        "locale": "ebu_KE"
+    },
+    {
+        "name": "Korea, Democratic Peoples Republic Of North Korean Won",
+        "alpha-2": "KP",
+        "alpha-3": "KPW",
+        "UN Code": "408",
+        "currency_decimal_format": 2,
+        "currency_code": "KPW",
+        "locale": "ko"
+    },
+    {
+        "name": "Korea, Republic Of Won",
+        "alpha-2": "KR",
+        "alpha-3": "KRW",
+        "UN Code": "410",
+        "currency_decimal_format": 2,
+        "currency_code": "KRW",
+        "locale": "ko_KR"
+    },
+    {
+        "name": "Kuwait Kuwaiti Dinar",
+        "alpha-2": "KW",
+        "alpha-3": "KWD",
+        "UN Code": "414",
+        "currency_decimal_format": 3,
+        "currency_code": "KWD",
+        "locale": "ar_KW"
+    },
+    {
+        "name": "Kyrgyzstan Som",
+        "alpha-2": "KG",
+        "alpha-3": "KGS",
+        "UN Code": "417",
+        "currency_decimal_format": 2,
+        "currency_code": "KGS",
+        "locale": "ky"
+    },
+    {
+        "name": "Lao Peoples Democratic Republic Kip",
+        "alpha-2": "LA",
+        "alpha-3": "LAK",
+        "UN Code": "418",
+        "currency_decimal_format": 2,
+        "currency_code": "LAK",
+        "locale": "lo"
+    },
+    {
+        "name": "Lebanon Lebanese Pound",
+        "alpha-2": "LB",
+        "alpha-3": "LBP",
+        "UN Code": "422",
+        "currency_decimal_format": 2,
+        "currency_code": "LBP",
+        "locale": "ar_LB"
+    },
+    {
+        "name": "Loti",
+        "alpha-2": "LS",
+        "alpha-3": "LSL",
+        "UN Code": "426",
+        "currency_decimal_format": 2,
+        "currency_code": "LSL",
+        "locale": "en"
+    },
+    {
+        "name": "Liberia Liberian Dollar",
+        "alpha-2": "LR",
+        "alpha-3": "LRD",
+        "UN Code": "430",
+        "currency_decimal_format": 2,
+        "currency_code": "LRD",
+        "locale": "en"
+    },
+    {
+        "name": "Libyan Arab Jamahiriya Libyan Dinar",
+        "alpha-2": "LY",
+        "alpha-3": "LYD",
+        "UN Code": "434",
+        "currency_decimal_format": 3,
+        "currency_code": "LYD",
+        "locale": "ar_LY"
+    },
+    {
+        "name": "Lithuania Lithuanian Litas",
+        "alpha-2": "LT",
+        "alpha-3": "LTL",
+        "UN Code": "440",
+        "currency_decimal_format": 2,
+        "currency_code": "LTL",
+        "locale": "lt_LT"
+    },
+    {
+        "name": "Macau Pataca",
+        "alpha-2": "MO",
+        "alpha-3": "MOP",
+        "UN Code": "446",
+        "currency_decimal_format": 2,
+        "currency_code": "MOP",
+        "locale": "zh_Hans_MO"
+    },
+    {
+        "name": "Macedonia, The Former Yugoslav Republic Of Denar",
+        "alpha-2": "MK",
+        "alpha-3": "MKD",
+        "UN Code": "807",
+        "currency_decimal_format": 2,
+        "currency_code": "MKD",
+        "locale": "mk_MK"
+    },
+    {
+        "name": "Madagascar Malagasy Franc",
+        "alpha-2": "MG",
+        "alpha-3": "MGA",
+        "UN Code": "969",
+        "currency_decimal_format": 2,
+        "currency_code": "MGA",
+        "locale": "fr_MG"
+    },
+    {
+        "name": "Malawi Kwacha",
+        "alpha-2": "MW",
+        "alpha-3": "MWK",
+        "UN Code": "454",
+        "currency_decimal_format": 2,
+        "currency_code": "MWK",
+        "locale": "en"
+    },
+    {
+        "name": "Malaysia Malaysian Ringgit",
+        "alpha-2": "MY",
+        "alpha-3": "MYR",
+        "UN Code": "458",
+        "currency_decimal_format": 2,
+        "currency_code": "MYR",
+        "locale": "ms_MY"
+    },
+    {
+        "name": "Maldives Rufiyaa",
+        "alpha-2": "MV",
+        "alpha-3": "MVR",
+        "UN Code": "462",
+        "currency_decimal_format": 2,
+        "currency_code": "MVR",
+        "locale": "dv"
+    },
+    {
+        "name": "Mauritania Ouguiya",
+        "alpha-2": "MR",
+        "alpha-3": "MRO",
+        "UN Code": "478",
+        "currency_decimal_format": 2,
+        "currency_code": "MRO",
+        "locale": "ar"
+    },
+    {
+        "name": "Mauritius Mauritius Rupee",
+        "alpha-2": "MU",
+        "alpha-3": "MUR",
+        "UN Code": "480",
+        "currency_decimal_format": 2,
+        "currency_code": "MUR",
+        "locale": "en_MU"
+    },
+    {
+        "name": "Mexico Mexican Peso",
+        "alpha-2": "MX",
+        "alpha-3": "MXN",
+        "UN Code": "484",
+        "currency_decimal_format": 2,
+        "currency_code": "MXN",
+        "locale": "es_MX"
+    },
+    {
+        "name": "Moldova, Republic Of Moldovan Leu",
+        "alpha-2": "MD",
+        "alpha-3": "MDL",
+        "UN Code": "498",
+        "currency_decimal_format": 2,
+        "currency_code": "MDL",
+        "locale": "ro_MD"
+    },
+    {
+        "name": "Mongolia Tugrik",
+        "alpha-2": "MN",
+        "alpha-3": "MNT",
+        "UN Code": "496",
+        "currency_decimal_format": 2,
+        "currency_code": "MNT",
+        "locale": "mn"
+    },
+    {
+        "name": "Morocco Moroccan Dirham",
+        "alpha-2": "EH",
+        "alpha-3": "MAD",
+        "UN Code": "504",
+        "currency_decimal_format": 2,
+        "currency_code": "MAD",
+        "locale": "es"
+    },
+    {
+        "name": "Mozambique Metical",
+        "alpha-2": "",
+        "alpha-3": "MZN",
+        "UN Code": "943",
+        "currency_decimal_format": 2,
+        "currency_code": "MZN",
+        "locale": ""
+    },
+    {
+        "name": "Myanmar Kyat",
+        "alpha-2": "MM",
+        "alpha-3": "MMK",
+        "UN Code": "104",
+        "currency_decimal_format": 2,
+        "currency_code": "MMK",
+        "locale": "my_MM"
+    },
+    {
+        "name": "Namibia Dollar",
+        "alpha-2": "NA",
+        "alpha-3": "NAD",
+        "UN Code": "516",
+        "currency_decimal_format": 2,
+        "currency_code": "NAD",
+        "locale": "en_NA"
+    },
+    {
+        "name": "Nepal Nepalese Rupee",
+        "alpha-2": "NP",
+        "alpha-3": "NPR",
+        "UN Code": "524",
+        "currency_decimal_format": 2,
+        "currency_code": "NPR",
+        "locale": "ne_NP"
+    },
+    {
+        "name": "Netherlands Antilles Antillian Guilder",
+        "alpha-2": "AN",
+        "alpha-3": "ANG",
+        "UN Code": "532",
+        "currency_decimal_format": 2,
+        "currency_code": "ANG",
+        "locale": "nl_AN"
+    },
+    {
+        "name": "New Zealand New Zealand Dollar",
+        "alpha-2": "TK",
+        "alpha-3": "NZD",
+        "UN Code": "554",
+        "currency_decimal_format": 2,
+        "currency_code": "NZD",
+        "locale": "en"
+    },
+    {
+        "name": "Nicaragua Cordoba Oro",
+        "alpha-2": "NI",
+        "alpha-3": "NIO",
+        "UN Code": "558",
+        "currency_decimal_format": 2,
+        "currency_code": "NIO",
+        "locale": "es_NI"
+    },
+    {
+        "name": "Nigeria Naira",
+        "alpha-2": "NG",
+        "alpha-3": "NGN",
+        "UN Code": "566",
+        "currency_decimal_format": 2,
+        "currency_code": "NGN",
+        "locale": "ha_Latn_NG"
+    },
+    {
+        "name": "Norway Norwegian Krone",
+        "alpha-2": "SJ",
+        "alpha-3": "NOK",
+        "UN Code": "578",
+        "currency_decimal_format": 2,
+        "currency_code": "NOK",
+        "locale": "no"
+    },
+    {
+        "name": "Oman Rial Omani",
+        "alpha-2": "OM",
+        "alpha-3": "OMR",
+        "UN Code": "512",
+        "currency_decimal_format": 3,
+        "currency_code": "OMR",
+        "locale": "ar_OM"
+    },
+    {
+        "name": "Pakistan Pakistan Rupee",
+        "alpha-2": "PK",
+        "alpha-3": "PKR",
+        "UN Code": "586",
+        "currency_decimal_format": 2,
+        "currency_code": "PKR",
+        "locale": "en_PK"
+    },
+    {
+        "name": "Panama Balboa",
+        "alpha-2": "PA",
+        "alpha-3": "PAB",
+        "UN Code": "590",
+        "currency_decimal_format": 2,
+        "currency_code": "PAB",
+        "locale": "es_PA"
+    },
+    {
+        "name": "Papua New Guinea Kina",
+        "alpha-2": "PG",
+        "alpha-3": "PGK",
+        "UN Code": "598",
+        "currency_decimal_format": 2,
+        "currency_code": "PGK",
+        "locale": "en"
+    },
+    {
+        "name": "Paraguay Guarani",
+        "alpha-2": "PY",
+        "alpha-3": "PYG",
+        "UN Code": "600",
+        "currency_decimal_format": 2,
+        "currency_code": "PYG",
+        "locale": "es_PY"
+    },
+    {
+        "name": "Peru Nuevo Sol",
+        "alpha-2": "PE",
+        "alpha-3": "PEN",
+        "UN Code": "604",
+        "currency_decimal_format": 2,
+        "currency_code": "PEN",
+        "locale": "es_PE"
+    },
+    {
+        "name": "Philippines Philippine Peso",
+        "alpha-2": "PH",
+        "alpha-3": "PHP",
+        "UN Code": "608",
+        "currency_decimal_format": 2,
+        "currency_code": "PHP",
+        "locale": "en_PH"
+    },
+    {
+        "name": "Poland Zloty",
+        "alpha-2": "PL",
+        "alpha-3": "PLN",
+        "UN Code": "985",
+        "currency_decimal_format": 2,
+        "currency_code": "PLN",
+        "locale": "pl_PL"
+    },
+    {
+        "name": "Qatar Qatari Rial",
+        "alpha-2": "QA",
+        "alpha-3": "QAR",
+        "UN Code": "634",
+        "currency_decimal_format": 2,
+        "currency_code": "QAR",
+        "locale": "ar_QA"
+    },
+    {
+        "name": "Romania Leu",
+        "alpha-2": "",
+        "alpha-3": "RON",
+        "UN Code": "946",
+        "currency_decimal_format": 2,
+        "currency_code": "RON",
+        "locale": ""
+    },
+    {
+        "name": "Russian Ruble",
+        "alpha-2": "RU",
+        "alpha-3": "RUB",
+        "UN Code": "643",
+        "currency_decimal_format": 2,
+        "currency_code": "RUB",
+        "locale": "ru_RU"
+    },
+    {
+        "name": "Rwanda Rwanda Franc",
+        "alpha-2": "RW",
+        "alpha-3": "RWF",
+        "UN Code": "646",
+        "currency_decimal_format": 2,
+        "currency_code": "RWF",
+        "locale": "fr_RW"
+    },
+    {
+        "name": "St Helena St Helena Pound",
+        "alpha-2": "SH",
+        "alpha-3": "SHP",
+        "UN Code": "654",
+        "currency_decimal_format": 2,
+        "currency_code": "SHP",
+        "locale": "en"
+    },
+    {
+        "name": "Samoa Tala",
+        "alpha-2": "WS",
+        "alpha-3": "WST",
+        "UN Code": "882",
+        "currency_decimal_format": 2,
+        "currency_code": "WST",
+        "locale": "sm"
+    },
+    {
+        "name": "Sao Tome and Principe Dobra",
+        "alpha-2": "ST",
+        "alpha-3": "STD",
+        "UN Code": "678",
+        "currency_decimal_format": 2,
+        "currency_code": "STD",
+        "locale": "pt"
+    },
+    {
+        "name": "Saudi Arabia Saudi Riyal",
+        "alpha-2": "SA",
+        "alpha-3": "SAR",
+        "UN Code": "682",
+        "currency_decimal_format": 2,
+        "currency_code": "SAR",
+        "locale": "ar_SA"
+    },
+    {
+        "name": "Seychelles Seychelles Rupee",
+        "alpha-2": "SC",
+        "alpha-3": "SCR",
+        "UN Code": "690",
+        "currency_decimal_format": 2,
+        "currency_code": "SCR",
+        "locale": "fr"
+    },
+    {
+        "name": "Sierra Leone Leone",
+        "alpha-2": "SL",
+        "alpha-3": "SLL",
+        "UN Code": "694",
+        "currency_decimal_format": 2,
+        "currency_code": "SLL",
+        "locale": "en"
+    },
+    {
+        "name": "Singapore Singapore Dollar",
+        "alpha-2": "SG",
+        "alpha-3": "SGD",
+        "UN Code": "702",
+        "currency_decimal_format": 2,
+        "currency_code": "SGD",
+        "locale": "en_SG"
+    },
+    {
+        "name": "Solomon Islands Solomon Islands Dollar",
+        "alpha-2": "SB",
+        "alpha-3": "SBD",
+        "UN Code": "90",
+        "currency_decimal_format": 2,
+        "currency_code": "SBD",
+        "locale": "en"
+    },
+    {
+        "name": "Somalia Somali Shilling",
+        "alpha-2": "SO",
+        "alpha-3": "SOS",
+        "UN Code": "706",
+        "currency_decimal_format": 2,
+        "currency_code": "SOS",
+        "locale": "so_SO"
+    },
+    {
+        "name": "South Africa Rand",
+        "alpha-2": "ZA",
+        "alpha-3": "ZAR",
+        "UN Code": "710",
+        "currency_decimal_format": 2,
+        "currency_code": "ZAR",
+        "locale": "af_ZA"
+    },
+    {
+        "name": "Sri Lanka Sri Lanka Rupee",
+        "alpha-2": "LK",
+        "alpha-3": "LKR",
+        "UN Code": "144",
+        "currency_decimal_format": 2,
+        "currency_code": "LKR",
+        "locale": "si_LK"
+    },
+    {
+        "name": "Sudan Sudanese Dinar",
+        "alpha-2": "",
+        "alpha-3": "SDG",
+        "UN Code": "938",
+        "currency_decimal_format": 2,
+        "currency_code": "SDG",
+        "locale": ""
+    },
+    {
+        "name": "Suriname Surinam Guilder",
+        "alpha-2": "SR",
+        "alpha-3": "SRD",
+        "UN Code": "968",
+        "currency_decimal_format": 2,
+        "currency_code": "SRD",
+        "locale": "nl"
+    },
+    {
+        "name": "Swaziland Lilangeni",
+        "alpha-2": "SZ",
+        "alpha-3": "SZL",
+        "UN Code": "748",
+        "currency_decimal_format": 2,
+        "currency_code": "SZL",
+        "locale": "en"
+    },
+    {
+        "name": "Sweden Swedish Krona",
+        "alpha-2": "SE",
+        "alpha-3": "SEK",
+        "UN Code": "752",
+        "currency_decimal_format": 2,
+        "currency_code": "SEK",
+        "locale": "sv_SE"
+    },
+    {
+        "name": "Switzerland Swiss Franc",
+        "alpha-2": "CH",
+        "alpha-3": "CHF",
+        "UN Code": "756",
+        "currency_decimal_format": 2,
+        "currency_code": "CHF",
+        "locale": "fr_CH"
+    },
+    {
+        "name": "Syrian Arab Republic Syrian Pound",
+        "alpha-2": "SY",
+        "alpha-3": "SYP",
+        "UN Code": "760",
+        "currency_decimal_format": 2,
+        "currency_code": "SYP",
+        "locale": "ar_SY"
+    },
+    {
+        "name": "Taiwan, Province Of China New Taiwan Dollar",
+        "alpha-2": "TW",
+        "alpha-3": "TWD",
+        "UN Code": "901",
+        "currency_decimal_format": 2,
+        "currency_code": "TWD",
+        "locale": "zh_Hant_TW"
+    },
+    {
+        "name": "Tajikistan Somoni",
+        "alpha-2": "TJ",
+        "alpha-3": "TJS",
+        "UN Code": "972",
+        "currency_decimal_format": 2,
+        "currency_code": "TJS",
+        "locale": "tg"
+    },
+    {
+        "name": "Tanzania, United Republic Of Tanzanian Shilling",
+        "alpha-2": "TZ",
+        "alpha-3": "TZS",
+        "UN Code": "834",
+        "currency_decimal_format": 2,
+        "currency_code": "TZS",
+        "locale": "asa_TZ"
+    },
+    {
+        "name": "Thailand Baht",
+        "alpha-2": "TH",
+        "alpha-3": "THB",
+        "UN Code": "764",
+        "currency_decimal_format": 2,
+        "currency_code": "THB",
+        "locale": "th_TH"
+    },
+    {
+        "name": "Tonga Paanga",
+        "alpha-2": "TO",
+        "alpha-3": "TOP",
+        "UN Code": "776",
+        "currency_decimal_format": 2,
+        "currency_code": "TOP",
+        "locale": "to_TO"
+    },
+    {
+        "name": "Trinidad and Tobago Trinidad and Tobago Dollar",
+        "alpha-2": "TT",
+        "alpha-3": "TTD",
+        "UN Code": "780",
+        "currency_decimal_format": 2,
+        "currency_code": "TTD",
+        "locale": "en_TT"
+    },
+    {
+        "name": "Tunisia Tunisian Dinar",
+        "alpha-2": "TN",
+        "alpha-3": "TND",
+        "UN Code": "788",
+        "currency_decimal_format": 3,
+        "currency_code": "TND",
+        "locale": "ar_TN"
+    },
+    {
+        "name": "Turkey Turkish Lira",
+        "alpha-2": "",
+        "alpha-3": "TRY",
+        "UN Code": "949",
+        "currency_decimal_format": 2,
+        "currency_code": "TRY",
+        "locale": ""
+    },
+    {
+        "name": "Turkmenistan Manat",
+        "alpha-2": "",
+        "alpha-3": "TMT",
+        "UN Code": "934",
+        "currency_decimal_format": 2,
+        "currency_code": "TMT",
+        "locale": ""
+    },
+    {
+        "name": "Uganda Uganda Shilling",
+        "alpha-2": "UG",
+        "alpha-3": "UGX",
+        "UN Code": "800",
+        "currency_decimal_format": 2,
+        "currency_code": "UGX",
+        "locale": "cgg_UG"
+    },
+    {
+        "name": "Ukraine Hryvnia",
+        "alpha-2": "UA",
+        "alpha-3": "UAH",
+        "UN Code": "980",
+        "currency_decimal_format": 2,
+        "currency_code": "UAH",
+        "locale": "uk_UA"
+    },
+    {
+        "name": "United Arab Emirates Dirham",
+        "alpha-2": "AE",
+        "alpha-3": "AED",
+        "UN Code": "784",
+        "currency_decimal_format": 2,
+        "currency_code": "AED",
+        "locale": "ar_AE"
+    },
+    {
+        "name": "United Kingdom Pound Sterling",
+        "alpha-2": "GB",
+        "alpha-3": "GBP",
+        "UN Code": "826",
+        "currency_decimal_format": 2,
+        "currency_code": "GBP",
+        "locale": "en_GB"
+    },
+    {
+        "name": "Uruguay Peso Uruguayo",
+        "alpha-2": "UY",
+        "alpha-3": "UYU",
+        "UN Code": "858",
+        "currency_decimal_format": 2,
+        "currency_code": "UYU",
+        "locale": "es_UY"
+    },
+    {
+        "name": "Uzbekistan Uzbekistan Sum",
+        "alpha-2": "UZ",
+        "alpha-3": "UZS",
+        "UN Code": "860",
+        "currency_decimal_format": 2,
+        "currency_code": "UZS",
+        "locale": "uz_Cyrl_UZ"
+    },
+    {
+        "name": "Vanuatu Vatu",
+        "alpha-2": "VU",
+        "alpha-3": "VUV",
+        "UN Code": "548",
+        "currency_decimal_format": 2,
+        "currency_code": "VUV",
+        "locale": "bi"
+    },
+    {
+        "name": "Venezuela Bolivar",
+        "alpha-2": "",
+        "alpha-3": "VEF",
+        "UN Code": "937",
+        "currency_decimal_format": 2,
+        "currency_code": "VEF",
+        "locale": ""
+    },
+    {
+        "name": "Vietnam Dong",
+        "alpha-2": "VN",
+        "alpha-3": "VND",
+        "UN Code": "704",
+        "currency_decimal_format": 2,
+        "currency_code": "VND",
+        "locale": "vi_VN"
+    },
+    {
+        "name": "Yemen Yemeni Rial",
+        "alpha-2": "YE",
+        "alpha-3": "YER",
+        "UN Code": "886",
+        "currency_decimal_format": 2,
+        "currency_code": "YER",
+        "locale": "ar_YE"
+    },
+    {
+        "name": "Zambia Kwacha",
+        "alpha-2": "",
+        "alpha-3": "ZMW",
+        "UN Code": "967",
+        "currency_decimal_format": 2,
+        "currency_code": "ZMW",
+        "locale": ""
+    },
+    {
+        "name": "Zimbabwe Zimbabwe Dollar",
+        "alpha-2": "",
+        "alpha-3": "ZWL",
+        "UN Code": "932",
+        "currency_decimal_format": 2,
+        "currency_code": "ZWL",
+        "locale": ""
+    },
+    {
+        "name": "Euro",
+        "alpha-2": "ES",
+        "alpha-3": "EUR",
+        "UN Code": "978",
+        "currency_decimal_format": 2,
+        "currency_code": "EUR",
+        "locale": "es_ES"
+    },
+    {
+        "name": "Bolivia Bolivian Peso",
+        "alpha-2": "BO",
+        "alpha-3": "BOB",
+        "UN Code": "68",
+        "currency_decimal_format": 2,
+        "currency_code": "BOB",
+        "locale": "es_BO"
+    },
+    {
+        "name": "Bolivia Bolivian Mvdol ",
+        "alpha-2": "BO",
+        "alpha-3": "BOV",
+        "UN Code": "984",
+        "currency_decimal_format": 2,
+        "currency_code": "BOV",
+        "locale": "es_BO"
+    },
+    {
+        "name": "Serbia Serbian dinar",
+        "alpha-2": "",
+        "alpha-3": "RSD",
+        "UN Code": "941",
+        "currency_decimal_format": 2,
+        "currency_code": "RSD",
+        "locale": ""
+    },
+    {
+        "name": "Silver (one troy ounce)",
+        "alpha-2": "",
+        "alpha-3": "XAG",
+        "UN Code": "961",
+        "currency_decimal_format": 0,
+        "currency_code": "XAG",
+        "locale": ""
+    },
+    {
+        "name": "Gold (one troy ounce)",
+        "alpha-2": "",
+        "alpha-3": "XAU",
+        "UN Code": "959",
+        "currency_decimal_format": 0,
+        "currency_code": "XAU",
+        "locale": ""
+    },
+    {
+        "name": "Palladium (one troy ounce)",
+        "alpha-2": "",
+        "alpha-3": "XPD",
+        "UN Code": "964",
+        "currency_decimal_format": 0,
+        "currency_code": "XPD",
+        "locale": ""
+    },
+    {
+        "name": "Platinum (one troy ounce)",
+        "alpha-2": "",
+        "alpha-3": "XPT",
+        "UN Code": "962",
+        "currency_decimal_format": 0,
+        "currency_code": "XPT",
+        "locale": ""
+    }
+]

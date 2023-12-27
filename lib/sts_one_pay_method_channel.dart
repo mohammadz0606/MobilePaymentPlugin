@@ -10,6 +10,8 @@ import 'sts_one_pay_platform_interface.dart';
 class MethodChannelStsOnePay extends StsOnePayPlatform {
   final MethodChannel _channel =
       const MethodChannel('samples.flutter.dev/payment');
+  final MethodChannel _channelIOS =
+      const MethodChannel('sts_one_pay');
 
   @override
   Future<void> openPaymentPage(StsOnePay stsOnePay) async {
@@ -20,7 +22,11 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
           stsOnePay.toJson(),
         );
       } else if (Platform.isIOS) {
-        /// implement ios method
+
+        await _channelIOS.invokeMethod(
+          'showPaymentPage',
+          stsOnePay.toJson(),
+        );
       } else {
         /// throw custom error
       }

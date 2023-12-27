@@ -12,6 +12,26 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>NSCameraUsageDescription</key>
+	<string>TYPE_YOUR_REASON_HERE</string>
+	<key>mastercard</key>
+    <dict>
+    <key>dsPublicKey</key>
+    <string>nca_demo_mastercard_encryption.crt</string>
+    <key>dsRootCertificate</key>
+    <string>nca_demo_mastercard_root.crt</string>
+    <key>logoImageName</key>
+    <string>mastercard</string>
+    </dict>
+    <key>visa</key>
+    <dict>
+    <key>dsPublicKey</key>
+    <string>nca_demo_visa_encryption.crt</string>
+    <key>dsRootCertificate</key>
+    <string>nca_demo_visa_root.crt</string>
+    <key>logoImageName</key>
+    <string>visa</string>
+    </dict>
 	<key>CFBundleName</key>
 	<string>sts_one_pay_example</string>
 	<key>CFBundlePackageType</key>
