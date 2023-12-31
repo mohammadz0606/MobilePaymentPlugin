@@ -95,6 +95,13 @@ dependencies {
             implementation.exclude module: 'lifecycle-viewmodel-ktx'
             implementation.exclude module :'kotlin-stdlib-jdk8'
             implementation.exclude group: 'com.google.code.gson', module :'gson'
+            /*
+            implementation.exclude module: 'lifecycle-viewmodel-ktx'
+            implementation.exclude module: 'jetified-kotlin-stdlib'
+            implementation.exclude module :'kotlin-stdlib'
+            //implementation.exclude group: 'org.jetbrains.kotlin'
+            implementation.exclude group: 'com.google.code.gson', module :'gson'
+             */
         }
     }
     //implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
