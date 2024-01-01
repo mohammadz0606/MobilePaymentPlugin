@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 
 import 'models/error_sts_one_pay.dart';
+import 'models/on_delete.dart';
 import 'models/other_api.dart';
 import 'models/payment_page_response.dart';
 import 'sts_one_pay_platform_interface.dart';
@@ -17,6 +18,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   Future<void> openPaymentPage(
     StsOnePay stsOnePay, {
     required Function(StsOnePayResponse result) onResultResponse,
+    required Function(OnDeleteCard onDeleteCard) onDeleteCardResponse,
   }) async {
     try {
       if (Platform.isAndroid) {
@@ -34,6 +36,16 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
               } else {
                 onResultResponse(StsOnePayResponse.fromJsonFailed(data));
               }
+            } catch (e) {
+              log(e.toString());
+              throw Exception('Error in call arguments');
+            }
+          } else if (call.method == "onDeleteCard") {
+            try {
+              Map<String, dynamic> data = Map.castFrom(call.arguments);
+              onDeleteCardResponse(OnDeleteCard.fromJson(data));
+              log('onDeleteCard');
+              log(data.toString());
             } catch (e) {
               log(e.toString());
               throw Exception('Error in call arguments');

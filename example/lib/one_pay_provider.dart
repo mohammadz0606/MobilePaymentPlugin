@@ -47,7 +47,6 @@ class PayOneProvider extends ChangeNotifier {
           tokensText.isNotEmpty ? tokens.map((e) => e.trim()).toList() : [];
       List<String> tokenInSharedPreferences =
           SharedPreferencesApp.getArray(key: 'tokens') ?? [];
-      log.log(tokenInSharedPreferences[0]);
       log.log('len of tokenInSharedPreferences');
       log.log(tokenInSharedPreferences.length.toString());
       await _methodChannelStsOnePay.openPaymentPage(
@@ -69,7 +68,7 @@ class PayOneProvider extends ChangeNotifier {
           log.log(result.token ?? '');
           log.log(result.statusDescription ?? '');
           if (result.saveCard != null) {
-            if(result.saveCard!){
+            if (result.saveCard!) {
               if (result.token != null) {
                 tokens.add(result.token!);
                 if (SharedPreferencesApp.getArray(key: 'tokens') != null) {
@@ -81,6 +80,17 @@ class PayOneProvider extends ChangeNotifier {
                 );
               }
             }
+          }
+        },
+        onDeleteCardResponse: (onDeleteCard) async {
+          if (onDeleteCard.deleted) {
+            List<String> allTokens =
+                SharedPreferencesApp.getArray(key: 'tokens') ?? [];
+            allTokens.remove(onDeleteCard.token);
+            log.log('On Delete Card Example');
+            log.log(allTokens.length.toString());
+            SharedPreferencesApp.remove(key: 'tokens');
+            SharedPreferencesApp.setArray(key: 'tokens', array: allTokens);
           }
         },
       );

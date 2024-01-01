@@ -63,6 +63,14 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
         }
     }
 
+    private fun onDeleteCard(token: String, deleted: Boolean) {
+        val result = mapOf("token" to token, "deleted" to deleted)
+        flutterEngine?.let { engine ->
+            MethodChannel(engine.dartExecutor.binaryMessenger, channel)
+                .invokeMethod("onDeleteCard", result)
+        }
+    }
+
     private fun paymentMethod(params: Map<String, Any>) {
         val request = OpenPaymentRequest()
         request.paymentType = params["paymentType"] as String
@@ -102,6 +110,7 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
 
     override fun onDeleteCardResponse(token: String, deleted: Boolean) {
         Toast.makeText(this, "$token + $deleted", Toast.LENGTH_LONG).show()
+        onDeleteCard(token, deleted)
     }
 
     override fun onPaymentFailed(a: MutableMap<String, String>) {
