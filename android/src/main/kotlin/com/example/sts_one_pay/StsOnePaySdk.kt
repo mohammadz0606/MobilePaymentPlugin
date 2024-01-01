@@ -21,13 +21,13 @@ import io.flutter.plugin.common.MethodChannel
 
 class StsOnePaySdk : FlutterActivity(), PaymentResultListener {
 
-    private val channel = "samples.flutter.dev/payment"
+    private val cannel = "samples.flutter.dev/payment"
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
-            channel
+            cannel
         ).setMethodCallHandler { call, result ->
             when (call.method) {
                 "paymentMethod" -> {
