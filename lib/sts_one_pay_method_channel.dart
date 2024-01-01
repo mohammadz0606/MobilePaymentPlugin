@@ -29,7 +29,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
             try {
               Map<String, dynamic> data = Map.castFrom(call.arguments['data']);
               String status = call.arguments['status'];
-              if (status == 'success') {
+              if (status.toLowerCase() == 'success') {
                 onResultResponse(StsOnePayResponse.fromJsonSuccess(data));
               } else {
                 onResultResponse(StsOnePayResponse.fromJsonFailed(data));
