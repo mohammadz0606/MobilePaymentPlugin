@@ -41,7 +41,10 @@ abstract class StsOnePayErrorHandler {
 
   static bool transactionId(String transactionId) {
     RegExp onlyNumbers = RegExp(r'^\d+$');
-    if (onlyNumbers.hasMatch(transactionId)) {
+    if(transactionId.trim().isEmpty){
+      return true;
+    }
+    else if (!onlyNumbers.hasMatch(transactionId.trim())) {
       throw const ErrorStsOnePay(
         code: 2005,
         message: 'Transaction Id must be integer numbers only',
@@ -72,13 +75,15 @@ abstract class StsOnePayErrorHandler {
         message: 'currency consists of only 3 length',
       );
     }
+
+    /// Entering 3-digits invalid currency code
     return true;
   }
 
   static bool cardsType(List<CardType> cards) {
     if(cards.isEmpty){
       throw const ErrorStsOnePay(
-        code: 2009,
+        code: 20010,
         message: 'You must choose the card types',
       );
     }
