@@ -18,6 +18,7 @@ class StsOnePay {
   final String version;
   final String frameworkInfo;
   final List<CardType> cardsType;
+  final String clientIPaddress;
 
   StsOnePay({
     this.authenticationToken = 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
@@ -35,6 +36,7 @@ class StsOnePay {
     this.paymentDescription = 'Sample Payment',
     this.version = '1.0',
     this.frameworkInfo = 'Android 7.0',
+    this.clientIPaddress = '3.7.21.24',
     this.cardsType = const [
       CardType.mastercard,
       CardType.visa,
@@ -67,6 +69,7 @@ class StsOnePay {
       "paymentDescription": paymentDescription.trim(),
       "version": version,
       "frameworkInfo": frameworkInfo,
+      "clientIPaddress": clientIPaddress,
       "cardsType": cardsType.map<String>((cardType) => cardType.name).toList(),
     };
   }

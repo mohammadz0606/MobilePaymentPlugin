@@ -70,7 +70,7 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
         request.add("AuthenticationToken", params["authenticationToken"] as String)
         request.add("TransactionID", params["transactionId"] as String)
         request.add("MerchantID", params["merchantID"] as String)
-        request.add("ClientIPaddress", "3.7.21.24")
+        request.add("ClientIPaddress", params["clientIPaddress"] as String)
         request.add("Amount", params["amount"] as String)
         request.add("Currency", params["currency"] as String)
         request.add("PaymentDescription", params["paymentDescription"] as String)
@@ -101,7 +101,7 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
     }
 
     override fun onDeleteCardResponse(token: String, deleted: Boolean) {
-        Toast.makeText(this, "$token + $deleted",Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "$token + $deleted", Toast.LENGTH_LONG).show()
     }
 
     override fun onPaymentFailed(a: MutableMap<String, String>) {
