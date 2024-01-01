@@ -3,9 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:sts_one_pay_example/screens/home.dart';
 
+import 'helper/shared_preferences.dart';
 import 'one_pay_provider.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPreferencesApp.init();
   runApp(const ExampleStsOnePay());
 }
 

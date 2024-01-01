@@ -107,9 +107,9 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
     }
 
     override fun onResponse(a: MutableMap<String, String>) {
-        Toast.makeText(this, Gson().toJson(a), Toast.LENGTH_LONG).show()
         val result = mapOf("status" to "success", "data" to a)
         getResult(result)
+        Toast.makeText(this, Gson().toJson(a), Toast.LENGTH_LONG).show()
     }
 
 
@@ -133,11 +133,14 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
             request,
             object : RefundCallback {
                 override fun onResponse(response: RefundResponse) {
+                    val result = mapOf("data" to response)
+                    getResult(result)
                     Toast.makeText(
                         applicationContext,
                         "Response: \n" + Gson().toJson(response),
                         Toast.LENGTH_LONG
                     ).show()
+
                 }
             },
         )
@@ -163,11 +166,14 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
             request,
             object : CompletionCallback {
                 override fun onResponse(response: CompletionResponse) {
+                    val result = mapOf("data" to response)
+                    getResult(result)
                     Toast.makeText(
                         applicationContext,
                         "Response: \n" + Gson().toJson(response),
                         Toast.LENGTH_LONG
                     ).show()
+
                 }
             },
         )
@@ -193,6 +199,8 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
             request,
             object : InquiryCallback {
                 override fun onResponse(response: InquiryResponse) {
+                    val result = mapOf("data" to response)
+                    getResult(result)
                     Toast.makeText(
                         applicationContext,
                         "Response: \n" + Gson().toJson(response),

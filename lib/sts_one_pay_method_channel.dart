@@ -1,10 +1,11 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 
+import 'models/error_sts_one_pay.dart';
 import 'models/other_api.dart';
+import 'models/payment_page_response.dart';
 import 'sts_one_pay_platform_interface.dart';
 
 class MethodChannelStsOnePay extends StsOnePayPlatform {
@@ -12,43 +13,37 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
       const MethodChannel('samples.flutter.dev/payment');
 
   @override
-  Future<Map<String, String>> openPaymentPage(StsOnePay stsOnePay) async {
+  Future<void> openPaymentPage(
+    StsOnePay stsOnePay, {
+    required Function(StsOnePayResponse result) onResultResponse,
+  }) async {
     try {
       if (Platform.isAndroid) {
-        Map<String, String> responseData = {};
         await _channel.invokeMethod(
           'paymentMethod',
           stsOnePay.toJson(),
         );
         _channel.setMethodCallHandler((call) async {
           if (call.method == 'getResult') {
-           try{
-             Map<String, String> data = Map.castFrom(call.arguments['data']);
-             responseData = data;
-             log('data getResult');
-             log(responseData.toString());
-           }catch(e){
-             log('Error in call arguments');
-             throw Exception(e.toString());
-           }
+            Map<String, dynamic> data = Map.castFrom(call.arguments['data']);
+            onResultResponse(StsOnePayResponse.fromJson(data));
           }
         });
-        return responseData;
       } else if (Platform.isIOS) {
         /// implement ios method
-        Map<String, String> responseData = {};
-        return responseData;
       } else {
-        throw PlatformException(code: '0', message: '');
+        throw const ErrorStsOnePay(
+          code: 2011,
+          message: 'Platform Not supports',
+        );
       }
     } on PlatformException catch (e) {
-      log(e.message.toString());
-      throw PlatformException(code: '0', message: '');
+      throw ErrorStsOnePay(
+        code: 2012,
+        message: 'Platform Exception ${e.message}',
+      );
     } catch (e) {
-      log(e.toString());
-
-      /// Edit Exception
-      throw Exception();
+      throw Exception(e.toString());
     }
   }
 
@@ -63,12 +58,18 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
       } else if (Platform.isIOS) {
         /// implement ios method
       } else {
-        /// throw custom error
+        throw const ErrorStsOnePay(
+          code: 2011,
+          message: 'Platform Not supports',
+        );
       }
     } on PlatformException catch (e) {
-      log(e.message.toString());
+      throw ErrorStsOnePay(
+        code: 2012,
+        message: 'Platform Exception ${e.message}',
+      );
     } catch (e) {
-      log(e.toString());
+      throw Exception(e.toString());
     }
   }
 
@@ -83,12 +84,18 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
       } else if (Platform.isIOS) {
         /// implement ios method
       } else {
-        /// throw custom error
+        throw const ErrorStsOnePay(
+          code: 2011,
+          message: 'Platform Not supports',
+        );
       }
     } on PlatformException catch (e) {
-      log(e.message.toString());
+      throw ErrorStsOnePay(
+        code: 2012,
+        message: 'Platform Exception ${e.message}',
+      );
     } catch (e) {
-      log(e.toString());
+      throw Exception(e.toString());
     }
   }
 
@@ -103,12 +110,22 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
       } else if (Platform.isIOS) {
         /// implement ios method
       } else {
-        /// throw custom error
+        throw const ErrorStsOnePay(
+          code: 2011,
+          message: 'Platform Not supports',
+        );
       }
     } on PlatformException catch (e) {
-      log(e.message.toString());
+      throw ErrorStsOnePay(
+        code: 2012,
+        message: 'Platform Exception ${e.message}',
+      );
     } catch (e) {
-      log(e.toString());
+      throw Exception(e.toString());
     }
   }
 }
+/*
+                      log(e.toString());
+                throw Exception('Error in call arguments');
+       */

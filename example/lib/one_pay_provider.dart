@@ -42,7 +42,7 @@ class PayOneProvider extends ChangeNotifier {
   }) async {
     try {
       List<String> tokens = tokensText.split(',');
-      await _methodChannelStsOnePay.openPaymentPage(
+          await _methodChannelStsOnePay.openPaymentPage(
         StsOnePay(
           amount: amount,
           tokens:
@@ -57,6 +57,10 @@ class PayOneProvider extends ChangeNotifier {
           paymentType: selectedPaymentTypeTypeValue,
           cardsType: cardsSelected,
         ),
+            onResultResponse: (result) {
+              log.log('Card Token 2');
+              log.log(result.token!.toString());
+            },
       );
     } on ErrorStsOnePay catch (e) {
       log.log(e.code.toString());

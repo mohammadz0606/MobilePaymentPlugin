@@ -83,7 +83,7 @@ abstract class StsOnePayErrorHandler {
   static bool cardsType(List<CardType> cards) {
     if(cards.isEmpty){
       throw const ErrorStsOnePay(
-        code: 20010,
+        code: 2010,
         message: 'You must choose the card types',
       );
     }

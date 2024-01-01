@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 
 import 'models/other_api.dart';
+import 'models/payment_page_response.dart';
 
 abstract class StsOnePayPlatform {
   static String generateTransactionId() {
@@ -11,7 +12,10 @@ abstract class StsOnePayPlatform {
     return (timestamp + random).toString();
   }
 
-  Future<Map<String, String>> openPaymentPage(StsOnePay stsOnePay);
+  Future<void> openPaymentPage(
+    StsOnePay stsOnePay, {
+    required Function(StsOnePayResponse result) onResultResponse,
+  });
 
   Future<void> refund(OtherAPI otherAPI);
 
