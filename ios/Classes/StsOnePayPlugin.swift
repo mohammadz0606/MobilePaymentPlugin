@@ -10,25 +10,25 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 
-  public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-          if call.method == "showPaymentPage" {
-          let paymentResult = MobilePaymentSDK.showPaymentPage()
+//   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+//           if call.method == "showPaymentPage" {
+//           let paymentResult = MobilePaymentSDK.showPaymentPage()
+//
+// //             let arg1 = call.arguments as? <String,Any>
+//               // Handle the method call and send a result back to Flutter
+//               let nativeResult = "Result from native method"
+//               result(arg1)
+//           } else {
+//               result(FlutterMethodNotImplemented)
+//           }
+//       }
 
-//             let arg1 = call.arguments as? <String,Any>
-              // Handle the method call and send a result back to Flutter
-              let nativeResult = "Result from native method"
-              result(arg1)
-          } else {
-              result(FlutterMethodNotImplemented)
-          }
-      }
-
-  public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-    switch call.method {
-    case "getPlatformVersion":
-      result("iOS " + UIDevice.current.systemVersion)
-    default:
-      result(FlutterMethodNotImplemented)
-    }
-  }
+//   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+//     switch call.method {
+//     case "getPlatformVersion":
+//       result("iOS " + UIDevice.current.systemVersion)
+//     default:
+//       result(FlutterMethodNotImplemented)
+//     }
+//   }
 }

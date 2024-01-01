@@ -12952,6 +12952,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -15293,6 +15300,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -17906,6 +17920,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -19017,9 +19038,11 @@
                 "mangledName": "$s16MobilePaymentSDK13ImageAnalyzerC7requestSo22VNRecognizeTextRequestCvM",
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
+                "intro_iOS": "13",
                 "declAttributes": [
                   "Transparent",
-                  "Final"
+                  "Final",
+                  "Available"
                 ],
                 "accessorKind": "_modify"
               }
@@ -19294,9 +19317,11 @@
                 "mangledName": "$s16MobilePaymentSDK13ImageAnalyzerC14requestHandlerySo9VNRequestC_s5Error_pSgtcSgvM",
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
+                "intro_iOS": "13",
                 "declAttributes": [
                   "Transparent",
-                  "Final"
+                  "Final",
+                  "Available"
                 ],
                 "accessorKind": "_modify"
               }
@@ -22515,6 +22540,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
@@ -23099,6 +23131,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -28111,6 +28150,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -28976,8 +29022,10 @@
                 "mangledName": "$s16MobilePaymentSDK10CameraViewC8delegateAA0dE8Delegate_pSgvM",
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
+                "intro_iOS": "13",
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "Available"
                 ],
                 "accessorKind": "_modify"
               }
@@ -29620,6 +29668,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -30165,6 +30220,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -31183,6 +31245,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -40331,6 +40400,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -41973,6 +42049,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -46121,6 +46204,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -49016,6 +49106,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Sendable",
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
@@ -49981,6 +50078,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -50249,6 +50353,10 @@
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
                 "isOpen": true,
+                "intro_iOS": "13",
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -50340,6 +50448,10 @@
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
                 "isOpen": true,
+                "intro_iOS": "13",
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -50431,6 +50543,10 @@
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
                 "isOpen": true,
+                "intro_iOS": "13",
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -50522,6 +50638,10 @@
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
                 "isOpen": true,
+                "intro_iOS": "13",
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -50613,6 +50733,10 @@
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
                 "isOpen": true,
+                "intro_iOS": "13",
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -50704,6 +50828,10 @@
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
                 "isOpen": true,
+                "intro_iOS": "13",
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -50795,6 +50923,10 @@
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
                 "isOpen": true,
+                "intro_iOS": "13",
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -50886,6 +51018,10 @@
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
                 "isOpen": true,
+                "intro_iOS": "13",
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -50977,6 +51113,10 @@
                 "moduleName": "MobilePaymentSDK",
                 "implicit": true,
                 "isOpen": true,
+                "intro_iOS": "13",
+                "declAttributes": [
+                  "Available"
+                ],
                 "accessorKind": "_modify"
               }
             ]
@@ -51302,6 +51442,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -52949,6 +53096,1978 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MobilePaymentSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MobilePaymentSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "MobilePaymentSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "MobilePaymentSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ColorResource",
+        "printedName": "ColorResource",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ColorResourceV4name33_CEC932EF63B60D4764F0DA0655B45B43LLSSvp",
+            "mangledName": "$s16MobilePaymentSDK13ColorResourceV4name33_CEC932EF63B60D4764F0DA0655B45B43LLSSvp",
+            "moduleName": "MobilePaymentSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "bundle",
+            "printedName": "bundle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ColorResourceV6bundle33_CEC932EF63B60D4764F0DA0655B45B43LLSo8NSBundleCvp",
+            "mangledName": "$s16MobilePaymentSDK13ColorResourceV6bundle33_CEC932EF63B60D4764F0DA0655B45B43LLSo8NSBundleCvp",
+            "moduleName": "MobilePaymentSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 1,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ColorResource",
+                "printedName": "MobilePaymentSDK.ColorResource",
+                "usr": "s:16MobilePaymentSDK13ColorResourceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16MobilePaymentSDK13ColorResourceV4name6bundleACSS_So8NSBundleCtcfc",
+            "mangledName": "$s16MobilePaymentSDK13ColorResourceV4name6bundleACSS_So8NSBundleCtcfc",
+            "moduleName": "MobilePaymentSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ColorResourceV9hashValueSivp",
+            "mangledName": "$s16MobilePaymentSDK13ColorResourceV9hashValueSivp",
+            "moduleName": "MobilePaymentSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ColorResourceV9hashValueSivg",
+                "mangledName": "$s16MobilePaymentSDK13ColorResourceV9hashValueSivg",
+                "moduleName": "MobilePaymentSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16MobilePaymentSDK13ColorResourceV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16MobilePaymentSDK13ColorResourceV4hash4intoys6HasherVz_tF",
+            "moduleName": "MobilePaymentSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ColorResource",
+                "printedName": "MobilePaymentSDK.ColorResource",
+                "usr": "s:16MobilePaymentSDK13ColorResourceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ColorResource",
+                "printedName": "MobilePaymentSDK.ColorResource",
+                "usr": "s:16MobilePaymentSDK13ColorResourceV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16MobilePaymentSDK13ColorResourceV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16MobilePaymentSDK13ColorResourceV2eeoiySbAC_ACtFZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "lightGray",
+            "printedName": "lightGray",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ColorResource",
+                "printedName": "MobilePaymentSDK.ColorResource",
+                "usr": "s:16MobilePaymentSDK13ColorResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ColorResourceV9lightGrayACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ColorResourceV9lightGrayACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ColorResource",
+                    "printedName": "MobilePaymentSDK.ColorResource",
+                    "usr": "s:16MobilePaymentSDK13ColorResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ColorResourceV9lightGrayACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ColorResourceV9lightGrayACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16MobilePaymentSDK13ColorResourceV",
+        "mangledName": "$s16MobilePaymentSDK13ColorResourceV",
+        "moduleName": "MobilePaymentSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ImageResource",
+        "printedName": "ImageResource",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV4name33_CEC932EF63B60D4764F0DA0655B45B43LLSSvp",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV4name33_CEC932EF63B60D4764F0DA0655B45B43LLSSvp",
+            "moduleName": "MobilePaymentSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "bundle",
+            "printedName": "bundle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV6bundle33_CEC932EF63B60D4764F0DA0655B45B43LLSo8NSBundleCvp",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV6bundle33_CEC932EF63B60D4764F0DA0655B45B43LLSo8NSBundleCvp",
+            "moduleName": "MobilePaymentSDK",
+            "isInternal": true,
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 1,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV4name6bundleACSS_So8NSBundleCtcfc",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV4name6bundleACSS_So8NSBundleCtcfc",
+            "moduleName": "MobilePaymentSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV9hashValueSivp",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV9hashValueSivp",
+            "moduleName": "MobilePaymentSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV9hashValueSivg",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV9hashValueSivg",
+                "moduleName": "MobilePaymentSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV4hash4intoys6HasherVz_tF",
+            "moduleName": "MobilePaymentSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV2eeoiySbAC_ACtFZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "cancel",
+            "printedName": "cancel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV6cancelACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV6cancelACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV6cancelACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV6cancelACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cancelDark",
+            "printedName": "cancelDark",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV10cancelDarkACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV10cancelDarkACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV10cancelDarkACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV10cancelDarkACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "addCard",
+            "printedName": "addCard",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV7addCardACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV7addCardACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV7addCardACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV7addCardACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "applepay",
+            "printedName": "applepay",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV8applepayACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV8applepayACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV8applepayACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV8applepayACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icAmex",
+            "printedName": "icAmex",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV6icAmexACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV6icAmexACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV6icAmexACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV6icAmexACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icAmexBottom",
+            "printedName": "icAmexBottom",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV12icAmexBottomACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV12icAmexBottomACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV12icAmexBottomACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV12icAmexBottomACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icBack",
+            "printedName": "icBack",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV6icBackACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV6icBackACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV6icBackACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV6icBackACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icBackReverse",
+            "printedName": "icBackReverse",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV13icBackReverseACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV13icBackReverseACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV13icBackReverseACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV13icBackReverseACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icBin",
+            "printedName": "icBin",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV5icBinACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV5icBinACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV5icBinACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV5icBinACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icBottomCircles",
+            "printedName": "icBottomCircles",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV15icBottomCirclesACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV15icBottomCirclesACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV15icBottomCirclesACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV15icBottomCirclesACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icCamera",
+            "printedName": "icCamera",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV8icCameraACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV8icCameraACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV8icCameraACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV8icCameraACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icCardsGray",
+            "printedName": "icCardsGray",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV11icCardsGrayACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV11icCardsGrayACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV11icCardsGrayACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV11icCardsGrayACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icDiners",
+            "printedName": "icDiners",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV8icDinersACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV8icDinersACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV8icDinersACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV8icDinersACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icDiscovery",
+            "printedName": "icDiscovery",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV11icDiscoveryACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV11icDiscoveryACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV11icDiscoveryACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV11icDiscoveryACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icErrorCircle",
+            "printedName": "icErrorCircle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV13icErrorCircleACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV13icErrorCircleACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV13icErrorCircleACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV13icErrorCircleACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icErrorTriangle",
+            "printedName": "icErrorTriangle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV15icErrorTriangleACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV15icErrorTriangleACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV15icErrorTriangleACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV15icErrorTriangleACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icJcb",
+            "printedName": "icJcb",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV5icJcbACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV5icJcbACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV5icJcbACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV5icJcbACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icLock",
+            "printedName": "icLock",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV6icLockACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV6icLockACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV6icLockACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV6icLockACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icMada",
+            "printedName": "icMada",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV6icMadaACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV6icMadaACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV6icMadaACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV6icMadaACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icMastercard",
+            "printedName": "icMastercard",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV12icMastercardACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV12icMastercardACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV12icMastercardACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV12icMastercardACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icMastercardBottom",
+            "printedName": "icMastercardBottom",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV18icMastercardBottomACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV18icMastercardBottomACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV18icMastercardBottomACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV18icMastercardBottomACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icPaymentFailure",
+            "printedName": "icPaymentFailure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV02icB7FailureACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV02icB7FailureACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV02icB7FailureACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV02icB7FailureACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icPaymentSuccess",
+            "printedName": "icPaymentSuccess",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV02icB7SuccessACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV02icB7SuccessACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV02icB7SuccessACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV02icB7SuccessACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icSpinner",
+            "printedName": "icSpinner",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV9icSpinnerACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV9icSpinnerACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV9icSpinnerACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV9icSpinnerACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icTopCircles",
+            "printedName": "icTopCircles",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV12icTopCirclesACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV12icTopCirclesACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV12icTopCirclesACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV12icTopCirclesACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icUnion",
+            "printedName": "icUnion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV7icUnionACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV7icUnionACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV7icUnionACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV7icUnionACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icVisa",
+            "printedName": "icVisa",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV6icVisaACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV6icVisaACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV6icVisaACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV6icVisaACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "icVisaBottom",
+            "printedName": "icVisaBottom",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16MobilePaymentSDK13ImageResourceV12icVisaBottomACvpZ",
+            "mangledName": "$s16MobilePaymentSDK13ImageResourceV12icVisaBottomACvpZ",
+            "moduleName": "MobilePaymentSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImageResource",
+                    "printedName": "MobilePaymentSDK.ImageResource",
+                    "usr": "s:16MobilePaymentSDK13ImageResourceV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV12icVisaBottomACvgZ",
+                "mangledName": "$s16MobilePaymentSDK13ImageResourceV12icVisaBottomACvgZ",
+                "moduleName": "MobilePaymentSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Transparent"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16MobilePaymentSDK13ImageResourceV",
+        "mangledName": "$s16MobilePaymentSDK13ImageResourceV",
+        "moduleName": "MobilePaymentSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "Array",
         "printedName": "Array",
@@ -53576,48 +55695,39 @@
           },
           {
             "kind": "Conformance",
-            "name": "DataProtocol",
-            "printedName": "DataProtocol",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "Regions",
-                "printedName": "Regions",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "CollectionOfOne",
-                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.UInt8]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:s15CollectionOfOneV"
+                    "name": "NSArray",
+                    "printedName": "Foundation.NSArray",
+                    "usr": "c:objc(cs)NSArray"
                   }
                 ]
               }
             ],
-            "usr": "s:10Foundation12DataProtocolP",
-            "mangledName": "$s10Foundation12DataProtocolP"
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
           },
           {
             "kind": "Conformance",
-            "name": "MutableDataProtocol",
-            "printedName": "MutableDataProtocol",
-            "usr": "s:10Foundation19MutableDataProtocolP",
-            "mangledName": "$s10Foundation19MutableDataProtocolP"
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ContiguousBytes",
+            "printedName": "ContiguousBytes",
+            "usr": "s:10Foundation15ContiguousBytesP",
+            "mangledName": "$s10Foundation15ContiguousBytesP"
           },
           {
             "kind": "Conformance",
@@ -53663,39 +55773,48 @@
           },
           {
             "kind": "Conformance",
-            "name": "_ObjectiveCBridgeable",
-            "printedName": "_ObjectiveCBridgeable",
+            "name": "DataProtocol",
+            "printedName": "DataProtocol",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "_ObjectiveCType",
-                "printedName": "_ObjectiveCType",
+                "name": "Regions",
+                "printedName": "Regions",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "NSArray",
-                    "printedName": "Foundation.NSArray",
-                    "usr": "c:objc(cs)NSArray"
+                    "name": "CollectionOfOne",
+                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.UInt8]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt8",
+                            "printedName": "Swift.UInt8",
+                            "usr": "s:s5UInt8V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:s15CollectionOfOneV"
                   }
                 ]
               }
             ],
-            "usr": "s:s21_ObjectiveCBridgeableP",
-            "mangledName": "$ss21_ObjectiveCBridgeableP"
+            "usr": "s:10Foundation12DataProtocolP",
+            "mangledName": "$s10Foundation12DataProtocolP"
           },
           {
             "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ContiguousBytes",
-            "printedName": "ContiguousBytes",
-            "usr": "s:10Foundation15ContiguousBytesP",
-            "mangledName": "$s10Foundation15ContiguousBytesP"
+            "name": "MutableDataProtocol",
+            "printedName": "MutableDataProtocol",
+            "usr": "s:10Foundation19MutableDataProtocolP",
+            "mangledName": "$s10Foundation19MutableDataProtocolP"
           }
         ]
       },
@@ -54592,6 +56711,41 @@
             "printedName": "CVarArg",
             "usr": "s:s7CVarArgP",
             "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sendable",
+                        "printedName": "Swift.Sendable",
+                        "usr": "s:s8SendableP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       },
@@ -54624,33 +56778,19 @@
         "usr": "s:10Foundation4DataV",
         "mangledName": "$s10Foundation4DataV",
         "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
         "declAttributes": [
-          "Frozen"
+          "Frozen",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
         ],
         "isExternal": true,
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "ReferenceConvertible",
-            "printedName": "ReferenceConvertible",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ReferenceType",
-                "printedName": "ReferenceType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSData",
-                    "printedName": "Foundation.NSData",
-                    "usr": "c:objc(cs)NSData"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:10Foundation20ReferenceConvertibleP",
-            "mangledName": "$s10Foundation20ReferenceConvertibleP"
-          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -55043,24 +57183,25 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomReflectable",
-            "printedName": "CustomReflectable",
-            "usr": "s:s17CustomReflectableP",
-            "mangledName": "$ss17CustomReflectableP"
+            "name": "ReferenceConvertible",
+            "printedName": "ReferenceConvertible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReferenceType",
+                "printedName": "ReferenceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSData",
+                    "printedName": "Foundation.NSData",
+                    "usr": "c:objc(cs)NSData"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation20ReferenceConvertibleP",
+            "mangledName": "$s10Foundation20ReferenceConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -55086,6 +57227,27 @@
           },
           {
             "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -55097,6 +57259,41 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sendable",
+                        "printedName": "Swift.Sendable",
+                        "usr": "s:s8SendableP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       },
@@ -55129,36 +57326,31 @@
         "usr": "s:10Foundation4DateV",
         "mangledName": "$s10Foundation4DateV",
         "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
         "isExternal": true,
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "ReferenceConvertible",
-            "printedName": "ReferenceConvertible",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ReferenceType",
-                "printedName": "ReferenceType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NSDate",
-                    "printedName": "Foundation.NSDate",
-                    "usr": "c:objc(cs)NSDate"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:10Foundation20ReferenceConvertibleP",
-            "mangledName": "$s10Foundation20ReferenceConvertibleP"
-          },
           {
             "kind": "Conformance",
             "name": "Comparable",
             "printedName": "Comparable",
             "usr": "s:SL",
             "mangledName": "$sSL"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           },
           {
             "kind": "Conformance",
@@ -55173,35 +57365,6 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Strideable",
-            "printedName": "Strideable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Stride",
-                "printedName": "Stride",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Double",
-                    "printedName": "Swift.Double",
-                    "usr": "s:Sd"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:Sx",
-            "mangledName": "$sSx"
           },
           {
             "kind": "Conformance",
@@ -55223,6 +57386,42 @@
             "printedName": "CustomReflectable",
             "usr": "s:s17CustomReflectableP",
             "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReferenceConvertible",
+            "printedName": "ReferenceConvertible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReferenceType",
+                "printedName": "ReferenceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDate",
+                    "printedName": "Foundation.NSDate",
+                    "usr": "c:objc(cs)NSDate"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation20ReferenceConvertibleP",
+            "mangledName": "$s10Foundation20ReferenceConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -55255,17 +57454,25 @@
           },
           {
             "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
+            "name": "Strideable",
+            "printedName": "Strideable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Stride",
+                "printedName": "Stride",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:Sx",
+            "mangledName": "$sSx"
           }
         ]
       },
@@ -55373,6 +57580,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           }
         ]
       },
@@ -55607,6 +57821,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -55715,6 +57936,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -55829,6 +58057,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "__DefaultCustomPlaygroundQuickLookable",
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
@@ -55880,6 +58115,35 @@
             "moduleName": "MobilePaymentSDK",
             "declAttributes": [
               "Convenience"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(resource:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ColorResource",
+                "printedName": "MobilePaymentSDK.ColorResource",
+                "usr": "s:16MobilePaymentSDK13ColorResourceV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:So7UIColorC16MobilePaymentSDKE8resourceAbC13ColorResourceV_tcfc",
+            "mangledName": "$sSo7UIColorC16MobilePaymentSDKE8resourceAbC13ColorResourceV_tcfc",
+            "moduleName": "MobilePaymentSDK",
+            "declAttributes": [
+              "Convenience",
+              "RawDocComment"
             ],
             "isFromExtension": true,
             "init_kind": "Convenience"
@@ -56434,6 +58698,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -57146,6 +59417,70 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Animatable",
+            "printedName": "Animatable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AnimatableData",
+                "printedName": "AnimatableData",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimatablePair",
+                    "printedName": "SwiftUI.AnimatablePair<SwiftUI.AnimatablePair<CoreGraphics.CGFloat, CoreGraphics.CGFloat>, SwiftUI.AnimatablePair<CoreGraphics.CGFloat, CoreGraphics.CGFloat>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimatablePair",
+                        "printedName": "SwiftUI.AnimatablePair<CoreGraphics.CGFloat, CoreGraphics.CGFloat>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ],
+                        "usr": "s:7SwiftUI14AnimatablePairV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimatablePair",
+                        "printedName": "SwiftUI.AnimatablePair<CoreGraphics.CGFloat, CoreGraphics.CGFloat>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGFloat",
+                            "printedName": "CoreGraphics.CGFloat",
+                            "usr": "s:14CoreFoundation7CGFloatV"
+                          }
+                        ],
+                        "usr": "s:7SwiftUI14AnimatablePairV"
+                      }
+                    ],
+                    "usr": "s:7SwiftUI14AnimatablePairV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI10AnimatableP",
+            "mangledName": "$s7SwiftUI10AnimatableP"
           }
         ]
       },
@@ -57295,6 +59630,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
           },
           {
             "kind": "Conformance",
@@ -58162,6 +60504,411 @@
             ],
             "usr": "s:s25ExpressibleByArrayLiteralP",
             "mangledName": "$ss25ExpressibleByArrayLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIImage",
+        "printedName": "UIImage",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(resource:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:So7UIImageC16MobilePaymentSDKE8resourceAbC13ImageResourceV_tcfc",
+            "mangledName": "$sSo7UIImageC16MobilePaymentSDKE8resourceAbC13ImageResourceV_tcfc",
+            "moduleName": "MobilePaymentSDK",
+            "declAttributes": [
+              "Convenience",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Convenience"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIImage",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIImage",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByImageLiteral",
+            "printedName": "_ExpressibleByImageLiteral",
+            "usr": "s:s26_ExpressibleByImageLiteralP",
+            "mangledName": "$ss26_ExpressibleByImageLiteralP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Color",
+        "printedName": "Color",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Color",
+                "printedName": "SwiftUI.Color",
+                "usr": "s:7SwiftUI5ColorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ColorResource",
+                "printedName": "MobilePaymentSDK.ColorResource",
+                "usr": "s:16MobilePaymentSDK13ColorResourceV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7SwiftUI5ColorV16MobilePaymentSDKEyAcD0C8ResourceVcfc",
+            "mangledName": "$s7SwiftUI5ColorV16MobilePaymentSDKEyAcD0C8ResourceVcfc",
+            "moduleName": "MobilePaymentSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7SwiftUI5ColorV",
+        "mangledName": "$s7SwiftUI5ColorV",
+        "moduleName": "SwiftUI",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Frozen",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sendable",
+                        "printedName": "Swift.Sendable",
+                        "usr": "s:s8SendableP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ShapeStyle",
+            "printedName": "ShapeStyle",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Resolved",
+                "printedName": "Resolved",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resolved",
+                    "printedName": "SwiftUI.Color.Resolved",
+                    "usr": "s:7SwiftUI5ColorV8ResolvedV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI10ShapeStyleP",
+            "mangledName": "$s7SwiftUI10ShapeStyleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Image",
+        "printedName": "Image",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Image",
+                "printedName": "SwiftUI.Image",
+                "usr": "s:7SwiftUI5ImageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImageResource",
+                "printedName": "MobilePaymentSDK.ImageResource",
+                "usr": "s:16MobilePaymentSDK13ImageResourceV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7SwiftUI5ImageV16MobilePaymentSDKEyAcD0C8ResourceVcfc",
+            "mangledName": "$s7SwiftUI5ImageV16MobilePaymentSDKEyAcD0C8ResourceVcfc",
+            "moduleName": "MobilePaymentSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:7SwiftUI5ImageV",
+        "mangledName": "$s7SwiftUI5ImageV",
+        "moduleName": "SwiftUI",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Frozen",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Transferable",
+            "printedName": "Transferable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Representation",
+                "printedName": "Representation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some CoreTransferable.TransferRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TransferRepresentation",
+                        "printedName": "CoreTransferable.TransferRepresentation",
+                        "usr": "s:16CoreTransferable22TransferRepresentationP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Sendable",
+                        "printedName": "Swift.Sendable",
+                        "usr": "s:s8SendableP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:16CoreTransferable0B0P",
+            "mangledName": "$s16CoreTransferable0B0P"
           }
         ]
       }
@@ -59369,21 +62116,21 @@
     {
       "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/MobilePaymentSDK\/Project\/PaymentDetialsEnter\/Card Details\/EnterCardDetailsDataController.swift",
       "kind": "IntegerLiteral",
-      "offset": 18083,
+      "offset": 18200,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/MobilePaymentSDK\/Project\/PaymentDetialsEnter\/Card Details\/EnterCardDetailsDataController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26344,
+      "offset": 26461,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/MobilePaymentSDK\/Project\/PaymentDetialsEnter\/Card Details\/EnterCardDetailsDataController.swift",
       "kind": "IntegerLiteral",
-      "offset": 35625,
+      "offset": 35742,
       "length": 1,
       "value": "1"
     },
@@ -59960,6 +62707,209 @@
       "offset": 4212,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 627,
+      "length": 12,
+      "value": "\"light-gray\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 866,
+      "length": 8,
+      "value": "\"Cancel\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1004,
+      "length": 12,
+      "value": "\"CancelDark\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1141,
+      "length": 10,
+      "value": "\"add_card\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1277,
+      "length": 10,
+      "value": "\"applepay\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1410,
+      "length": 9,
+      "value": "\"ic_amex\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1555,
+      "length": 16,
+      "value": "\"ic_amex_bottom\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1694,
+      "length": 9,
+      "value": "\"ic_back\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1841,
+      "length": 17,
+      "value": "\"ic_back_reverse\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1979,
+      "length": 8,
+      "value": "\"ic_bin\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2129,
+      "length": 19,
+      "value": "\"ic_bottom_circles\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2275,
+      "length": 11,
+      "value": "\"ic_camera\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2420,
+      "length": 15,
+      "value": "\"ic_cards_gray\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2562,
+      "length": 11,
+      "value": "\"ic_diners\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2706,
+      "length": 14,
+      "value": "\"ic_discovery\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2858,
+      "length": 17,
+      "value": "\"ic_error_circle\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3017,
+      "length": 19,
+      "value": "\"ic_error_triangle\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3157,
+      "length": 8,
+      "value": "\"ic_jcb\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3288,
+      "length": 9,
+      "value": "\"ic_lock\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3420,
+      "length": 9,
+      "value": "\"ic_mada\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3564,
+      "length": 15,
+      "value": "\"ic_mastercard\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3727,
+      "length": 22,
+      "value": "\"ic_mastercard_bottom\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 3893,
+      "length": 20,
+      "value": "\"ic_payment_failure\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4057,
+      "length": 20,
+      "value": "\"ic_payment_success\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4206,
+      "length": 12,
+      "value": "\"ic_spinner\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4354,
+      "length": 16,
+      "value": "\"ic_top_circles\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4495,
+      "length": 10,
+      "value": "\"ic_union\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4628,
+      "length": 9,
+      "value": "\"ic_visa\""
+    },
+    {
+      "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/build\/MobilePaymentSDK.build\/Debug-iphonesimulator\/MobilePaymentSDK.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 4773,
+      "length": 16,
+      "value": "\"ic_visa_bottom\""
     }
   ]
 }

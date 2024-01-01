@@ -16,8 +16,8 @@ A new Flutter project.
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '11.0'
-    s.source           = { :path => 'https://github.com/CocoaPods/Specs.git' }
-  s.dependency 'MobilePaymentSDK-iOS'
+#     s.source           = { :path => 'https://github.com/CocoaPods/Specs.git' }
+#   s.dependency 'MobilePaymentSDK-iOS'
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
@@ -25,5 +25,12 @@ A new Flutter project.
  # s.preserve_paths = 'MobilePaymentSDK.framework'
  # s.xcconfig = { 'OTHER_LDFLAGS' => '-framework MobilePaymentSDK' }
  # s.vendored_frameworks = 'MobilePaymentSDK.framework'
-
+ s.preserve_paths = 'ThreeDS_SDK.xcframework'
+ s.xcconfig = { 'OTHER_LDFLAGS' => '-framework ThreeDS_SDK' }
+ s.vendored_frameworks = 'ThreeDS_SDK.xcframework'
+ s.public_header_files = 'Classes/**/*.h'
+  # s.preserve_paths = 'MobilePaymentSDK.framework'
+  # s.xcconfig = { 'OTHER_LDFLAGS' => '-framework MobilePaymentSDK' }
+  # s.vendored_frameworks = 'MobilePaymentSDK.framework'
+    s.static_framework = true
 end
