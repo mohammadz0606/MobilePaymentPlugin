@@ -1,12 +1,12 @@
 class StsOnePayResponse {
-  final String amount;
+  final String? amount;
   final int? approvalCode;
   final String? cardNumber;
-  final String currencyISOCode;
+  final String? currencyISOCode;
   final String? gatewayName;
   final int? gatewayStatusCode;
   final String? gatewayStatusDescription;
-  final String merchantID;
+  final String? merchantID;
   final int? messageID;
   final int? paymentMethod;
   final int? rrn;
@@ -14,32 +14,32 @@ class StsOnePayResponse {
   final int? statusCode;
   final String? statusDescription;
   final String? token;
-  final String transactionID;
+  final String? transactionID;
   final String? responseHashMatch;
-  final bool saveCard;
+  final bool? saveCard;
 
   const StsOnePayResponse({
-    required this.amount,
-    required this.approvalCode,
-    required this.cardNumber,
-    required this.currencyISOCode,
-    required this.gatewayName,
-    required this.gatewayStatusCode,
-    required this.gatewayStatusDescription,
-    required this.merchantID,
-    required this.messageID,
-    required this.rrn,
-    required this.secureHash,
-    required this.paymentMethod,
-    required this.statusCode,
-    required this.statusDescription,
-    required this.token,
-    required this.transactionID,
-    required this.responseHashMatch,
-    required this.saveCard,
+    this.amount,
+    this.approvalCode,
+    this.cardNumber,
+    this.currencyISOCode,
+    this.gatewayName,
+    this.gatewayStatusCode,
+    this.gatewayStatusDescription,
+    this.merchantID,
+    this.messageID,
+    this.rrn,
+    this.secureHash,
+    this.paymentMethod,
+    this.statusCode,
+    this.statusDescription,
+    this.token,
+    this.transactionID,
+    this.responseHashMatch,
+    this.saveCard,
   });
 
-  factory StsOnePayResponse.fromJson(Map<String, dynamic> json) {
+  factory StsOnePayResponse.fromJsonSuccess(Map<String, dynamic> json) {
     return StsOnePayResponse(
       amount: json["Response.Amount"].toString(),
       approvalCode: int.tryParse(json["Response.ApprovalCode"]),
@@ -58,7 +58,21 @@ class StsOnePayResponse {
       token: json["Response.Token"],
       transactionID: json["Response.TransactionID"],
       responseHashMatch: json["ResponseHashMatch"],
-      saveCard: (json["SaveCard"]).toString().toLowerCase() == "true" ? true : false,
+      saveCard: json["SaveCard"] == null
+          ? null
+          : (json["SaveCard"]).toString().toLowerCase() == "true"
+              ? true
+              : false,
     );
   }
+
+  factory StsOnePayResponse.fromJsonFailed(Map<String, dynamic> json) {
+    return StsOnePayResponse(
+      secureHash: json["Response.SecureHash"],
+      statusCode: int.tryParse(json["Response.StatusCode"]),
+      statusDescription: json["Response.StatusDescription"],
+      responseHashMatch: json["ResponseHashMatch"],
+    );
+  }
+
 }

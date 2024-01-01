@@ -6,14 +6,19 @@ abstract class SharedPreferencesApp {
   static Future<SharedPreferences> init() async =>
       sharedPreferences = await SharedPreferences.getInstance();
 
-  static Future<bool> serArray({
+  static Future<bool> setArray({
     required String key,
     required List<String> array,
   }) async =>
       await sharedPreferences.setStringList(key, array);
 
-  static List<String>? getString({
+  static List<String>? getArray({
     required String key,
   }) =>
       sharedPreferences.getStringList(key);
+
+  static Future<bool> remove({
+    required String key,
+  }) async =>
+      await sharedPreferences.remove(key);
 }

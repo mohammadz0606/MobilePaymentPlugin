@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
@@ -25,8 +26,18 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
         );
         _channel.setMethodCallHandler((call) async {
           if (call.method == 'getResult') {
-            Map<String, dynamic> data = Map.castFrom(call.arguments['data']);
-            onResultResponse(StsOnePayResponse.fromJson(data));
+            try {
+              Map<String, dynamic> data = Map.castFrom(call.arguments['data']);
+              String status = call.arguments['status'];
+              if (status == 'success') {
+                onResultResponse(StsOnePayResponse.fromJsonSuccess(data));
+              } else {
+                onResultResponse(StsOnePayResponse.fromJsonFailed(data));
+              }
+            } catch (e) {
+              log(e.toString());
+              throw Exception('Error in call arguments');
+            }
           }
         });
       } else if (Platform.isIOS) {

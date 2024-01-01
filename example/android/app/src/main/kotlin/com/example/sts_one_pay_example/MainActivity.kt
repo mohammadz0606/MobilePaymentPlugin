@@ -91,7 +91,11 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
         //request.addOptional("Quantity", "1")
         request.addOptional("Version", params["version"] as String)
         request.addOptional("FrameworkInfo", params["frameworkInfo"] as String)
-        request.add("Tokens", params["tokens"] as List<String>)
+        val tokenList = params["tokens"] as List<String>
+        //c52bdd6fa4266337c024cc738df1c59b6c4dc0088c863300d66025709219d6ea
+        //cbaed5f2465fc578b0394631737420c2d5d4dc73324cf29e053591b4bb209ad
+        //8e6ceb318f8aeedca171600d0713ba33d973f6e5d5d6e92e69bfa8ad4d24577a
+        request.add("Tokens", tokenList.joinToString(","))
         val checkout = Checkout(this, this)
         checkout.open(request)
     }
