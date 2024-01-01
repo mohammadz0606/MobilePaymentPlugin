@@ -101,7 +101,7 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
     }
 
     override fun onDeleteCardResponse(token: String, deleted: Boolean) {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "$token + $deleted",Toast.LENGTH_LONG).show()
     }
 
     override fun onPaymentFailed(a: MutableMap<String, String>) {
