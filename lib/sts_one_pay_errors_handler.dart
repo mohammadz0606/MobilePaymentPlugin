@@ -75,7 +75,7 @@ abstract class StsOnePayErrorHandler {
         message: 'currency consists of only 3 length',
       );
     }
-
+    /// code 2009
     /// Entering 3-digits invalid currency code
     return true;
   }

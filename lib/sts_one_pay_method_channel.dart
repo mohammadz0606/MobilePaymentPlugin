@@ -12,22 +12,43 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
       const MethodChannel('samples.flutter.dev/payment');
 
   @override
-  Future<void> openPaymentPage(StsOnePay stsOnePay) async {
+  Future<Map<String, String>> openPaymentPage(StsOnePay stsOnePay) async {
     try {
       if (Platform.isAndroid) {
+        Map<String, String> responseData = {};
         await _channel.invokeMethod(
           'paymentMethod',
           stsOnePay.toJson(),
         );
+        _channel.setMethodCallHandler((call) async {
+          if (call.method == 'getResult') {
+           try{
+             Map<String, String> data = Map.castFrom(call.arguments['data']);
+             responseData = data;
+             log('data getResult');
+             log(responseData.toString());
+           }catch(e){
+             log('Error in call arguments');
+             throw Exception(e.toString());
+           }
+          }
+        });
+        return responseData;
       } else if (Platform.isIOS) {
         /// implement ios method
+        Map<String, String> responseData = {};
+        return responseData;
       } else {
-        /// throw custom error
+        throw PlatformException(code: '0', message: '');
       }
     } on PlatformException catch (e) {
       log(e.message.toString());
+      throw PlatformException(code: '0', message: '');
     } catch (e) {
       log(e.toString());
+
+      /// Edit Exception
+      throw Exception();
     }
   }
 

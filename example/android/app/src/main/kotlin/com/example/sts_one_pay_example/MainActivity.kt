@@ -22,13 +22,13 @@ import com.google.gson.Gson
 
 
 class MainActivity : FlutterActivity(), PaymentResultListener {
-    private val cannel = "samples.flutter.dev/payment"
+    private val channel = "samples.flutter.dev/payment"
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
-            cannel
+            channel
         ).setMethodCallHandler { call, result ->
             when (call.method) {
                 "paymentMethod" -> {
@@ -52,6 +52,14 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
                 }
             }
 
+        }
+
+    }
+
+    private fun getResult(result: Map<String, Any>) {
+        flutterEngine?.let { engine ->
+            MethodChannel(engine.dartExecutor.binaryMessenger, channel)
+                .invokeMethod("getResult", result)
         }
     }
 
@@ -94,12 +102,14 @@ class MainActivity : FlutterActivity(), PaymentResultListener {
 
     override fun onPaymentFailed(a: MutableMap<String, String>) {
         Toast.makeText(this, Gson().toJson(a), Toast.LENGTH_LONG).show()
-        print("Error tr")
-        print("ssss")
+        val result = mapOf("status" to "failed", "data" to a)
+        getResult(result)
     }
 
     override fun onResponse(a: MutableMap<String, String>) {
         Toast.makeText(this, Gson().toJson(a), Toast.LENGTH_LONG).show()
+        val result = mapOf("status" to "success", "data" to a)
+        getResult(result)
     }
 
 

@@ -11,7 +11,7 @@ abstract class StsOnePayPlatform {
     return (timestamp + random).toString();
   }
 
-  Future<void> openPaymentPage(StsOnePay stsOnePay);
+  Future<Map<String, String>> openPaymentPage(StsOnePay stsOnePay);
 
   Future<void> refund(OtherAPI otherAPI);
 
