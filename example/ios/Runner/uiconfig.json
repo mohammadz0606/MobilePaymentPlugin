@@ -1,0 +1,16 @@
+{
+  "primary_color": "717C7D",
+  "text_color": "717C7D",
+  "hint_text_color": "ff0000",
+  "loader_color": "F15A29",
+  "payment_type_selected_color": "515A5A",
+  "payment_type_unselected_color": "FFFFFF",
+  "button_color": "717C7D",
+  "submission_failed_bg": "80F7F4F4",
+  "submission_failed_image_bg": "80D9D9D9",
+  "saved_card_colors": [
+      {"start" : "00A7B5", "end": "155778"},
+      {"start" : "15B078", "end": "02744B"},
+      {"start" : "ca95b4", "end": "8464e5"}
+  ]
+}

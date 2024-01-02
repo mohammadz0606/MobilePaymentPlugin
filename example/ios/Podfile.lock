@@ -1,0 +1,35 @@
+PODS:
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - MobilePaymentSDK-iOS (1.0.0)
+  - sts_one_pay (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - MobilePaymentSDK-iOS
+  - sts_one_pay (from `.symlinks/plugins/sts_one_pay/ios`)
+
+SPEC REPOS:
+  trunk:
+    - MobilePaymentSDK-iOS
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  sts_one_pay:
+    :path: ".symlinks/plugins/sts_one_pay/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  integration_test: 13825b8a9334a850581300559b8839134b124670
+  MobilePaymentSDK-iOS: 3138673d40b82408e1a10e22dbb14c9bb98f1cd3
+  sts_one_pay: afdd1e90a89cffb71b7352977aa9716bf0b745e4
+
+PODFILE CHECKSUM: 6112df5a3ad7ab17bd6db373acb6d6dfbd542307
+
+COCOAPODS: 1.14.3

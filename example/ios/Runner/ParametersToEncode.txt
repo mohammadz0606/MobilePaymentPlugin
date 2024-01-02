@@ -1,0 +1,7 @@
+ApplePayToken
+CardExpiryDate
+CardHolderName
+CardNumber
+CVV2
+PARes
+PaRes

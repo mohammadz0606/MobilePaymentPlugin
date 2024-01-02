@@ -52,7 +52,7 @@ import MobilePaymentSDK
           currency: "400",
           tokens: [],
           paymentMethods: [.visa, .amex, .mada, .mastercard],
-          transactionId: "",
+          transactionId: "12345",
           paymentType: .sale,
           is3DSAuth: true,
           shouldTokenizeCard: true,
@@ -86,9 +86,11 @@ extension AppDelegate : MobilePaymentSDKDelegate{
     }
     
     func onPaymentError(_ error: MobilePaymentError, transactionId: String) {
+        
     }
     
     func onPaymentCancelled(transactionId: String) {
+        
     }
     
     func didTapDeleteCard(_ withToken: String) {

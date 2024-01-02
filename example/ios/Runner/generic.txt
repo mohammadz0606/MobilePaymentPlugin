@@ -1,0 +1,21 @@
+PaymentURL = https://demo.stspayone.com/SmartRoutePaymentSPGWEB/SRMsgHandler
+ApproveURL = https://demo.stspayone.com/SmartRoutePaymentSPGWEB/SRMsgHandler
+InquiryURL = https://demo.stspayone.com/SmartRoutePaymentSPGWEB/SRMsgHandler
+RefundURL  = https://demo.stspayone.com/SmartRoutePaymentSPGWEB/SRMsgHandler
+ByPassSecureHashValidationForResponse = N
+TimeOutValue = 100
+isProduction = NO
+logData = YES
+
+mastercard_logo = logoMasterCard
+mastercard_debug_encryption_key = nca_demo_mastercard_encryption.crt
+mastercard_debug_root_certificate_key = stspayone.pem
+
+visa_logo = logoVisa
+visa_debug_encryption_key = nca_demo_visa_encryption.crt
+visa_debug_root_certificate_key = stspayone.pem
+
+union_logo = logoUnion
+diners_logo = logoDiners
+jcb_logo = logoJcb
+amex_logo = logoAmex
