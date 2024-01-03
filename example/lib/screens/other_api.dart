@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../helper/dialogs.dart';
@@ -10,7 +9,6 @@ import '../widgets/other_api_fields.dart';
 
 class OtherAPIStsOnePayExample extends StatelessWidget {
   const OtherAPIStsOnePayExample({super.key});
-  static const platform = const MethodChannel('samples.flutter.dev/testt');
 
   @override
   Widget build(BuildContext context) {
@@ -79,9 +77,6 @@ class OtherAPIStsOnePayExample extends StatelessWidget {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () async {
-                          if (Platform.isIOS) {
-                            await platform.invokeMethod('getInquiry');
-                          }
                           await provider.inquiry(
                             onError: (code, error) {
                               showCustomDialog(

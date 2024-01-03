@@ -70,6 +70,29 @@ class StsOnePay {
       "cardsType": cardsType.map<String>((cardType) => cardType.name).toList(),
     };
   }
+
+  Map<String, dynamic> toIOSJson() {
+    return {
+      "authenticationToken": authenticationToken,
+      "merchantID": merchantID,
+      "amount": amount.trim(),
+      "tokens": tokens,
+      "currency": currency.trim(),
+      "transactionId": transactionId.isEmpty
+          ? StsOnePayPlatform.generateTransactionId()
+          : transactionId.trim(),
+      "isThreeDSSecure": isThreeDSSecure,
+      "shouldTokenizeCard": shouldTokenizeCard,
+      "isCardScanEnable": isCardScanEnable,
+      "isSaveCardEnable": isSaveCardEnable,
+      "langCode": langCode.name,
+      "paymentType": paymentType.name,
+      "paymentDescription": paymentDescription.trim(),
+      "version": version,
+      "frameworkInfo": frameworkInfo,
+      "cardsType": cardsType.map<String>((cardType) => cardType.name).toList(),
+    };
+  }
 }
 
 enum Language {

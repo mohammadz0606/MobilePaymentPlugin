@@ -32,7 +32,7 @@ flutter_ios_podfile_setup
 target 'Runner' do
   use_frameworks!
 #     pod 'ThreeDS_SDK'
-      pod 'MobilePaymentSDK-iOS'
+     # pod 'MobilePaymentSDK-iOS'
   use_modular_headers!
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end

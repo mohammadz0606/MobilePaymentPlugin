@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../helper/dialogs.dart';
@@ -11,7 +10,6 @@ import 'other_api.dart';
 
 class HomeStsOnePayExample extends StatelessWidget {
   const HomeStsOnePayExample({super.key});
-  static const platform = const MethodChannel('samples.flutter.dev/testt');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,10 +43,6 @@ class HomeStsOnePayExample extends StatelessWidget {
                       width: double.infinity,
                       child: OutlinedButton(
                         onPressed: () async {
-                          if (Platform.isIOS) {
-                            await platform.invokeMethod('openPaymentPage');
-                          }
-                          else{
                             await provider.openPaymentPage(
                               onError: (code, error) {
                                 showCustomDialog(
@@ -58,8 +52,6 @@ class HomeStsOnePayExample extends StatelessWidget {
                                 );
                               },
                             );
-                          }
-
                         },
                         child: const Text('Pay Now'),
                       ),

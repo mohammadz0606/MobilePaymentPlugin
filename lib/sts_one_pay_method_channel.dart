@@ -11,7 +11,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   final MethodChannel _channel =
       const MethodChannel('samples.flutter.dev/payment');
   final MethodChannel _channelIOS =
-      const MethodChannel('sts_one_pay');
+    const MethodChannel('samples.flutter.dev/paymentIOS');
 
   @override
   Future<void> openPaymentPage(StsOnePay stsOnePay) async {
@@ -24,8 +24,8 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
       } else if (Platform.isIOS) {
 
         await _channelIOS.invokeMethod(
-          'showPaymentPage',
-          stsOnePay.toJson(),
+          'openPaymentPage',
+          stsOnePay.toIOSJson(),
         );
       } else {
         /// throw custom error
@@ -46,7 +46,10 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
           otherAPI.toJson(),
         );
       } else if (Platform.isIOS) {
-        /// implement ios method
+        await _channelIOS.invokeMethod(
+          'refund',
+          otherAPI.toJson(),
+        );
       } else {
         /// throw custom error
       }
@@ -66,7 +69,10 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
           otherAPI.toJson(),
         );
       } else if (Platform.isIOS) {
-        /// implement ios method
+        await _channelIOS.invokeMethod(
+          'completion',
+          otherAPI.toJson(),
+        );
       } else {
         /// throw custom error
       }
@@ -86,7 +92,10 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
           otherAPI.toJson(),
         );
       } else if (Platform.isIOS) {
-        /// implement ios method
+        await _channelIOS.invokeMethod(
+          'getInquiry',
+          otherAPI.toJson(),
+        );
       } else {
         /// throw custom error
       }

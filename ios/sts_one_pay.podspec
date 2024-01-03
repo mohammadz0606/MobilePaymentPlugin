@@ -25,12 +25,27 @@ A new Flutter project.
  # s.preserve_paths = 'MobilePaymentSDK.framework'
  # s.xcconfig = { 'OTHER_LDFLAGS' => '-framework MobilePaymentSDK' }
  # s.vendored_frameworks = 'MobilePaymentSDK.framework'
- s.preserve_paths = 'ThreeDS_SDK.xcframework'
- s.xcconfig = { 'OTHER_LDFLAGS' => '-framework ThreeDS_SDK' }
- s.vendored_frameworks = 'ThreeDS_SDK.xcframework'
- s.public_header_files = 'Classes/**/*.h'
+#  s.preserve_paths = 'ThreeDS_SDK.xcframework'
+#  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework ThreeDS_SDK' }
+#  s.vendored_frameworks = 'ThreeDS_SDK.xcframework'
+#  s.public_header_files = 'Classes/**/*.h'
   # s.preserve_paths = 'MobilePaymentSDK.framework'
   # s.xcconfig = { 'OTHER_LDFLAGS' => '-framework MobilePaymentSDK' }
   # s.vendored_frameworks = 'MobilePaymentSDK.framework'
     s.static_framework = true
+
+     s.subspec 'MobilePaymentSDK' do |mobilePaymentSDK|
+             mobilePaymentSDK.preserve_paths = 'ThreeDS_SDK.xcframework'
+             mobilePaymentSDK.xcconfig = { 'OTHER_LDFLAGS' => '-framework ThreeDS_SDK' }
+             mobilePaymentSDK.vendored_frameworks = 'ThreeDS_SDK.xcframework'
+             mobilePaymentSDK.public_header_files = 'Classes/**/*.h'
+        end
+
+        s.subspec 'ThreeDS_SDK' do |threeDSSDK|
+              threeDSSDK.preserve_paths = 'MobilePaymentSDK.framework'
+              threeDSSDK.xcconfig = { 'OTHER_LDFLAGS' => '-framework MobilePaymentSDK' }
+              threeDSSDK.vendored_frameworks = 'MobilePaymentSDK.framework'
+              threeDSSDK.public_header_files = 'Classes/**/*.h'
+        end
+
 end
