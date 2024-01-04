@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'dart:io';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 
@@ -8,14 +9,17 @@ import 'models/other_api.dart';
 import 'sts_one_pay_platform_interface.dart';
 
 class MethodChannelStsOnePay extends StsOnePayPlatform {
-  final MethodChannel _channel =
-      const MethodChannel('samples.flutter.dev/payment');
+  @visibleForTesting
+  final methodChannel = const MethodChannel('sts_one_pay');
+
+/*  final MethodChannel methodChannel =
+      const MethodChannel('samples.flutter.dev/payment');*/
 
   @override
   Future<void> openPaymentPage(StsOnePay stsOnePay) async {
     try {
       if (Platform.isAndroid) {
-        await _channel.invokeMethod(
+        await methodChannel.invokeMethod(
           'paymentMethod',
           stsOnePay.toJson(),
         );
@@ -35,7 +39,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   Future<void> refund(OtherAPI otherAPI) async {
     try {
       if (Platform.isAndroid) {
-        await _channel.invokeMethod(
+        await methodChannel.invokeMethod(
           'refund',
           otherAPI.toJson(),
         );
@@ -55,7 +59,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   Future<void> completion(OtherAPI otherAPI) async {
     try {
       if (Platform.isAndroid) {
-        await _channel.invokeMethod(
+        await methodChannel.invokeMethod(
           'completion',
           otherAPI.toJson(),
         );
@@ -75,7 +79,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   Future<void> inquiry(OtherAPI otherAPI) async {
     try {
       if (Platform.isAndroid) {
-        await _channel.invokeMethod(
+        await methodChannel.invokeMethod(
           'inquiry',
           otherAPI.toJson(),
         );

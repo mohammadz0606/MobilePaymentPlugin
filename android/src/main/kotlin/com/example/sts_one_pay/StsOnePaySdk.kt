@@ -6,6 +6,7 @@ import com.edesign.paymentsdk.Inquiry.InquiryResponse
 import com.edesign.paymentsdk.Refund.RefundRequest
 import com.edesign.paymentsdk.Refund.RefundResponse
 import com.edesign.paymentsdk.version2.*
+import com.edesign.paymentsdk.version2.PaymentResultListener
 import com.edesign.paymentsdk.version2.completion.CompletionCallback
 import com.edesign.paymentsdk.version2.completion.CompletionRequest
 import com.edesign.paymentsdk.version2.completion.CompletionResponse
@@ -16,45 +17,10 @@ import com.edesign.paymentsdk.version2.refund.RefundCallback
 import com.edesign.paymentsdk.version2.refund.SmartRouteRefundService
 import com.google.gson.Gson
 import io.flutter.embedding.android.FlutterActivity
-import io.flutter.embedding.engine.FlutterEngine
-import io.flutter.plugin.common.MethodChannel
 
-class StsOnePaySdk : FlutterActivity(), PaymentResultListener {
+open class StsOnePaySdk : FlutterActivity(), PaymentResultListener {
 
-    private val cannel = "samples.flutter.dev/payment"
-
-    override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
-        super.configureFlutterEngine(flutterEngine)
-        MethodChannel(
-            flutterEngine.dartExecutor.binaryMessenger,
-            cannel
-        ).setMethodCallHandler { call, result ->
-            when (call.method) {
-                "paymentMethod" -> {
-                    paymentMethod(call.arguments as Map<String, Any>)
-                    result.success(null)
-                }
-                "refund" -> {
-                    refund(call.arguments as Map<String, Any>)
-                    result.success(null)
-                }
-                "completion" -> {
-                    completion(call.arguments as Map<String, Any>)
-                    result.success(null)
-                }
-                "inquiry" -> {
-                    inquiry(call.arguments as Map<String, Any>)
-                    result.success(null)
-                }
-                else -> {
-                    result.notImplemented()
-                }
-            }
-
-        }
-    }
-
-    private fun paymentMethod(params: Map<String, Any>) {
+    public fun paymentMethod(params: Map<String, Any>) {
         val request = OpenPaymentRequest()
         request.paymentType = params["paymentType"] as String
         PaymentType.PREAUTH.name
@@ -87,22 +53,22 @@ class StsOnePaySdk : FlutterActivity(), PaymentResultListener {
         checkout.open(request)
     }
 
-    override fun onDeleteCardResponse(token: String, deleted: Boolean) {
+    public override fun onDeleteCardResponse(token: String, deleted: Boolean) {
         TODO("Not yet implemented")
     }
 
-    override fun onPaymentFailed(a: MutableMap<String, String>) {
+    public override fun onPaymentFailed(a: MutableMap<String, String>) {
         Toast.makeText(this, Gson().toJson(a), Toast.LENGTH_LONG).show()
         print("Error tr")
         print("ssss")
     }
 
-    override fun onResponse(a: MutableMap<String, String>) {
+    public override fun onResponse(a: MutableMap<String, String>) {
         Toast.makeText(this, Gson().toJson(a), Toast.LENGTH_LONG).show()
     }
 
 
-    private fun refund(params: Map<String, Any>) {
+    public fun refund(params: Map<String, Any>) {
         val request = RefundRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
@@ -132,7 +98,7 @@ class StsOnePaySdk : FlutterActivity(), PaymentResultListener {
         )
     }
 
-    private fun completion(params: Map<String, Any>) {
+    public fun completion(params: Map<String, Any>) {
         val request = CompletionRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
@@ -162,7 +128,7 @@ class StsOnePaySdk : FlutterActivity(), PaymentResultListener {
         )
     }
 
-    private fun inquiry(params: Map<String, Any>) {
+    public fun inquiry(params: Map<String, Any>) {
         val request = InquiryRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
