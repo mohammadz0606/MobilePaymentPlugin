@@ -1,8 +1,9 @@
 package com.example.sts_one_pay_example
 
+import io.flutter.embedding.android.FlutterActivity
 
 
-class MainActivity {
+class MainActivity : FlutterActivity() {
 
 }
 
