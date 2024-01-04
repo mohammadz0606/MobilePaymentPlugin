@@ -45,14 +45,14 @@ class PayOneProvider extends ChangeNotifier {
       List<String> tokens = tokensText.split(',');
       tokens =
           tokensText.isNotEmpty ? tokens.map((e) => e.trim()).toList() : [];
-      List<String> tokenInSharedPreferences =
-          SharedPreferencesApp.getArray(key: 'tokens') ?? [];
+     /* List<String> tokenInSharedPreferences =
+          SharedPreferencesApp.getArray(key: 'tokens') ?? [];*/
       log.log('len of tokenInSharedPreferences');
-      log.log(tokenInSharedPreferences.length.toString());
+      //log.log(tokenInSharedPreferences.length.toString());
       await _methodChannelStsOnePay.openPaymentPage(
         StsOnePay(
           amount: amount,
-          tokens: [...tokens, ...tokenInSharedPreferences],
+          tokens: [...tokens, ],//[...tokens, ...tokenInSharedPreferences],
           currency: currency,
           transactionId: transactionId,
           isThreeDSSecure: isThreeDSSecure,
@@ -69,7 +69,7 @@ class PayOneProvider extends ChangeNotifier {
           log.log(result.statusDescription ?? '');
           if (result.saveCard != null) {
             if (result.saveCard!) {
-              if (result.token != null) {
+              /*if (result.token != null) {
                 tokens.add(result.token!);
                 if (SharedPreferencesApp.getArray(key: 'tokens') != null) {
                   await SharedPreferencesApp.remove(key: 'tokens');
@@ -78,19 +78,19 @@ class PayOneProvider extends ChangeNotifier {
                   key: 'tokens',
                   array: tokens,
                 );
-              }
+              }*/
             }
           }
         },
         onDeleteCardResponse: (onDeleteCard) async {
           if (onDeleteCard.deleted) {
-            List<String> allTokens =
-                SharedPreferencesApp.getArray(key: 'tokens') ?? [];
-            allTokens.remove(onDeleteCard.token);
+           /* List<String> allTokens =
+                SharedPreferencesApp.getArray(key: 'tokens') ?? [];*/
+          //  allTokens.remove(onDeleteCard.token);
             log.log('On Delete Card Example');
-            log.log(allTokens.length.toString());
-            SharedPreferencesApp.remove(key: 'tokens');
-            SharedPreferencesApp.setArray(key: 'tokens', array: allTokens);
+            //log.log(allTokens.length.toString());
+            //SharedPreferencesApp.remove(key: 'tokens');
+            //SharedPreferencesApp.setArray(key: 'tokens', array: allTokens);
           }
         },
       );

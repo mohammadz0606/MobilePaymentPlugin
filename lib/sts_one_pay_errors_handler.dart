@@ -10,17 +10,20 @@ abstract class StsOnePayErrorHandler {
         code: 2000,
         message: 'amount is empty',
       );
-    } else if (specialCharacters.hasMatch(amount)) {
+    }
+    else if (specialCharacters.hasMatch(amount)) {
       throw const ErrorStsOnePay(
         code: 2001,
         message: 'The amount must be entered without commas or periods',
       );
-    } else if (amountDouble == null) {
+    }
+    else if (amountDouble == null) {
       throw const ErrorStsOnePay(
         code: 2002,
         message: 'Amount Enter incorrectly',
       );
-    } else if (amountDouble <= 0) {
+    }
+    else if (amountDouble <= 0) {
       throw const ErrorStsOnePay(
         code: 2003,
         message: 'Amount must be Greater than zero',

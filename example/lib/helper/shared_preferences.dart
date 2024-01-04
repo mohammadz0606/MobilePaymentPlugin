@@ -1,6 +1,6 @@
-import 'package:shared_preferences/shared_preferences.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 
-abstract class SharedPreferencesApp {
+/*abstract class SharedPreferencesApp {
   static late SharedPreferences sharedPreferences;
 
   static Future<SharedPreferences> init() async =>
@@ -21,4 +21,4 @@ abstract class SharedPreferencesApp {
     required String key,
   }) async =>
       await sharedPreferences.remove(key);
-}
+}*/

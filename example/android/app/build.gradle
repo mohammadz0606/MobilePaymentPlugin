@@ -5,6 +5,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -82,8 +83,8 @@ dependencies {
     implementation files('libs/payment_sdk-release.aar') {
         configurations {
             implementation.exclude module: 'lifecycle-viewmodel-ktx'
-            implementation.exclude module :'kotlin-stdlib-jdk8'
-            implementation.exclude group: 'com.google.code.gson', module :'gson'
+            implementation.exclude module: 'kotlin-stdlib-jdk8'
+            implementation.exclude group: 'com.google.code.gson', module: 'gson'
             /*
             implementation.exclude module: 'lifecycle-viewmodel-ktx'
             implementation.exclude module: 'jetified-kotlin-stdlib'
@@ -93,6 +94,7 @@ dependencies {
              */
         }
     }
+    implementation 'com.google.android.gms:play-services-appindex:16.1.0'
     //implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
     implementation 'com.google.android.gms:play-services-mlkit-text-recognition:18.0.2'
     implementation "androidx.camera:camera-camera2:1.0.0-beta12"
