@@ -1,5 +1,6 @@
 package com.example.sts_one_pay
 
+import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -8,7 +9,9 @@ import io.flutter.plugin.common.MethodChannel.Result
 
 
 /** StsOnePayPlugin */
-class StsOnePayPlugin : FlutterPlugin, MethodCallHandler, StsOnePaySdk() {
+class StsOnePayPlugin : FlutterActivity(), FlutterPlugin, MethodCallHandler {
+
+    private val stsOnePaySdk = StsOnePaySdk()
 
     private lateinit var channel: MethodChannel
 
@@ -20,19 +23,19 @@ class StsOnePayPlugin : FlutterPlugin, MethodCallHandler, StsOnePaySdk() {
     override fun onMethodCall(call: MethodCall, result: Result) {
         when (call.method) {
             "paymentMethod" -> {
-                paymentMethod(call.arguments as Map<String, Any>)
+                stsOnePaySdk.paymentMethod(call.arguments as Map<String, Any>)
                 result.success(null)
             }
             "refund" -> {
-                refund(call.arguments as Map<String, Any>)
+                stsOnePaySdk.refund(call.arguments as Map<String, Any>)
                 result.success(null)
             }
             "completion" -> {
-                completion(call.arguments as Map<String, Any>)
+                stsOnePaySdk.completion(call.arguments as Map<String, Any>)
                 result.success(null)
             }
             "inquiry" -> {
-                inquiry(call.arguments as Map<String, Any>)
+                stsOnePaySdk.inquiry(call.arguments as Map<String, Any>)
                 result.success(null)
             }
             else -> {

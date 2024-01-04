@@ -12,8 +12,6 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('sts_one_pay');
 
-/*  final MethodChannel methodChannel =
-      const MethodChannel('samples.flutter.dev/payment');*/
 
   @override
   Future<void> openPaymentPage(StsOnePay stsOnePay) async {
