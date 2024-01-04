@@ -1,6 +1,7 @@
 package com.example.sts_one_pay
 
 import android.app.Activity
+import android.content.Context
 import android.widget.Toast
 import com.edesign.paymentsdk.Inquiry.InquiryRequest
 import com.edesign.paymentsdk.Inquiry.InquiryResponse
@@ -17,7 +18,6 @@ import com.edesign.paymentsdk.version2.inquiry.SmartRouteInquiryService
 import com.edesign.paymentsdk.version2.refund.RefundCallback
 import com.edesign.paymentsdk.version2.refund.SmartRouteRefundService
 import com.google.gson.Gson
-import io.flutter.embedding.android.FlutterActivity
 
 open class StsOnePaySdk : Activity(), PaymentResultListener {
     public fun paymentMethod(params: Map<String, Any>) {

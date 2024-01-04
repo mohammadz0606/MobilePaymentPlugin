@@ -1,24 +1,16 @@
 package com.example.sts_one_pay
 
-import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 
-
-/** StsOnePayPlugin */
-class StsOnePayPlugin : FlutterActivity(), FlutterPlugin, MethodCallHandler {
-
-    private val stsOnePaySdk = StsOnePaySdk()
+class StsOnePayPlugin : FlutterPlugin, MethodCallHandler {
 
     private lateinit var channel: MethodChannel
 
-    override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "sts_one_pay")
-        channel.setMethodCallHandler(this)
-    }
+    private val stsOnePaySdk = StsOnePaySdk()
 
     override fun onMethodCall(call: MethodCall, result: Result) {
         when (call.method) {
@@ -42,6 +34,13 @@ class StsOnePayPlugin : FlutterActivity(), FlutterPlugin, MethodCallHandler {
                 result.notImplemented()
             }
         }
+    }
+
+
+    override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "sts_one_pay")
+        channel.setMethodCallHandler(this)
+        //flutterPluginBinding.applicationContext
     }
 
     override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
