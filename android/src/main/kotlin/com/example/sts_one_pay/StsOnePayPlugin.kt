@@ -40,8 +40,6 @@ class StsOnePayPlugin : FlutterPlugin, ActivityAware ,MethodChannel.MethodCallHa
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         channel = MethodChannel(flutterPluginBinding.binaryMessenger, "sts_one_pay")
         channel.setMethodCallHandler(this)
-        //flutterPluginBinding.applicationContext
-
     }
 
     override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
