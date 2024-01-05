@@ -78,13 +78,12 @@ open class StsOnePaySdk(private val activity: FlutterActivity, private var chann
     override fun onPaymentFailed(a: MutableMap<String, String>) {
         val result = mapOf("status" to "failed", "data" to a)
         getResult(result)
-        Toast.makeText(activity, Gson().toJson(a), Toast.LENGTH_LONG).show()
+        //Toast.makeText(activity, Gson().toJson(a), Toast.LENGTH_LONG).show()
     }
 
     override fun onResponse(a: MutableMap<String, String>) {
         val result = mapOf("status" to "success", "data" to a)
         getResult(result)
-        Toast.makeText(activity, Gson().toJson(a), Toast.LENGTH_LONG).show()
     }
 
 
