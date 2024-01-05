@@ -1,7 +1,6 @@
 package com.example.sts_one_pay
 
 import android.app.Activity
-import android.content.Context
 import android.widget.Toast
 import com.edesign.paymentsdk.Inquiry.InquiryRequest
 import com.edesign.paymentsdk.Inquiry.InquiryResponse
@@ -19,38 +18,12 @@ import com.edesign.paymentsdk.version2.refund.RefundCallback
 import com.edesign.paymentsdk.version2.refund.SmartRouteRefundService
 import com.google.gson.Gson
 import io.flutter.embedding.android.FlutterActivity
-import io.flutter.plugin.common.MethodCall
-import io.flutter.plugin.common.MethodChannel
-
-class StsOnePaySdk(private var context: Context) : PaymentResultListener,
-    MethodChannel.MethodCallHandler {
-
-    override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
-        when (call.method) {
-            "paymentMethod" -> {
-                paymentMethod(call.arguments as Map<String, Any>)
-                result.success(null)
-            }
-            "refund" -> {
-                refund(call.arguments as Map<String, Any>)
-                result.success(null)
-            }
-            "completion" -> {
-                completion(call.arguments as Map<String, Any>)
-                result.success(null)
-            }
-            "inquiry" -> {
-                inquiry(call.arguments as Map<String, Any>)
-                result.success(null)
-            }
-            else -> {
-                result.notImplemented()
-            }
-        }
-    }
 
 
-    private fun paymentMethod(params: Map<String, Any>) {
+open class StsOnePaySdk(private val activity: FlutterActivity) :
+    PaymentResultListener {
+
+    fun paymentMethod(params: Map<String, Any>) {
         val request = OpenPaymentRequest()
         request.paymentType = params["paymentType"] as String
         PaymentType.PREAUTH.name
@@ -79,7 +52,7 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
         request.addOptional("Version", params["version"] as String)
         request.addOptional("FrameworkInfo", params["frameworkInfo"] as String)
         request.add("Tokens", params["tokens"] as List<String>)
-        val checkout = Checkout(context as FlutterActivity, this)
+        val checkout = Checkout(activity, this)
         checkout.open(request)
     }
 
@@ -88,17 +61,17 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
     }
 
     override fun onPaymentFailed(a: MutableMap<String, String>) {
-        Toast.makeText(context, Gson().toJson(a), Toast.LENGTH_LONG).show()
+        Toast.makeText(activity, Gson().toJson(a), Toast.LENGTH_LONG).show()
         print("Error tr")
         print("ssss")
     }
 
     override fun onResponse(a: MutableMap<String, String>) {
-        Toast.makeText(context, Gson().toJson(a), Toast.LENGTH_LONG).show()
+        Toast.makeText(activity, Gson().toJson(a), Toast.LENGTH_LONG).show()
     }
 
 
-    private fun refund(params: Map<String, Any>) {
+    fun refund(params: Map<String, Any>) {
         val request = RefundRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
@@ -113,13 +86,13 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
             "OriginalTransactionID", params["originalTransactionID"] as String
         )
         request.add("Version", params["version"] as String)
-        val paymentService = SmartRouteRefundService(context)
+        val paymentService = SmartRouteRefundService(activity)
         paymentService.process(
             request,
             object : RefundCallback {
                 override fun onResponse(response: RefundResponse) {
                     Toast.makeText(
-                        context,
+                        activity,
                         "Response: \n" + Gson().toJson(response),
                         Toast.LENGTH_LONG
                     ).show()
@@ -128,7 +101,7 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
         )
     }
 
-    private fun completion(params: Map<String, Any>) {
+    fun completion(params: Map<String, Any>) {
         val request = CompletionRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
@@ -143,13 +116,13 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
             "OriginalTransactionID", params["originalTransactionID"] as String
         )
         request.add("Version", params["version"] as String)
-        val paymentService = SmartRouteCompletionService(context)
+        val paymentService = SmartRouteCompletionService(activity)
         paymentService.process(
             request,
             object : CompletionCallback {
                 override fun onResponse(response: CompletionResponse) {
                     Toast.makeText(
-                        context,
+                        activity,
                         "Response: \n" + Gson().toJson(response),
                         Toast.LENGTH_LONG
                     ).show()
@@ -158,7 +131,7 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
         )
     }
 
-    private fun inquiry(params: Map<String, Any>) {
+    fun inquiry(params: Map<String, Any>) {
         val request = InquiryRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
@@ -173,16 +146,16 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
             "OriginalTransactionID", params["originalTransactionID"] as String
         )
         request.add("Version", params["version"] as String)
-        val paymentService = SmartRouteInquiryService(context)
+        val paymentService = SmartRouteInquiryService(activity)
         paymentService.process(
             request,
             object : InquiryCallback {
                 override fun onResponse(response: InquiryResponse) {
                     Toast.makeText(
-                        context,
-                        "Response: \n" + Gson().toJson(response),
-                        Toast.LENGTH_LONG
-                    ).show()
+                        activity,
+                         "Response: \n" + Gson().toJson(response),
+                         Toast.LENGTH_LONG
+                     ).show()
                 }
             },
         )
