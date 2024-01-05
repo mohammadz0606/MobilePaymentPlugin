@@ -1,45 +1,17 @@
 package com.example.sts_one_pay
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
-import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
-import io.flutter.plugin.common.MethodChannel.MethodCallHandler
-import io.flutter.plugin.common.MethodChannel.Result
 
-class StsOnePayPlugin : FlutterPlugin, MethodCallHandler {
+class StsOnePayPlugin : FlutterPlugin {
 
     private lateinit var channel: MethodChannel
-
-    private val stsOnePaySdk = StsOnePaySdk()
-
-    override fun onMethodCall(call: MethodCall, result: Result) {
-        when (call.method) {
-            "paymentMethod" -> {
-                stsOnePaySdk.paymentMethod(call.arguments as Map<String, Any>)
-                result.success(null)
-            }
-            "refund" -> {
-                stsOnePaySdk.refund(call.arguments as Map<String, Any>)
-                result.success(null)
-            }
-            "completion" -> {
-                stsOnePaySdk.completion(call.arguments as Map<String, Any>)
-                result.success(null)
-            }
-            "inquiry" -> {
-                stsOnePaySdk.inquiry(call.arguments as Map<String, Any>)
-                result.success(null)
-            }
-            else -> {
-                result.notImplemented()
-            }
-        }
-    }
 
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         channel = MethodChannel(flutterPluginBinding.binaryMessenger, "sts_one_pay")
-        channel.setMethodCallHandler(this)
+        val stsOnePaySdk = StsOnePaySdk(flutterPluginBinding.applicationContext)
+        channel.setMethodCallHandler(stsOnePaySdk)
         //flutterPluginBinding.applicationContext
     }
 
