@@ -48,7 +48,7 @@ class PayOneProvider extends ChangeNotifier {
       List<String> tokenInSharedPreferences =
           SharedPreferencesApp.getArray(key: 'tokens') ?? [];
       log.log('len of tokenInSharedPreferences');
-      //log.log(tokenInSharedPreferences.length.toString());
+      log.log(tokenInSharedPreferences.length.toString());
       await _methodChannelStsOnePay.openPaymentPage(
         StsOnePay(
           amount: amount,
@@ -66,6 +66,7 @@ class PayOneProvider extends ChangeNotifier {
         onResultResponse: (result) async {
           log.log('Card Token 2');
           log.log(result.token ?? '');
+          log.log(result.statusCode?.toString() ?? '');
           log.log((result.token == null).toString());
           log.log(result.statusDescription ?? '');
           if (result.saveCard != null) {
