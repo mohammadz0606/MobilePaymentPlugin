@@ -50,7 +50,7 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
     }
 
 
-    public fun paymentMethod(params: Map<String, Any>) {
+    private fun paymentMethod(params: Map<String, Any>) {
         val request = OpenPaymentRequest()
         request.paymentType = params["paymentType"] as String
         PaymentType.PREAUTH.name
@@ -83,22 +83,22 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
         checkout.open(request)
     }
 
-    public override fun onDeleteCardResponse(token: String, deleted: Boolean) {
+    override fun onDeleteCardResponse(token: String, deleted: Boolean) {
         TODO("Not yet implemented")
     }
 
-    public override fun onPaymentFailed(a: MutableMap<String, String>) {
+    override fun onPaymentFailed(a: MutableMap<String, String>) {
         Toast.makeText(context, Gson().toJson(a), Toast.LENGTH_LONG).show()
         print("Error tr")
         print("ssss")
     }
 
-    public override fun onResponse(a: MutableMap<String, String>) {
+    override fun onResponse(a: MutableMap<String, String>) {
         Toast.makeText(context, Gson().toJson(a), Toast.LENGTH_LONG).show()
     }
 
 
-    public fun refund(params: Map<String, Any>) {
+    private fun refund(params: Map<String, Any>) {
         val request = RefundRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
@@ -128,7 +128,7 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
         )
     }
 
-    public fun completion(params: Map<String, Any>) {
+    private fun completion(params: Map<String, Any>) {
         val request = CompletionRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
@@ -158,7 +158,7 @@ class StsOnePaySdk(private var context: Context) : PaymentResultListener,
         )
     }
 
-    public fun inquiry(params: Map<String, Any>) {
+    private fun inquiry(params: Map<String, Any>) {
         val request = InquiryRequest()
         request.setPaymentAuthenticationToken(
             "AuthenticationToken",
