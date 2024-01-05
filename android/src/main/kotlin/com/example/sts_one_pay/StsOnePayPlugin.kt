@@ -37,6 +37,10 @@ class StsOnePayPlugin : FlutterPlugin, ActivityAware ,MethodChannel.MethodCallHa
         }
     }
 
+    /*private fun getResult(resultData: Map<String, Any>) {
+        channel.invokeMethod("getResult", resultData)
+    }*/
+
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         channel = MethodChannel(flutterPluginBinding.binaryMessenger, "sts_one_pay")
         channel.setMethodCallHandler(this)
@@ -47,7 +51,7 @@ class StsOnePayPlugin : FlutterPlugin, ActivityAware ,MethodChannel.MethodCallHa
     }
 
     override fun onAttachedToActivity(binding: ActivityPluginBinding) {
-        stsOnePaySdk = StsOnePaySdk(binding.activity as FlutterActivity)
+        stsOnePaySdk = StsOnePaySdk(binding.activity as FlutterActivity,channel)
     }
 
     override fun onDetachedFromActivityForConfigChanges() {
@@ -55,7 +59,7 @@ class StsOnePayPlugin : FlutterPlugin, ActivityAware ,MethodChannel.MethodCallHa
     }
 
     override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
-        stsOnePaySdk = StsOnePaySdk(binding.activity as FlutterActivity)
+        stsOnePaySdk = StsOnePaySdk(binding.activity as FlutterActivity,channel)
     }
 
     override fun onDetachedFromActivity() {

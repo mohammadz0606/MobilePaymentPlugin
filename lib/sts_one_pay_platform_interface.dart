@@ -3,7 +3,9 @@ import 'dart:math';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 
+import 'models/on_delete.dart';
 import 'models/other_api.dart';
+import 'models/payment_page_response.dart';
 
 abstract class StsOnePayPlatform extends PlatformInterface {
   StsOnePayPlatform() : super(token: _token);
@@ -16,7 +18,11 @@ abstract class StsOnePayPlatform extends PlatformInterface {
     return (timestamp + random).toString();
   }
 
-  Future<void> openPaymentPage(StsOnePay stsOnePay);
+  Future<void> openPaymentPage(
+    StsOnePay stsOnePay, {
+    required Function(StsOnePayResponse result) onResultResponse,
+    required Function(OnDeleteCard onDeleteCard) onDeleteCardResponse,
+  });
 
   Future<void> refund(OtherAPI otherAPI);
 
