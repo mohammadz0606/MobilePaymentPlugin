@@ -19,7 +19,7 @@ class PayOneProvider extends ChangeNotifier {
   bool shouldTokenizeCard = true;
   bool isCardScanEnable = true;
   bool isSaveCardEnable = true;
-  Language selectedLangVale = Language.arabic;
+  Language selectedLangVale = Language.ar;
   PaymentType selectedPaymentTypeTypeValue = PaymentType.sale;
   final List<CardType> cardsType = [
     CardType.visa,

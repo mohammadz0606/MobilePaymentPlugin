@@ -35,7 +35,7 @@ class StsOnePay {
       this.shouldTokenizeCard = true,
       this.isCardScanEnable = true,
       this.isSaveCardEnable = true,
-      this.langCode = Language.english,
+      this.langCode = Language.en,
       this.paymentType = PaymentType.sale,
       this.paymentDescription = 'Sample Payment',
       this.paymentTitle = 'Sample Payment',
@@ -44,7 +44,7 @@ class StsOnePay {
       this.itemId = "",
       this.quantity = "1",
       this.agreementId = "",
-      this.agreementType = AgreementType.none,
+      this.agreementType = AgreementType.NONE,
       this.cardsType = const [
         CardType.mastercard,
         CardType.visa,
@@ -111,9 +111,9 @@ class StsOnePay {
 }
 
 enum Language {
-  english,
-  arabic,
-  turkish,
+  en,
+  ar,
+  tr,
 }
 
 enum PaymentType {
@@ -121,9 +121,9 @@ enum PaymentType {
   preAuth,
 }
 enum AgreementType {
-  unscheduled,
-  recurring,
-  none,
+  UNSCHEDULED,
+  RECURRING,
+  NONE,
 }
 
 enum CardType {

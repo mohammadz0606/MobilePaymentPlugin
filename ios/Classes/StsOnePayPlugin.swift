@@ -131,8 +131,14 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
         }
         var paymentType = MobilePaymentType(rawValue: paymentTypeValue).unsafelyUnwrapped
         //ZA: fix me here
-//                var lang = MobilePaymentSupportedLanguage.init(rawValue: <#T##MobilePaymentSupportedLanguage.RawValue#>)
-//        var agreementType = MobileAgreementType(rawValue: agreementTypeValue).unsafelyUnwrapped
+        guard let lang = MobilePaymentSupportedLanguage(rawValue: langCode) else {
+            //throw
+            return
+        }
+        guard let agreementType = MobileAgreementType(rawValue: agreementTypeValue) else {
+            //throw
+            return
+        }
         MobilePaymentSDK.shared.showPaymentPage(
             fromViewController: viewController,
             amount: amount,
@@ -144,13 +150,13 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
             is3DSAuth: is3DSAuth,
             shouldTokenizeCard: shouldTokenizeCard,
             isCardScanningEnabled: isCardScanningEnabled,
-            language: .arabic,
+            language: lang,
             paymentDescription: paymentDescription,
             paymentTitle: paymentTitle,
             quantity: quantity,
             itemId: itemId,
             agreementId: agreementId,
-            agreementType: .none
+            agreementType: agreementType
         )
 
         result("Payment page opened successfully")
@@ -170,7 +176,7 @@ extension StsOnePayPlugin: MobilePaymentSDKDelegate {
     }
 
     public func onPaymentError(_ error: MobilePaymentError, transactionId: String) {
-        print(error)
+        print(error.userInfo)
     print(transactionId)
         // Implementation goes here
         self.result?(error)

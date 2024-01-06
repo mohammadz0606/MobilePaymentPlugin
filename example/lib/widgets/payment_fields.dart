@@ -112,15 +112,15 @@ class PaymentFields extends StatelessWidget {
               onChanged: (value) => provider.onChangeLang(value),
               items: const [
                 DropdownMenuItem<Language>(
-                  value: Language.arabic,
+                  value: Language.ar,
                   child: Text('Arabic'),
                 ),
                 DropdownMenuItem<Language>(
-                  value: Language.english,
+                  value: Language.en,
                   child: Text('English'),
                 ),
                 DropdownMenuItem<Language>(
-                  value: Language.turkish,
+                  value: Language.tr,
                   child: Text('Turkish'),
                 ),
               ],

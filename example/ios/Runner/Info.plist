@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -12,26 +14,6 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
-	<key>NSCameraUsageDescription</key>
-	<string>TYPE_YOUR_REASON_HERE</string>
-	<key>mastercard</key>
-    <dict>
-    <key>dsPublicKey</key>
-    <string>nca_demo_mastercard_encryption.crt</string>
-    <key>dsRootCertificate</key>
-    <string>nca_demo_mastercard_root.crt</string>
-    <key>logoImageName</key>
-    <string>mastercard</string>
-    </dict>
-    <key>visa</key>
-    <dict>
-    <key>dsPublicKey</key>
-    <string>nca_demo_visa_encryption.crt</string>
-    <key>dsRootCertificate</key>
-    <string>nca_demo_visa_root.crt</string>
-    <key>logoImageName</key>
-    <string>visa</string>
-    </dict>
 	<key>CFBundleName</key>
 	<string>sts_one_pay_example</string>
 	<key>CFBundlePackageType</key>
@@ -43,6 +25,10 @@
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>TYPE_YOUR_REASON_HERE</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -61,9 +47,23 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
+	<key>mastercard</key>
+	<dict>
+		<key>dsPublicKey</key>
+		<string>nca_demo_mastercard_encryption.crt</string>
+		<key>dsRootCertificate</key>
+		<string>nca_demo_mastercard_root.crt</string>
+		<key>logoImageName</key>
+		<string>mastercard</string>
+	</dict>
+	<key>visa</key>
+	<dict>
+		<key>dsPublicKey</key>
+		<string>nca_demo_visa_encryption.crt</string>
+		<key>dsRootCertificate</key>
+		<string>nca_demo_visa_root.crt</string>
+		<key>logoImageName</key>
+		<string>visa</string>
+	</dict>
 </dict>
 </plist>
