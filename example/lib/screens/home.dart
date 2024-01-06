@@ -8,10 +8,31 @@ import '../one_pay_provider.dart';
 import '../widgets/payment_fields.dart';
 import 'other_api.dart';
 
-class HomeStsOnePayExample extends StatelessWidget {
+class HomeStsOnePayExample extends StatefulWidget {
   const HomeStsOnePayExample({super.key});
+
+  @override
+  State<HomeStsOnePayExample> createState() => _HomeStsOnePayExampleState();
+}
+
+
+class _HomeStsOnePayExampleState extends State<HomeStsOnePayExample> {
+
+  @override
+  void initState() {
+    Provider.of<PayOneProvider>(context,listen: false).initializeSDK(
+      onError: (code, error) {
+      showCustomDialog(
+        context,
+        title: 'Code:$code',
+        description: error,
+      );
+    },);
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("StsOnePayDemo"),

@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
+import 'package:sts_one_pay/models/initializeSDK.dart';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 
 import 'models/other_api.dart';
@@ -13,6 +14,26 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   final MethodChannel _channelIOS =
     const MethodChannel('samples.flutter.dev/paymentIOS');
 
+  @override
+  Future<void> initializeSDK(InitializeSDK initializeSDK) async {
+    try {
+      if (Platform.isAndroid) {
+
+      } else if (Platform.isIOS) {
+
+        await _channelIOS.invokeMethod(
+          'initializeSDK',
+          initializeSDK.toJson(),
+        );
+      } else {
+        /// throw custom error
+      }
+    } on PlatformException catch (e) {
+      log(e.message.toString());
+    } catch (e) {
+      log(e.toString());
+    }
+  }
   @override
   Future<void> openPaymentPage(StsOnePay stsOnePay) async {
     try {
@@ -92,10 +113,11 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
           otherAPI.toJson(),
         );
       } else if (Platform.isIOS) {
-        await _channelIOS.invokeMethod(
+        final response = await _channelIOS.invokeMethod(
           'getInquiry',
           otherAPI.toJson(),
         );
+        print('Response from native code: $response');
       } else {
         /// throw custom error
       }

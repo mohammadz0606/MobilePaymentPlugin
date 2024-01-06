@@ -1,6 +1,7 @@
 import 'dart:developer' as log;
 import 'package:flutter/material.dart';
 import 'package:sts_one_pay/models/error_sts_one_pay.dart';
+import 'package:sts_one_pay/models/initializeSDK.dart';
 import 'package:sts_one_pay/models/other_api.dart';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 import 'package:sts_one_pay/sts_one_pay_platform_interface.dart';
@@ -18,7 +19,7 @@ class PayOneProvider extends ChangeNotifier {
   bool shouldTokenizeCard = true;
   bool isCardScanEnable = true;
   bool isSaveCardEnable = true;
-  Language selectedLangVale = Language.ar;
+  Language selectedLangVale = Language.arabic;
   PaymentType selectedPaymentTypeTypeValue = PaymentType.sale;
   final List<CardType> cardsType = [
     CardType.visa,
@@ -36,6 +37,22 @@ class PayOneProvider extends ChangeNotifier {
   ];
 
   final StsOnePayPlatform _methodChannelStsOnePay = MethodChannelStsOnePay();
+
+  Future<void> initializeSDK({
+    required Function(String code, String error) onError,
+  }) async {
+    try {
+      await _methodChannelStsOnePay.initializeSDK(
+       const InitializeSDK()
+      );
+    } on ErrorStsOnePay catch (e) {
+      log.log(e.code.toString());
+      log.log(e.message);
+      onError(e.code.toString(), e.message);
+    } catch (e) {
+      log.log(e.toString());
+    }
+  }
 
   Future<void> openPaymentPage({
     required Function(String code, String error) onError,

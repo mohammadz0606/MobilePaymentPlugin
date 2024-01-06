@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 
+import 'models/initializeSDK.dart';
 import 'models/other_api.dart';
 
 abstract class StsOnePayPlatform {
@@ -10,6 +11,8 @@ abstract class StsOnePayPlatform {
     int random = Random().nextInt(999999);
     return (timestamp + random).toString();
   }
+
+  Future<void> initializeSDK(InitializeSDK initializeSDK);
 
   Future<void> openPaymentPage(StsOnePay stsOnePay);
 

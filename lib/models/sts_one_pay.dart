@@ -14,9 +14,14 @@ class StsOnePay {
   final bool isSaveCardEnable;
   final Language langCode;
   final PaymentType paymentType;
+  final String paymentTitle;
   final String paymentDescription;
   final String version;
   final String frameworkInfo;
+  final String itemId;
+  final String quantity;
+  final String agreementId;
+  final AgreementType agreementType;
   final List<CardType> cardsType;
 
   StsOnePay(
@@ -30,11 +35,16 @@ class StsOnePay {
       this.shouldTokenizeCard = true,
       this.isCardScanEnable = true,
       this.isSaveCardEnable = true,
-      this.langCode = Language.en,
+      this.langCode = Language.english,
       this.paymentType = PaymentType.sale,
       this.paymentDescription = 'Sample Payment',
+      this.paymentTitle = 'Sample Payment',
       this.version = '1.0',
       this.frameworkInfo = 'Android 7.0',
+      this.itemId = "",
+      this.quantity = "1",
+      this.agreementId = "",
+      this.agreementType = AgreementType.none,
       this.cardsType = const [
         CardType.mastercard,
         CardType.visa,
@@ -86,33 +96,46 @@ class StsOnePay {
       "isCardScanEnable": isCardScanEnable,
       "isSaveCardEnable": isSaveCardEnable,
       "langCode": langCode.name,
-      "paymentType": paymentType.name,
+      "paymentType": paymentType.index,
+      "paymentTitle": paymentTitle,
       "paymentDescription": paymentDescription.trim(),
       "version": version,
       "frameworkInfo": frameworkInfo,
-      "cardsType": cardsType.map<String>((cardType) => cardType.name).toList(),
+      "itemId": itemId,
+      "quantity": quantity,
+      "agreementId": agreementId,
+      "agreementType": agreementType.name,
+      "cardsType": cardsType.map<int>((cardType) => cardType.index).toList(),
     };
   }
 }
 
 enum Language {
-  ar,
-  en,
-  tr,
+  english,
+  arabic,
+  turkish,
 }
 
 enum PaymentType {
   sale,
   preAuth,
 }
+enum AgreementType {
+  unscheduled,
+  recurring,
+  none,
+}
 
 enum CardType {
   visa,
   mastercard,
-  amex,
+  mada,
+  jcb,
   diners,
   union,
-  jcb,
   discover,
-  mada,
+  amex,
+  applePay,
+  payPal,
+  cash,
 }
