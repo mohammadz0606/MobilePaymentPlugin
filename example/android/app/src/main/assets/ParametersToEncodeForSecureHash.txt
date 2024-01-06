@@ -1,6 +1,0 @@
-Response.StatusMessage
-Response.StatusDescription
-Response.GatewayStatusDescription
-PaymentDescription
-PARes
-PaRes

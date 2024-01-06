@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:sts_one_pay/models/error_sts_one_pay.dart';
 import 'package:sts_one_pay/models/initializeSDK.dart';
 import 'package:sts_one_pay/models/other_api.dart';
+import 'package:sts_one_pay/models/payment_page_response.dart';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 import 'package:sts_one_pay/sts_one_pay_platform_interface.dart';
 import 'package:sts_one_pay/sts_one_pay_method_channel.dart';
+import 'package:sts_one_pay_example/helper/shared_preferences.dart';
 
 class PayOneProvider extends ChangeNotifier {
   String amount = '';
@@ -56,14 +58,20 @@ class PayOneProvider extends ChangeNotifier {
 
   Future<void> openPaymentPage({
     required Function(String code, String error) onError,
+    required Function(StsOnePayResponse result) onResponse,
   }) async {
     try {
       List<String> tokens = tokensText.split(',');
+      tokens =
+          tokensText.isNotEmpty ? tokens.map((e) => e.trim()).toList() : [];
+      List<String> tokenInSharedPreferences =
+          SharedPreferencesApp.getArray(key: 'tokens') ?? [];
+      log.log('len of tokenInSharedPreferences');
+      log.log(tokenInSharedPreferences.length.toString());
       await _methodChannelStsOnePay.openPaymentPage(
         StsOnePay(
           amount: amount,
-          tokens:
-              tokensText.isNotEmpty ? tokens.map((e) => e.trim()).toList() : [],
+          tokens: [...tokens, ...tokenInSharedPreferences],
           currency: currency,
           transactionId: transactionId,
           isThreeDSSecure: isThreeDSSecure,
@@ -74,6 +82,39 @@ class PayOneProvider extends ChangeNotifier {
           paymentType: selectedPaymentTypeTypeValue,
           cardsType: cardsSelected,
         ),
+        onResultResponse: (result) async {
+          onResponse(result);
+          log.log('Card Token 2');
+          log.log(result.token ?? '');
+          log.log(result.statusCode?.toString() ?? '');
+          log.log((result.token == null).toString());
+          log.log(result.statusDescription ?? '');
+          if (result.saveCard != null) {
+            if (result.saveCard!) {
+              if (result.token != null) {
+                tokens.add(result.token!);
+                if (SharedPreferencesApp.getArray(key: 'tokens') != null) {
+                  await SharedPreferencesApp.remove(key: 'tokens');
+                }
+                await SharedPreferencesApp.setArray(
+                  key: 'tokens',
+                  array: tokens,
+                );
+              }
+            }
+          }
+        },
+        onDeleteCardResponse: (onDeleteCard) async {
+          if (onDeleteCard.deleted) {
+            List<String> allTokens =
+                SharedPreferencesApp.getArray(key: 'tokens') ?? [];
+            allTokens.remove(onDeleteCard.token);
+            log.log('On Delete Card Example');
+            log.log(allTokens.length.toString());
+            SharedPreferencesApp.remove(key: 'tokens');
+            SharedPreferencesApp.setArray(key: 'tokens', array: allTokens);
+          }
+        },
       );
     } on ErrorStsOnePay catch (e) {
       log.log(e.code.toString());

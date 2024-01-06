@@ -3,9 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:sts_one_pay_example/screens/home.dart';
 
+import 'helper/shared_preferences.dart';
 import 'one_pay_provider.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPreferencesApp.init();
   runApp(const ExampleStsOnePay());
 }
 
@@ -22,8 +25,8 @@ class ExampleStsOnePay extends StatelessWidget {
           primaryColor: const Color(0xff007A8A),
           scaffoldBackgroundColor: Colors.white,
           colorScheme: ThemeData.light().colorScheme.copyWith(
-                secondary: const Color(0xff00A4B4),
-              ),
+            secondary: const Color(0xff00A4B4),
+          ),
           appBarTheme: const AppBarTheme(
             elevation: 0,
             centerTitle: true,
@@ -47,7 +50,7 @@ class ExampleStsOnePay extends StatelessWidget {
                 ),
               ),
               foregroundColor:
-                  MaterialStateProperty.all(const Color(0xff007A8A)),
+              MaterialStateProperty.all(const Color(0xff007A8A)),
               shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
@@ -65,7 +68,7 @@ class ExampleStsOnePay extends StatelessWidget {
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ButtonStyle(
               backgroundColor:
-                  MaterialStateProperty.all(const Color(0xff007A8A)),
+              MaterialStateProperty.all(const Color(0xff007A8A)),
               shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),

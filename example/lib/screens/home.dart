@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import '../helper/dialogs.dart';
 import '../one_pay_provider.dart';
 import '../widgets/payment_fields.dart';
+import '../widgets/response.dart';
 import 'other_api.dart';
 
 class HomeStsOnePayExample extends StatefulWidget {
@@ -65,15 +66,24 @@ class _HomeStsOnePayExampleState extends State<HomeStsOnePayExample> {
                       width: double.infinity,
                       child: OutlinedButton(
                         onPressed: () async {
-                            await provider.openPaymentPage(
-                              onError: (code, error) {
-                                showCustomDialog(
-                                  context,
-                                  title: 'Code:$code',
-                                  description: error,
-                                );
-                              },
-                            );
+                          await provider.openPaymentPage(
+                            onError: (code, error) {
+                              showCustomDialog(
+                                context,
+                                title: 'Code:$code',
+                                description: error,
+                              );
+                            },
+                            onResponse: (result) async {
+                              await showDialog(
+                                context: context,
+                                useSafeArea: true,
+                                builder: (context) {
+                                  return ResponseDialog(result: result);
+                                },
+                              );
+                            },
+                          );
                         },
                         child: const Text('Pay Now'),
                       ),
