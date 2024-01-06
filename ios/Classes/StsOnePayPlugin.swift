@@ -21,15 +21,20 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
     }
     
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        self.result = result
         switch call.method {
         case "initializeSDK":
-         guard let args = call.arguments as? [String : Any] else {return}
+            guard let args = call.arguments as? [String : Any] else {
+                result(FlutterError(code: "5000", message: "Arguments is not valid", details: nil));
+                return
+            }
          handleInitializeSDK(args: args)
         case "openPaymentPage":
-            if let viewController = UIApplication.shared.windows.first?.rootViewController as? UIViewController, let args = call.arguments as? [String: Any] {
-                guard let args = call.arguments as? [String : Any] else {return}
-                print("dddd")
-                print(args["amount"]!)
+            if let viewController = UIApplication.shared.windows.first?.rootViewController as? UIViewController {
+                guard let args = call.arguments as? [String : Any] else {
+                    result(FlutterError(code: "5000", message: "Arguments is not valid", details: nil));
+                    return
+                }
                 self.result = result
                 handleOpenPaymentPage(viewController: viewController, args: args, result: self.result!)
             } else {
@@ -84,13 +89,13 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
         }
     }
        func handleInitializeSDK(args: [String: Any]) {
-//         guard let merchantId = args["merchantId"] as? String,
-//                  let secretKey = args["secretKey"] as? String,
-//                  let appleMerchantId = args["appleMerchantId"] as? String
-//            else {
-//                result(FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil))
-//                return
-//            }
+//           guard let merchantId = args["merchantId"] as? String,
+//                 let secretKey = args["secretKey"] as? String,
+//                 let appleMerchantId = args["appleMerchantId"] as? String
+//           else {
+//               result?(FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil))
+//               return
+//           }
 
             try? MobilePaymentSDK.initializeSDK(
                 withMerchantID: "AirrchipMerchant",
@@ -100,6 +105,7 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
             )
         }
     func handleOpenPaymentPage(viewController: UIViewController, args: [String: Any], result: @escaping FlutterResult) {
+        self.result = result
         // Extract necessary data from Flutter method call arguments
         guard let amount = args["amount"] as? String,
               let currency = args["currency"] as? String,
@@ -118,7 +124,7 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
               let agreementId = args["agreementId"] as? String,
               let agreementTypeValue = args["agreementType"] as? String
         else {
-            result(FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil))
+            result(FlutterError(code: "5004", message: "Invalid payment data", details: nil))
             return
         }
         var paymentMthds: [MobilePaymentSDKPaymentMethod] = []
@@ -129,14 +135,17 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
         for item in tokensValues {
             tokens.append(item)
         }
-        var paymentType = MobilePaymentType(rawValue: paymentTypeValue).unsafelyUnwrapped
+        guard let paymentType = MobilePaymentType(rawValue: paymentTypeValue) else {
+            result(FlutterError(code: "5007", message: "PaymentType is not valid", details: nil))
+            return
+        }
         //ZA: fix me here
         guard let lang = MobilePaymentSupportedLanguage(rawValue: langCode) else {
-            //throw
+            result(FlutterError(code: "5006", message: "Language is not valid", details: nil))
             return
         }
         guard let agreementType = MobileAgreementType(rawValue: agreementTypeValue) else {
-            //throw
+            result(FlutterError(code: "5005", message: "AgreementType is not valid", details: nil))
             return
         }
         MobilePaymentSDK.shared.showPaymentPage(
@@ -159,7 +168,7 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
             agreementType: agreementType
         )
 
-        result("Payment page opened successfully")
+       // result("Payment page opened successfully")
     }
 
 
@@ -167,33 +176,33 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
 
 extension StsOnePayPlugin: MobilePaymentSDKDelegate {
     public func onPaymentSuccess(withTransactionId transactionId: String, infoDictionary: [String: Any], tokenizedCard: String?, shouldStoreCard: Bool) {
-    print(transactionId)
-    print(infoDictionary)
-    print(tokenizedCard)
-    print(shouldStoreCard)
-        self.result?(infoDictionary)
+        print(transactionId)
+        print(infoDictionary)
+        print(tokenizedCard)
+        print(shouldStoreCard)
+        self.result?(["infoDictionary": infoDictionary, "transactionId": transactionId, "shouldStoreCard": shouldStoreCard, "tokenizedCard": tokenizedCard])
         // Implementation goes here
     }
-
+    
     public func onPaymentError(_ error: MobilePaymentError, transactionId: String) {
         print(error.userInfo)
-    print(transactionId)
+        print(transactionId)
         // Implementation goes here
-        self.result?(error)
+        self.result?(FlutterError(code: "5003", message: "Payment Error", details: ["error": error, "transactionId": transactionId]))
     }
-
+    
     public func onPaymentCancelled(transactionId: String) {
         print(transactionId)
-        self.result?(transactionId)
+        self.result?(FlutterError(code: "5002", message: "Payment cancelled by user", details: ["transactionId": transactionId]))
         // Implementation goes here
     }
-
+    
     public func didTapDeleteCard(_ withToken: String) {
         print(withToken)
-
+        
         // Implementation goes here
     }
-
+    
     public func onPaymentCompletion(withResponse response: MobilePaymentGatewayResponse) {
         // Implementation goes here
     }
