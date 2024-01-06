@@ -12,9 +12,8 @@ import 'models/payment_page_response.dart';
 import 'sts_one_pay_platform_interface.dart';
 
 class MethodChannelStsOnePay extends StsOnePayPlatform {
-  final MethodChannel _channel =
-      const MethodChannel('samples.flutter.dev/payment');
-  final MethodChannel _channelIOS =
+  final _methodChannel = const MethodChannel('sts_one_pay');
+  final _methodChannelIOS =
     const MethodChannel('samples.flutter.dev/paymentIOS');
 
   @override
@@ -24,7 +23,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
 
       } else if (Platform.isIOS) {
 
-        final Map<Object?, Object?> resp = await _channelIOS.invokeMethod(
+        final Map<Object?, Object?> resp = await _methodChannelIOS.invokeMethod(
           'initializeSDK',
           initializeSDK.toJson(),
         );
@@ -46,7 +45,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   }) async {
     try {
       if (Platform.isAndroid) {
-        await _channel.invokeMethod(
+        await _methodChannel.invokeMethod(
           'paymentMethod',
           stsOnePay.toJson(),
         );
@@ -78,7 +77,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
         });
       } else if (Platform.isIOS) {
 
-        final Map<Object?, Object?> resp = await _channelIOS.invokeMethod(
+        final Map<Object?, Object?> resp = await _methodChannelIOS.invokeMethod(
           'openPaymentPage',
           stsOnePay.toIOSJson(),
         );
@@ -105,12 +104,12 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   Future<void> refund(OtherAPI otherAPI) async {
     try {
       if (Platform.isAndroid) {
-        await _channel.invokeMethod(
+        await _methodChannel.invokeMethod(
           'refund',
           otherAPI.toJson(),
         );
       } else if (Platform.isIOS) {
-        await _channelIOS.invokeMethod(
+        await _methodChannelIOS.invokeMethod(
           'refund',
           otherAPI.toJson(),
         );
@@ -128,12 +127,12 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   Future<void> completion(OtherAPI otherAPI) async {
     try {
       if (Platform.isAndroid) {
-        await _channel.invokeMethod(
+        await _methodChannel.invokeMethod(
           'completion',
           otherAPI.toJson(),
         );
       } else if (Platform.isIOS) {
-        await _channelIOS.invokeMethod(
+        await _methodChannelIOS.invokeMethod(
           'completion',
           otherAPI.toJson(),
         );
@@ -151,12 +150,12 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
   Future<void> inquiry(OtherAPI otherAPI) async {
     try {
       if (Platform.isAndroid) {
-        await _channel.invokeMethod(
+        await _methodChannel.invokeMethod(
           'inquiry',
           otherAPI.toJson(),
         );
       } else if (Platform.isIOS) {
-        final response = await _channelIOS.invokeMethod(
+        final response = await _methodChannelIOS.invokeMethod(
           'getInquiry',
           otherAPI.toJson(),
         );
