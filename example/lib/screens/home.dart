@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../helper/dialogs.dart';
 import '../one_pay_provider.dart';
 import '../widgets/payment_fields.dart';
+import '../widgets/response.dart';
 import 'other_api.dart';
 
 class HomeStsOnePayExample extends StatelessWidget {
@@ -48,6 +49,15 @@ class HomeStsOnePayExample extends StatelessWidget {
                                 context,
                                 title: 'Code:$code',
                                 description: error,
+                              );
+                            },
+                            onResponse: (result) async {
+                              await showDialog(
+                                context: context,
+                                useSafeArea: true,
+                                builder: (context) {
+                                  return ResponseDialog(result: result);
+                                },
                               );
                             },
                           );

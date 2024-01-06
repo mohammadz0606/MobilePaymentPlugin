@@ -2,6 +2,7 @@ import 'dart:developer' as log;
 import 'package:flutter/material.dart';
 import 'package:sts_one_pay/models/error_sts_one_pay.dart';
 import 'package:sts_one_pay/models/other_api.dart';
+import 'package:sts_one_pay/models/payment_page_response.dart';
 import 'package:sts_one_pay/models/sts_one_pay.dart';
 import 'package:sts_one_pay/sts_one_pay_platform_interface.dart';
 import 'package:sts_one_pay/sts_one_pay_method_channel.dart';
@@ -40,6 +41,7 @@ class PayOneProvider extends ChangeNotifier {
 
   Future<void> openPaymentPage({
     required Function(String code, String error) onError,
+    required Function(StsOnePayResponse result) onResponse,
   }) async {
     try {
       List<String> tokens = tokensText.split(',');
@@ -64,6 +66,7 @@ class PayOneProvider extends ChangeNotifier {
           cardsType: cardsSelected,
         ),
         onResultResponse: (result) async {
+          onResponse(result);
           log.log('Card Token 2');
           log.log(result.token ?? '');
           log.log(result.statusCode?.toString() ?? '');
