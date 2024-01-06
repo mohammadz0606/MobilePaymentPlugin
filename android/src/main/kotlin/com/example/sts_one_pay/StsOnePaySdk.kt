@@ -1,6 +1,5 @@
 package com.example.sts_one_pay
 
-import android.app.Activity
 import android.widget.Toast
 import com.edesign.paymentsdk.Inquiry.InquiryRequest
 import com.edesign.paymentsdk.Inquiry.InquiryResponse
