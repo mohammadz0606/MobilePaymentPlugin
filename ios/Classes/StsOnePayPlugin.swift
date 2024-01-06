@@ -4,41 +4,43 @@ import MobilePaymentSDK
 
 public class StsOnePayPlugin: NSObject, FlutterPlugin {
     private var result: ((Any) -> ())?
-        public static let shared = StsOnePayPlugin()
-
+    public static let shared = StsOnePayPlugin()
+    
     override private init() {}
     public static func register(with registrar: FlutterPluginRegistrar) {
         let instance = StsOnePayPlugin()
-//         let merchantId = "AirrchipMerchant"
-//         let secretKey = "MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh"
-//         let appleMerchantId = "merchant.com.stspayone.demo"
-
+        //         let merchantId = "AirrchipMerchant"
+        //         let secretKey = "MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh"
+        //         let appleMerchantId = "merchant.com.stspayone.demo"
+        
         // Initialize MyPaymentSDKDelegate as an instance variable
         
-
+        
         let channel = FlutterMethodChannel(name: "samples.flutter.dev/paymentIOS", binaryMessenger: registrar.messenger())
         registrar.addMethodCallDelegate(instance, channel: channel)
     }
     
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-        self.result = result
+        StsOnePayPlugin.shared.result = result
         switch call.method {
         case "initializeSDK":
             guard let args = call.arguments as? [String : Any] else {
-                result(FlutterError(code: "5000", message: "Arguments is not valid", details: nil));
+                let object = FlutterError(code: "5000", message: "Arguments is not valid", details: nil)
+                result(object)
                 return
             }
-         handleInitializeSDK(args: args)
+            handleInitializeSDK(args: args)
         case "openPaymentPage":
             if let viewController = UIApplication.shared.windows.first?.rootViewController as? UIViewController {
                 guard let args = call.arguments as? [String : Any] else {
-                    result(FlutterError(code: "5000", message: "Arguments is not valid", details: nil));
+                    let object = FlutterError(code: "5000", message: "Arguments is not valid", details: nil)
+                    result(object)
                     return
                 }
-                self.result = result
-                handleOpenPaymentPage(viewController: viewController, args: args, result: self.result!)
+                handleOpenPaymentPage(viewController: viewController, args: args, result: result)
             } else {
-                result(result)
+                let object = FlutterError(code: "5006", message: "View controller is not valid", details: nil)
+                result(object)
             }
         case "getInquiry":
             guard let args = call.arguments as? [String : Any] else {return}
@@ -60,7 +62,6 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
                 result(FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil))
                 return
             }
-            self.result = result
             MobilePaymentSDK.shared.requestForPaymentRefund(
                 forOriginalTransactionId: forOriginalTransactionId,
                 forTransactionId: forTransactionId,
@@ -77,7 +78,6 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
                 result(FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil))
                 return
             }
-            self.result = result
             MobilePaymentSDK.shared.requestForPaymentCompletion(
                 forOriginalTransactionId: forOriginalTransactionId,
                 forTransactionId: forTransactionId,
@@ -88,24 +88,25 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
             result(FlutterMethodNotImplemented)
         }
     }
-       func handleInitializeSDK(args: [String: Any]) {
-          guard let merchantId = args["merchantId"] as? String,
-                let secretKey = args["secretKey"] as? String,
-                let appleMerchantId = args["appleMerchantId"] as? String
-          else {
-              result?(FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil))
-              return
-          }
-
-            try? MobilePaymentSDK.initializeSDK(
-                withMerchantID: merchantId,
-                secretKey: secretKey,
-                delegate: StsOnePayPlugin.shared,
-                appleMerchantId: appleMerchantId
-            )
+    func handleInitializeSDK(args: [String: Any]) {
+        guard let merchantId = args["merchantId"] as? String,
+              let secretKey = args["secretKey"] as? String,
+              let appleMerchantId = args["appleMerchantId"] as? String
+        else {
+            let object = FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil)
+            result?(object)
+            return
         }
+        
+        try? MobilePaymentSDK.initializeSDK(
+            withMerchantID: merchantId,
+            secretKey: secretKey,
+            delegate: StsOnePayPlugin.shared,
+            appleMerchantId: appleMerchantId
+        )
+    }
     func handleOpenPaymentPage(viewController: UIViewController, args: [String: Any], result: @escaping FlutterResult) {
-        self.result = result
+        StsOnePayPlugin.shared.result = result
         // Extract necessary data from Flutter method call arguments
         guard let amount = args["amount"] as? String,
               let currency = args["currency"] as? String,
@@ -167,55 +168,50 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
             agreementId: agreementId,
             agreementType: agreementType
         )
-
-       // result("Payment page opened successfully")
+        
+        // result("Payment page opened successfully")
     }
-
-
+    
+    
 }
 
 extension StsOnePayPlugin: MobilePaymentSDKDelegate {
     public func onPaymentSuccess(withTransactionId transactionId: String, infoDictionary: [String: Any], tokenizedCard: String?, shouldStoreCard: Bool) {
-        print(transactionId)
-        print(infoDictionary)
-        print(tokenizedCard)
-        print(shouldStoreCard)
-        self.result?("success /transactionId")
-//         self.result?(["infoDictionary": infoDictionary, "transactionId": transactionId, "shouldStoreCard": shouldStoreCard, "tokenizedCard": tokenizedCard])
-        // Implementation goes here
+        let object: [String : Any] = ["infoDictionary": infoDictionary, "transactionId": transactionId, "shouldStoreCard": shouldStoreCard, "tokenizedCard": tokenizedCard ?? ""]
+        StsOnePayPlugin.shared.result?(object)
     }
     
     public func onPaymentError(_ error: MobilePaymentError, transactionId: String) {
-        print(error.userInfo)
-        print(transactionId)
-        // Implementation goes here
-        self.result?("error /transactionId")
-//         self.result?(FlutterError(code: "5003", message: "Payment Error", details: ["error": error, "transactionId": transactionId]))
+        let object = FlutterError(code: "5003", message: "Payment Error", details: ["error": error, "transactionId": transactionId])
+        StsOnePayPlugin.shared.result?(object)
     }
     
     public func onPaymentCancelled(transactionId: String) {
-        print(transactionId)
-        self.result?(FlutterError(code: "5002", message: "Payment cancelled by user", details: ["transactionId": transactionId]))
-        // Implementation goes here
+//        let object = FlutterResponse(data: nil, error: FlutterError(code: "5002", message: "Payment cancelled by user", details: ["transactionId": transactionId]), method: .cancelled)
+        StsOnePayPlugin.shared.result?(FlutterError(code: "5002", message: "Payment cancelled by user", details: ["transactionId": transactionId]))
     }
     
     public func didTapDeleteCard(_ withToken: String) {
-        print(withToken)
-        
-        // Implementation goes here
+        let object = ["cardToken": withToken]
+        StsOnePayPlugin.shared.result?(object)
     }
     
     public func onPaymentCompletion(withResponse response: MobilePaymentGatewayResponse) {
-        // Implementation goes here
+        let object = ["response": response]
+        StsOnePayPlugin.shared.result?(object)
     }
 }
 
-struct FlutterReponse {
-    var type: MyEnum?
+struct FlutterResponse {
+    var data: [String: Any]?
+    var error: FlutterError?
+    var method: MobilePaymentSDKMethodsEnum
 }
 
-enum MyEnum {
+enum MobilePaymentSDKMethodsEnum {
     case success
     case error
     case cancelled
+    case deleteCard
+    case paymentCompletion
 }
