@@ -21,10 +21,11 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
 
       } else if (Platform.isIOS) {
 
-        await _channelIOS.invokeMethod(
+        final Map<Object?, Object?> resp = await _channelIOS.invokeMethod(
           'initializeSDK',
           initializeSDK.toJson(),
         );
+        log(resp.toString());
       } else {
         /// throw custom error
       }
@@ -44,14 +45,18 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
         );
       } else if (Platform.isIOS) {
 
-        await _channelIOS.invokeMethod(
+        final Map<Object?, Object?> resp = await _channelIOS.invokeMethod(
           'openPaymentPage',
           stsOnePay.toIOSJson(),
         );
+        log("dddd");
+        log(resp["key"].toString());
+        log(resp["error"].toString());
       } else {
         /// throw custom error
       }
     } on PlatformException catch (e) {
+      log(e.toString());
       log(e.message.toString());
     } catch (e) {
       log(e.toString());
