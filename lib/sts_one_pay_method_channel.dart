@@ -81,9 +81,19 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
           'openPaymentPage',
           stsOnePay.toIOSJson(),
         );
-        log("dddd");
-        log(resp["key"].toString());
-        log(resp["error"].toString());
+        String status = resp["code"].toString();
+        String transactionId = resp["transactionId"].toString();
+        log(resp.toString(),name: transactionId);
+
+        if (status.toLowerCase() == '200') {
+          log("success",name: transactionId);
+          log(resp.toString(),name: transactionId);
+          // Map<String, dynamic> data = resp["infoDictionary"];
+          onResultResponse(StsOnePayResponse.fromIOSJsonSuccess(resp));
+        } else {
+          log("error",name: transactionId);
+          // onResultResponse(StsOnePayResponse.fromJsonFailed(data));
+        }
       } else {
         throw const ErrorStsOnePay(
           code: 2011,

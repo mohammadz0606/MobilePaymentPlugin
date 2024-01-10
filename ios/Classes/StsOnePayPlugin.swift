@@ -3,7 +3,7 @@ import UIKit
 import MobilePaymentSDK
 
 public class StsOnePayPlugin: NSObject, FlutterPlugin {
-    private var result: ((Any) -> ())?
+    private var result: FlutterResult?
     public static let shared = StsOnePayPlugin()
     
     override private init() {}
@@ -62,6 +62,7 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
                 result(FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil))
                 return
             }
+            self.result = result
             MobilePaymentSDK.shared.requestForPaymentRefund(
                 forOriginalTransactionId: forOriginalTransactionId,
                 forTransactionId: forTransactionId,
@@ -78,6 +79,7 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
                 result(FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil))
                 return
             }
+            self.result = result
             MobilePaymentSDK.shared.requestForPaymentCompletion(
                 forOriginalTransactionId: forOriginalTransactionId,
                 forTransactionId: forTransactionId,
@@ -88,23 +90,22 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
             result(FlutterMethodNotImplemented)
         }
     }
-    func handleInitializeSDK(args: [String: Any]) {
-        guard let merchantId = args["merchantId"] as? String,
-              let secretKey = args["secretKey"] as? String,
-              let appleMerchantId = args["appleMerchantId"] as? String
-        else {
-            let object = FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil)
-            result?(object)
-            return
+       func handleInitializeSDK(args: [String: Any]) {
+          guard let merchantId = args["merchantId"] as? String,
+                let secretKey = args["secretKey"] as? String,
+                let appleMerchantId = args["appleMerchantId"] as? String
+          else {
+              result?(FlutterError(code: "INVALID_ARGUMENTS", message: "Invalid payment data", details: nil))
+              return
+          }
+
+            try? MobilePaymentSDK.initializeSDK(
+                withMerchantID: merchantId,
+                secretKey: secretKey,
+                delegate: StsOnePayPlugin.shared,
+                appleMerchantId: appleMerchantId
+            )
         }
-        
-        try? MobilePaymentSDK.initializeSDK(
-            withMerchantID: merchantId,
-            secretKey: secretKey,
-            delegate: StsOnePayPlugin.shared,
-            appleMerchantId: appleMerchantId
-        )
-    }
     func handleOpenPaymentPage(viewController: UIViewController, args: [String: Any], result: @escaping FlutterResult) {
         StsOnePayPlugin.shared.result = result
         // Extract necessary data from Flutter method call arguments
@@ -168,22 +169,31 @@ public class StsOnePayPlugin: NSObject, FlutterPlugin {
             agreementId: agreementId,
             agreementType: agreementType
         )
-        
-        // result("Payment page opened successfully")
+
+       // result("Payment page opened successfully")
     }
-    
-    
+
+
 }
 
 extension StsOnePayPlugin: MobilePaymentSDKDelegate {
     public func onPaymentSuccess(withTransactionId transactionId: String, infoDictionary: [String: Any], tokenizedCard: String?, shouldStoreCard: Bool) {
-        let object: [String : Any] = ["infoDictionary": infoDictionary, "transactionId": transactionId, "shouldStoreCard": shouldStoreCard, "tokenizedCard": tokenizedCard ?? ""]
-        StsOnePayPlugin.shared.result?(object)
+
+        var newInfoDictionary = infoDictionary
+
+        newInfoDictionary["tokenizedCard"] = tokenizedCard
+        newInfoDictionary["shouldStoreCard"] = shouldStoreCard
+        newInfoDictionary["transactionId"] = transactionId
+        newInfoDictionary["code"] = "200"
+
+//         let object: [String : Any] = ["infoDictionary": newInfoDictionary, "transactionId": transactionId, "shouldStoreCard": shouldStoreCard, "tokenizedCard": tokenizedCard ?? "","code": "200"]
+        StsOnePayPlugin.shared.result?(newInfoDictionary)
     }
-    
+
     public func onPaymentError(_ error: MobilePaymentError, transactionId: String) {
-        let object = FlutterError(code: "5003", message: "Payment Error", details: ["error": error, "transactionId": transactionId])
-        StsOnePayPlugin.shared.result?(object)
+
+        let object: [String : Any] = ["infoDictionary": "", "transactionId": transactionId, "shouldStoreCard": "", "tokenizedCard": "","code": "5003"]
+         StsOnePayPlugin.shared.result?(object)
     }
     
     public func onPaymentCancelled(transactionId: String) {
@@ -197,7 +207,7 @@ extension StsOnePayPlugin: MobilePaymentSDKDelegate {
     }
     
     public func onPaymentCompletion(withResponse response: MobilePaymentGatewayResponse) {
-        let object = ["response": response]
+        let object = ["response": response.getGatewayRawResponse()]
         StsOnePayPlugin.shared.result?(object)
     }
 }
@@ -212,6 +222,4 @@ enum MobilePaymentSDKMethodsEnum {
     case success
     case error
     case cancelled
-    case deleteCard
-    case paymentCompletion
 }

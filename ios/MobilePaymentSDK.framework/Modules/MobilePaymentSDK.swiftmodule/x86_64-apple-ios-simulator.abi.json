@@ -61612,14 +61612,14 @@
     {
       "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/MobilePaymentSDK\/Project\/PaymentDetialsEnter\/Card Details\/EnterCardDetailsViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 47472,
+      "offset": 47574,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/MobilePaymentSDK\/Project\/PaymentDetialsEnter\/Card Details\/EnterCardDetailsViewController.swift",
       "kind": "StringLiteral",
-      "offset": 47503,
+      "offset": 47605,
       "length": 3,
       "value": "\" \""
     },
@@ -62116,21 +62116,21 @@
     {
       "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/MobilePaymentSDK\/Project\/PaymentDetialsEnter\/Card Details\/EnterCardDetailsDataController.swift",
       "kind": "IntegerLiteral",
-      "offset": 18200,
+      "offset": 18089,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/MobilePaymentSDK\/Project\/PaymentDetialsEnter\/Card Details\/EnterCardDetailsDataController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26461,
+      "offset": 26350,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/zabbas\/Documents\/PayOneSDK\/MobilePaymentSDK\/Project\/PaymentDetialsEnter\/Card Details\/EnterCardDetailsDataController.swift",
       "kind": "IntegerLiteral",
-      "offset": 35742,
+      "offset": 35631,
       "length": 1,
       "value": "1"
     },

@@ -65,6 +65,33 @@ class StsOnePayResponse {
               : false,
     );
   }
+  factory StsOnePayResponse.fromIOSJsonSuccess(Map<Object?, Object?> json) {
+
+    return StsOnePayResponse(
+      amount: json["Response.Amount"].toString(),
+      approvalCode: int.tryParse(json["Response.ApprovalCode"].toString()),
+      cardNumber: json["Response.CardNumber"].toString(),
+      currencyISOCode: json["Response.CurrencyISOCode"].toString(),
+      gatewayName: json["Response.GatewayName"].toString(),
+      gatewayStatusCode: int.tryParse(json["Response.GatewayStatusCode"].toString()),
+      gatewayStatusDescription: json["Response.GatewayStatusDescription"].toString(),
+      merchantID: json["Response.MerchantID"].toString(),
+      messageID: int.tryParse(json["Response.MessageID"].toString()),
+      paymentMethod: int.tryParse(json["Response.PaymentMethod"].toString()),
+      rrn: int.tryParse(json["Response.RRN"].toString()),
+      secureHash: json["Response.SecureHash"].toString(),
+      statusCode: int.tryParse(json["Response.StatusCode"].toString()),
+      statusDescription: json["Response.StatusDescription"].toString(),
+      token: json["Response.Token"].toString(),
+      transactionID: json["Response.TransactionID"].toString(),
+      responseHashMatch: json["ResponseHashMatch"].toString(),
+      saveCard: json["SaveCard"] == null
+          ? null
+          : (json["SaveCard"]).toString().toLowerCase() == "true"
+              ? true
+              : false,
+    );
+  }
 
   factory StsOnePayResponse.fromJsonFailed(Map<String, dynamic> json) {
     return StsOnePayResponse(
