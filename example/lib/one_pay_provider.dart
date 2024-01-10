@@ -44,9 +44,7 @@ class PayOneProvider extends ChangeNotifier {
     required Function(String code, String error) onError,
   }) async {
     try {
-      await _methodChannelStsOnePay.initializeSDK(
-       const InitializeSDK()
-      );
+      await _methodChannelStsOnePay.initializeSDK(const InitializeSDK());
     } on ErrorStsOnePay catch (e) {
       log.log(e.code.toString());
       log.log(e.message);
@@ -64,13 +62,12 @@ class PayOneProvider extends ChangeNotifier {
       List<String> tokens = tokensText.split(',');
       tokens =
           tokensText.isNotEmpty ? tokens.map((e) => e.trim()).toList() : [];
-/*      List<String> tokenInSharedPreferences =
+      List<String> tokenInSharedPreferences =
           SharedPreferencesApp.getArray(key: 'tokens') ?? [];
-      log.log('len of tokenInSharedPreferences');*/
       await _methodChannelStsOnePay.openPaymentPage(
         StsOnePay(
           amount: amount,
-          //tokens: [...tokens, ...tokenInSharedPreferences],
+          tokens: [...tokens, ...tokenInSharedPreferences],
           currency: currency,
           transactionId: transactionId,
           isThreeDSSecure: isThreeDSSecure,
@@ -81,7 +78,7 @@ class PayOneProvider extends ChangeNotifier {
           paymentType: selectedPaymentTypeTypeValue,
           cardsType: cardsSelected,
         ),
-        onResultResponse: (result) async {
+        onPaymentResponse: (result) async {
           onResponse(result);
           log.log('Card Token 2');
           log.log(result.token ?? '');
@@ -90,7 +87,7 @@ class PayOneProvider extends ChangeNotifier {
           log.log(result.statusDescription ?? '');
           if (result.saveCard != null) {
             if (result.saveCard!) {
-              /*if (result.token != null) {
+              if (result.token != null) {
                 tokens.add(result.token!);
                 if (SharedPreferencesApp.getArray(key: 'tokens') != null) {
                   await SharedPreferencesApp.remove(key: 'tokens');
@@ -99,9 +96,19 @@ class PayOneProvider extends ChangeNotifier {
                   key: 'tokens',
                   array: tokens,
                 );
-              }*/
+              }
             }
           }
+        },
+        onPaymentFailed: (result) {
+          onResponse(
+            StsOnePayResponse(
+              responseHashMatch: result.responseHashMatch,
+              statusDescription: result.statusDescription,
+              statusCode: result.statusCode,
+              secureHash: result.secureHash,
+            ),
+          );
         },
         onDeleteCardResponse: (onDeleteCard) async {
           /*if (onDeleteCard.deleted) {

@@ -25,33 +25,33 @@ class StsOnePay {
   final List<CardType> cardsType;
   final String clientIPaddress;
 
-  StsOnePay(
-      {this.authenticationToken = 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
-      this.merchantID = 'AirrchipMerchant',
-      required this.amount,
-      this.tokens = const [],
-      required this.currency,
-      this.transactionId = '',
-      this.isThreeDSSecure = true,
-      this.shouldTokenizeCard = true,
-      this.isCardScanEnable = true,
-      this.isSaveCardEnable = true,
-      this.langCode = Language.en,
-      this.paymentType = PaymentType.sale,
-      this.paymentDescription = 'Sample Payment',
-      this.paymentTitle = 'Sample Payment',
-      this.version = '1.0',
-      this.frameworkInfo = 'Android 7.0',
-      this.clientIPaddress = '3.7.21.24',
-      this.itemId = "",
-      this.quantity = "1",
-      this.agreementId = "",
-      this.agreementType = AgreementType.NONE,
-      this.cardsType = const [
-        CardType.mastercard,
-        CardType.visa,
-      ]})
-      : assert(
+  StsOnePay({
+    this.authenticationToken = 'MmQ2OTQyMTQyNjUyZmIzYTY4ZGZhOThh',
+    this.merchantID = 'AirrchipMerchant',
+    required this.amount,
+    this.tokens = const [],
+    required this.currency,
+    this.transactionId = '',
+    this.isThreeDSSecure = true,
+    this.shouldTokenizeCard = true,
+    this.isCardScanEnable = true,
+    this.isSaveCardEnable = true,
+    this.langCode = Language.en,
+    this.paymentType = PaymentType.sale,
+    this.paymentDescription = 'Sample Payment',
+    this.paymentTitle = 'Sample Payment',
+    this.version = '1.0',
+    this.frameworkInfo = 'Android 7.0',
+    this.clientIPaddress = '3.7.21.24',
+    this.itemId = "",
+    this.quantity = "1",
+    this.agreementId = "",
+    this.agreementType = AgreementType.NONE,
+    this.cardsType = const [
+      CardType.mastercard,
+      CardType.visa,
+    ],
+  }) : assert(
           StsOnePayErrorHandler.amount(amount) &&
               StsOnePayErrorHandler.authenticationToken(authenticationToken) &&
               StsOnePayErrorHandler.transactionId(transactionId) &&
@@ -123,6 +123,7 @@ enum PaymentType {
   sale,
   preAuth,
 }
+
 enum AgreementType {
   UNSCHEDULED,
   RECURRING,

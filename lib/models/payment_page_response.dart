@@ -39,7 +39,7 @@ class StsOnePayResponse {
     this.saveCard,
   });
 
-  factory StsOnePayResponse.fromJsonSuccess(Map<String, dynamic> json) {
+  factory StsOnePayResponse.fromJson(Map<String, dynamic> json) {
     return StsOnePayResponse(
       amount: json["Response.Amount"].toString(),
       approvalCode: int.tryParse(json["Response.ApprovalCode"]),
@@ -66,12 +66,4 @@ class StsOnePayResponse {
     );
   }
 
-  factory StsOnePayResponse.fromJsonFailed(Map<String, dynamic> json) {
-    return StsOnePayResponse(
-      secureHash: json["Response.SecureHash"],
-      statusCode: int.tryParse(json["Response.StatusCode"]),
-      statusDescription: json["Response.StatusDescription"],
-      responseHashMatch: json["ResponseHashMatch"],
-    );
-  }
 }
