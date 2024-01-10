@@ -8,7 +8,7 @@ abstract class StsOnePayErrorHandler {
     if (amount.isEmpty) {
       throw const ErrorStsOnePay(
         code: 2000,
-        message: 'amount is empty',
+        message: 'Amount is empty',
       );
     }
     else if (specialCharacters.hasMatch(amount)) {
