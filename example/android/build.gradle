@@ -4,7 +4,14 @@ buildscript {
         google()
         mavenCentral()
         gradlePluginPortal()
-        jcenter()
+        maven {
+            url uri("https://maven.pkg.github.com/suhaibkamal/PaymentSDK")
+            credentials{
+                username = "suhaibkamal"
+                password= "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"
+            }
+        }
+
         /*flatDir {
             dirs("app/libs")
         }*/
@@ -19,7 +26,14 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
+        maven {
+            url uri("https://maven.pkg.github.com/suhaibkamal/PaymentSDK")
+            credentials{
+                username = "suhaibkamal"
+                password= "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"
+            }
+        }
+
         //maven { url 'https://maven.google.com' }
         /*flatDir {
             dirs("libs")
