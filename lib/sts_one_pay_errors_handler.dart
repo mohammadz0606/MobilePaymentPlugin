@@ -71,12 +71,12 @@ abstract class StsOnePayErrorHandler {
         code: 2007,
         message: 'currency is empty',
       );
-    } else if (currency.length != 3) {
+    } /*else if (currency.length != 3) {
       throw const ErrorStsOnePay(
         code: 2008,
         message: 'currency consists of only 3 length',
       );
-    }
+    }*/
 
     /// code 2009
     /// Entering 3-digits invalid currency code
