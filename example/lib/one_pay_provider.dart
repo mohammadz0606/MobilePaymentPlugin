@@ -69,6 +69,7 @@ class PayOneProvider extends ChangeNotifier {
           amount: amount,
           //tokens: [...tokens, ...tokenInSharedPreferences],
           currency: currency,
+          agreementType: AgreementType.RECURRING,
           transactionId: transactionId,
           isThreeDSSecure: isThreeDSSecure,
           shouldTokenizeCard: shouldTokenizeCard,

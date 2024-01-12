@@ -44,8 +44,8 @@ open class StsOnePaySdk(private val activity: FlutterActivity, private var chann
         request.add("Amount", params["amount"] as String)
         request.add("Currency", params["currency"] as String)
         request.add("PaymentDescription", params["paymentDescription"] as String)
-        request.add("AgreementID", params["agreementId"] as String)
-        request.add("AgreementType", params["agreementType"] as String)
+        request.add("AgreementID", "")
+        request.add("AgreementType", "")
         request.add("Language", params["langCode"] as String)
         request.add("ThreeDSEnable", params["isThreeDSSecure"] as Boolean)
         request.add("TokenizeCard", params["shouldTokenizeCard"] as Boolean)
@@ -57,8 +57,8 @@ open class StsOnePaySdk(private val activity: FlutterActivity, private var chann
             params["cardsType"] as List<String>,
         )
         //optional param
-        request.addOptional("ItemID", params["itemId"] as String)
-        request.addOptional("Quantity", params["quantity"] as String)
+        //request.addOptional("ItemID", params["itemId"] as String)
+        //request.addOptional("Quantity", params["quantity"] as String)
         request.addOptional("Version", params["version"] as String)
         request.addOptional("FrameworkInfo", params["frameworkInfo"] as String)
         val tokenList = params["tokens"] as List<String>
