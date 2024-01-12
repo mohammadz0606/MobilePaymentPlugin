@@ -92,7 +92,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
       }
     } on PlatformException catch (e) {
       throw ErrorStsOnePay(
-        code: 2012,
+        code: 2011,
         message: 'Platform Exception ${e.message}',
       );
     } catch (e) {
