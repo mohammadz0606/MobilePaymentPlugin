@@ -96,7 +96,6 @@ android {
 }
 
 dependencies {
-   //implementation project(':payment_sdk')
     implementation('com.PaymentSDK:paymentsdk:1.0.0') {
         configurations {
             implementation.exclude module: 'lifecycle-viewmodel-ktx'
