@@ -7,13 +7,13 @@ buildscript {
         google()
         mavenCentral()
         jcenter()
-       /* maven {
-            uri("https://maven.pkg.github.com/suhaibkamal/PaymentSDK")
+        maven {
+            url "https://maven.pkg.github.com/suhaibkamal/PaymentSDK"
             credentials {
                 password = "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"
                 username = "mohammadz0606"
             }
-        }*/
+        }
     }
 
     dependencies {
