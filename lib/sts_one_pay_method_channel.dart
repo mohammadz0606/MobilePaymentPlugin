@@ -89,10 +89,9 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
           log("success",name: transactionId);
           log(resp.toString(),name: transactionId);
           // Map<String, dynamic> data = resp["infoDictionary"];
-          onResultResponse(StsOnePayResponse.fromIOSJsonSuccess(resp));
+          onPaymentResponse(StsOnePayResponse.fromIOSJsonSuccess(resp));
         } else {
-          log("error",name: transactionId);
-          // onResultResponse(StsOnePayResponse.fromJsonFailed(data));
+          onPaymentFailed(StsOnePayPaymentFailed.fromIOSJson(resp));
         }
       } else {
         throw const ErrorStsOnePay(

@@ -192,7 +192,7 @@ extension StsOnePayPlugin: MobilePaymentSDKDelegate {
 
     public func onPaymentError(_ error: MobilePaymentError, transactionId: String) {
 
-        let object: [String : Any] = ["infoDictionary": "", "transactionId": transactionId, "shouldStoreCard": "", "tokenizedCard": "","code": "5003"]
+        let object: [String : Any] = ["transactionId": transactionId,"code": error.code]
          StsOnePayPlugin.shared.result?(object)
     }
     

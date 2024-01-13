@@ -19,4 +19,13 @@ class StsOnePayPaymentFailed {
       responseHashMatch: json["responseHashMatch"],
     );
   }
+
+  factory StsOnePayPaymentFailed.fromIOSJson(Map<Object?, Object?> json) {
+    return StsOnePayPaymentFailed(
+      secureHash: json["secureHash"].toString(),
+      statusCode: int.parse(json["code"].toString()),
+      statusDescription: json["statusDescription"].toString(),
+      responseHashMatch: json["responseHashMatch"].toString(),
+    );
+  }
 }
