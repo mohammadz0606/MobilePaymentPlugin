@@ -26,14 +26,14 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
           'initializeSDK',
           initializeSDK.toJson(),
         );
-        log(resp.toString());
+        log(resp.toString(),name: 'initializeSDK');
       } else {
         /// throw custom error
       }
     } on PlatformException catch (e) {
-      log(e.message.toString());
+      log(e.message.toString(),name: 'initializeSDK message');
     } catch (e) {
-      log(e.toString());
+      log(e.toString(),name: 'initializeSDK e');
     }
   }
 
