@@ -19,9 +19,13 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
 
   @override
   Future<void> initializeSDK(InitializeSDK initializeSDK) async {
+    log("resp.toString()",name: 'initializeSDKtop');
+
     try {
       if (Platform.isAndroid) {
       } else if (Platform.isIOS) {
+        log("resp.toString()",name: 'initializeSDKios ');
+
         final Map<Object?, Object?> resp = await _methodChannelIOS.invokeMethod(
           'initializeSDK',
           initializeSDK.toJson(),
