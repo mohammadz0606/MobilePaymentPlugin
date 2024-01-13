@@ -44,9 +44,7 @@ class PayOneProvider extends ChangeNotifier {
     required Function(String code, String error) onError,
   }) async {
     try {
-      await _methodChannelStsOnePay.initializeSDK(
-       const InitializeSDK()
-      );
+      await _methodChannelStsOnePay.initializeSDK(const InitializeSDK());
     } on ErrorStsOnePay catch (e) {
       log.log(e.code.toString());
       log.log(e.message);
@@ -66,8 +64,6 @@ class PayOneProvider extends ChangeNotifier {
           tokensText.isNotEmpty ? tokens.map((e) => e.trim()).toList() : [];
       List<String> tokenInSharedPreferences =
           SharedPreferencesApp.getArray(key: 'tokens') ?? [];
-      log.log('len of tokenInSharedPreferences');
-      log.log(tokenInSharedPreferences.length.toString());
       await _methodChannelStsOnePay.openPaymentPage(
         StsOnePay(
           amount: amount,
@@ -82,7 +78,7 @@ class PayOneProvider extends ChangeNotifier {
           paymentType: selectedPaymentTypeTypeValue,
           cardsType: cardsSelected,
         ),
-        onResultResponse: (result) async {
+        onPaymentResponse: (result) async {
           onResponse(result);
           log.log('Card Token 2');
           log.log(result.token ?? '');
@@ -104,8 +100,18 @@ class PayOneProvider extends ChangeNotifier {
             }
           }
         },
+        onPaymentFailed: (result) {
+          onResponse(
+            StsOnePayResponse(
+              responseHashMatch: result.responseHashMatch,
+              statusDescription: result.statusDescription,
+              statusCode: result.statusCode,
+              secureHash: result.secureHash,
+            ),
+          );
+        },
         onDeleteCardResponse: (onDeleteCard) async {
-          if (onDeleteCard.deleted) {
+          /*if (onDeleteCard.deleted) {
             List<String> allTokens =
                 SharedPreferencesApp.getArray(key: 'tokens') ?? [];
             allTokens.remove(onDeleteCard.token);
@@ -113,7 +119,7 @@ class PayOneProvider extends ChangeNotifier {
             log.log(allTokens.length.toString());
             SharedPreferencesApp.remove(key: 'tokens');
             SharedPreferencesApp.setArray(key: 'tokens', array: allTokens);
-          }
+          }*/
         },
       );
     } on ErrorStsOnePay catch (e) {

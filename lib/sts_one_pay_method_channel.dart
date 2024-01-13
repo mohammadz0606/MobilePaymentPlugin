@@ -8,21 +8,20 @@ import 'package:sts_one_pay/models/sts_one_pay.dart';
 import 'models/error_sts_one_pay.dart';
 import 'models/on_delete.dart';
 import 'models/other_api.dart';
+import 'models/payment_page_failed_response.dart';
 import 'models/payment_page_response.dart';
 import 'sts_one_pay_platform_interface.dart';
 
 class MethodChannelStsOnePay extends StsOnePayPlatform {
   final _methodChannel = const MethodChannel('sts_one_pay');
   final _methodChannelIOS =
-    const MethodChannel('samples.flutter.dev/paymentIOS');
+      const MethodChannel('samples.flutter.dev/paymentIOS');
 
   @override
   Future<void> initializeSDK(InitializeSDK initializeSDK) async {
     try {
       if (Platform.isAndroid) {
-
       } else if (Platform.isIOS) {
-
         final Map<Object?, Object?> resp = await _methodChannelIOS.invokeMethod(
           'initializeSDK',
           initializeSDK.toJson(),
@@ -37,10 +36,12 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
       log(e.toString());
     }
   }
+
   @override
   Future<void> openPaymentPage(
     StsOnePay stsOnePay, {
-    required Function(StsOnePayResponse result) onResultResponse,
+    required Function(StsOnePayResponse result) onPaymentResponse,
+    required Function(StsOnePayPaymentFailed result) onPaymentFailed,
     required Function(OnDeleteCard onDeleteCard) onDeleteCardResponse,
   }) async {
     try {
@@ -55,9 +56,9 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
               Map<String, dynamic> data = Map.castFrom(call.arguments['data']);
               String status = call.arguments['status'];
               if (status.toLowerCase() == 'success') {
-                onResultResponse(StsOnePayResponse.fromJsonSuccess(data));
+                onPaymentResponse(StsOnePayResponse.fromJson(data));
               } else {
-                onResultResponse(StsOnePayResponse.fromJsonFailed(data));
+                onPaymentFailed(StsOnePayPaymentFailed.fromJson(data));
               }
             } catch (e) {
               log(e.toString());
@@ -76,7 +77,6 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
           }
         });
       } else if (Platform.isIOS) {
-
         final Map<Object?, Object?> resp = await _methodChannelIOS.invokeMethod(
           'openPaymentPage',
           stsOnePay.toIOSJson(),
