@@ -1,4 +1,4 @@
-/*
+
 
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -24,4 +24,4 @@ abstract class SharedPreferencesApp {
   }) async =>
       await sharedPreferences.remove(key);
 }
-*/
+
