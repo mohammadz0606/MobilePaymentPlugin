@@ -48,6 +48,7 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
     required Function(StsOnePayPaymentFailed result) onPaymentFailed,
     required Function(OnDeleteCard onDeleteCard) onDeleteCardResponse,
   }) async {
+    log("top",name: 'openPaymentPage');
     try {
       if (Platform.isAndroid) {
         await _methodChannel.invokeMethod(
@@ -80,11 +81,15 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
             }
           }
         });
-      } else if (Platform.isIOS) {
+      }
+      else if (Platform.isIOS) {
+        log("ios",name: 'openPaymentPage');
+
         final Map<Object?, Object?> resp = await _methodChannelIOS.invokeMethod(
           'openPaymentPage',
           stsOnePay.toIOSJson(),
         );
+        log(resp.toString(),name: 'openPaymentPage');
         String status = resp["code"].toString();
         String transactionId = resp["transactionId"].toString();
         log(resp.toString(),name: transactionId);
