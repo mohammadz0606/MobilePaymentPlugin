@@ -22,6 +22,7 @@ A new Flutter project.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
  # s.ios.deployment_target = '10.0'
+ s.dependency 'MobilePaymentSDK-iOS'
  # s.preserve_paths = 'MobilePaymentSDK.framework'
  # s.xcconfig = { 'OTHER_LDFLAGS' => '-framework MobilePaymentSDK' }
  # s.vendored_frameworks = 'MobilePaymentSDK.framework'
@@ -34,18 +35,18 @@ A new Flutter project.
   # s.vendored_frameworks = 'MobilePaymentSDK.framework'
     s.static_framework = true
 
-     s.subspec 'MobilePaymentSDK' do |mobilePaymentSDK|
-             mobilePaymentSDK.preserve_paths = 'ThreeDS_SDK.xcframework'
-             mobilePaymentSDK.xcconfig = { 'OTHER_LDFLAGS' => '-framework ThreeDS_SDK' }
-             mobilePaymentSDK.vendored_frameworks = 'ThreeDS_SDK.xcframework'
-             mobilePaymentSDK.public_header_files = 'Classes/**/*.h'
+     s.subspec 'ThreeDS_SDK' do |threeDSSDK|
+             threeDSSDK.preserve_paths = 'ThreeDS_SDK.xcframework'
+             threeDSSDK.xcconfig = { 'OTHER_LDFLAGS' => '-framework ThreeDS_SDK' }
+             threeDSSDK.vendored_frameworks = 'ThreeDS_SDK.xcframework'
+             threeDSSDK.public_header_files = 'Classes/**/*.h'
         end
 
-        s.subspec 'ThreeDS_SDK' do |threeDSSDK|
-              threeDSSDK.preserve_paths = 'MobilePaymentSDK.framework'
-              threeDSSDK.xcconfig = { 'OTHER_LDFLAGS' => '-framework MobilePaymentSDK' }
-              threeDSSDK.vendored_frameworks = 'MobilePaymentSDK.framework'
-              threeDSSDK.public_header_files = 'Classes/**/*.h'
-        end
+#         s.subspec 'ThreeDS_SDK' do |threeDSSDK|
+#               threeDSSDK.preserve_paths = 'MobilePaymentSDK.framework'
+#               threeDSSDK.xcconfig = { 'OTHER_LDFLAGS' => '-framework MobilePaymentSDK' }
+#               threeDSSDK.vendored_frameworks = 'MobilePaymentSDK.framework'
+#               threeDSSDK.public_header_files = 'Classes/**/*.h'
+#         end
 
 end
