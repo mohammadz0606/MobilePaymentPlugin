@@ -1,4 +1,4 @@
-package com.example.sts_one_pay
+package com.example.MobilePaymentPlugin
 
 import android.widget.Toast
 import com.edesign.paymentsdk.Inquiry.InquiryRequest
@@ -20,7 +20,7 @@ import io.flutter.embedding.android.FlutterActivity
 import io.flutter.plugin.common.MethodChannel
 
 
-open class StsOnePaySdk(private val activity: FlutterActivity, private var channel: MethodChannel) :
+open class MobilePaymentPlugin(private val activity: FlutterActivity, private var channel: MethodChannel) :
     PaymentResultListener {
 
     private fun getResult(result: Map<String, Any>) {

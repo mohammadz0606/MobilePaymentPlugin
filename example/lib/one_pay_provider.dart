@@ -1,12 +1,12 @@
 import 'dart:developer' as log;
 import 'package:flutter/material.dart';
-import 'package:sts_one_pay/models/error_sts_one_pay.dart';
-import 'package:sts_one_pay/models/initializeSDK.dart';
-import 'package:sts_one_pay/models/other_api.dart';
-import 'package:sts_one_pay/models/payment_page_response.dart';
-import 'package:sts_one_pay/models/sts_one_pay.dart';
-import 'package:sts_one_pay/sts_one_pay_platform_interface.dart';
-import 'package:sts_one_pay/sts_one_pay_method_channel.dart';
+import 'package:MobilePaymentPlugin/models/error_sts_one_pay.dart';
+import 'package:MobilePaymentPlugin/models/initializeSDK.dart';
+import 'package:MobilePaymentPlugin/models/other_api.dart';
+import 'package:MobilePaymentPlugin/models/payment_page_response.dart';
+import 'package:MobilePaymentPlugin/models/sts_one_pay.dart';
+import 'package:MobilePaymentPlugin/sts_one_pay_platform_interface.dart';
+import 'package:MobilePaymentPlugin/sts_one_pay_method_channel.dart';
 import 'package:sts_one_pay_example/helper/shared_preferences.dart';
 
 class PayOneProvider extends ChangeNotifier {

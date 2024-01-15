@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sts_one_pay/models/payment_page_response.dart';
+import 'package:MobilePaymentPlugin/models/payment_page_response.dart';
 
 class ResponseDialog extends StatelessWidget {
   const ResponseDialog({

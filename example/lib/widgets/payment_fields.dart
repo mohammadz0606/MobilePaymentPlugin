@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:sts_one_pay/models/sts_one_pay.dart';
+import 'package:MobilePaymentPlugin/models/sts_one_pay.dart';
 
 import '../one_pay_provider.dart';
 import 'dropdown_button.dart';

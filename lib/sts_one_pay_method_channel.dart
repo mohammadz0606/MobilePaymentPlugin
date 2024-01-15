@@ -2,14 +2,14 @@ import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
-import 'package:sts_one_pay/models/initializeSDK.dart';
-import 'package:sts_one_pay/models/sts_one_pay.dart';
 
 import 'models/error_sts_one_pay.dart';
+import 'models/initializeSDK.dart';
 import 'models/on_delete.dart';
 import 'models/other_api.dart';
 import 'models/payment_page_failed_response.dart';
 import 'models/payment_page_response.dart';
+import 'models/sts_one_pay.dart';
 import 'sts_one_pay_platform_interface.dart';
 
 class MethodChannelStsOnePay extends StsOnePayPlatform {

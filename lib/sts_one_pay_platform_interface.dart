@@ -1,13 +1,13 @@
 import 'dart:math';
 
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:sts_one_pay/models/sts_one_pay.dart';
 
 import 'models/on_delete.dart';
 import 'models/initializeSDK.dart';
 import 'models/other_api.dart';
 import 'models/payment_page_failed_response.dart';
 import 'models/payment_page_response.dart';
+import 'models/sts_one_pay.dart';
 
 abstract class StsOnePayPlatform extends PlatformInterface {
   StsOnePayPlatform() : super(token: _token);

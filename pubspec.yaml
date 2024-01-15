@@ -1,4 +1,4 @@
-name: sts_one_pay
+name: MobilePaymentPlugin
 description: A new Flutter project.
 version: 0.0.1
 homepage:
@@ -35,10 +35,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.example.sts_one_pay
-        pluginClass: StsOnePayPlugin
+        package: com.example.MobilePaymentPlugin
+        pluginClass: MobilePaymentPlugin
       ios:
-        pluginClass: StsOnePayPlugin
+        pluginClass: MobilePaymentPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
