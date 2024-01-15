@@ -19,25 +19,21 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
 
   @override
   Future<void> initializeSDK(InitializeSDK initializeSDK) async {
-    log("resp.toString()",name: 'initializeSDKtop');
-
     try {
       if (Platform.isAndroid) {
       } else if (Platform.isIOS) {
-        log("resp.toString()",name: 'initializeSDKios ');
-
         final Map<Object?, Object?> resp = await _methodChannelIOS.invokeMethod(
           'initializeSDK',
           initializeSDK.toJson(),
         );
-        log(resp.toString(),name: 'initializeSDK');
+        log(resp.toString());
       } else {
         /// throw custom error
       }
     } on PlatformException catch (e) {
-      log(e.message.toString(),name: 'initializeSDK message');
+      log(e.message.toString());
     } catch (e) {
-      log(e.toString(),name: 'initializeSDK e');
+      log(e.toString());
     }
   }
 
@@ -48,7 +44,6 @@ class MethodChannelStsOnePay extends StsOnePayPlatform {
     required Function(StsOnePayPaymentFailed result) onPaymentFailed,
     required Function(OnDeleteCard onDeleteCard) onDeleteCardResponse,
   }) async {
-    log("top",name: 'openPaymentPage');
     try {
       if (Platform.isAndroid) {
         await _methodChannel.invokeMethod(

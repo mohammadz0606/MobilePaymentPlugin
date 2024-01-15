@@ -69,6 +69,7 @@ class PayOneProvider extends ChangeNotifier {
           amount: amount,
           tokens: [...tokens, ...tokenInSharedPreferences],
           currency: currency,
+          agreementType: AgreementType.RECURRING,
           transactionId: transactionId,
           isThreeDSSecure: isThreeDSSecure,
           shouldTokenizeCard: shouldTokenizeCard,
@@ -111,7 +112,7 @@ class PayOneProvider extends ChangeNotifier {
           );
         },
         onDeleteCardResponse: (onDeleteCard) async {
-          /*if (onDeleteCard.deleted) {
+          if (onDeleteCard.deleted) {
             List<String> allTokens =
                 SharedPreferencesApp.getArray(key: 'tokens') ?? [];
             allTokens.remove(onDeleteCard.token);
@@ -119,7 +120,7 @@ class PayOneProvider extends ChangeNotifier {
             log.log(allTokens.length.toString());
             SharedPreferencesApp.remove(key: 'tokens');
             SharedPreferencesApp.setArray(key: 'tokens', array: allTokens);
-          }*/
+          }
         },
       );
     } on ErrorStsOnePay catch (e) {

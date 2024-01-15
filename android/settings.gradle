@@ -1,4 +1,36 @@
 rootProject.name = 'sts_one_pay'
 
+/*pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven {
+            url uri("https://maven.pkg.github.com/suhaibkamal/PaymentSDK")
+            credentials{
+                username = "suhaibkamal"
+                password= "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"
+            }
+        }
+    }
+}
 
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        flatDir {
+            dirs("app/libs")
+        }
+        maven {
+            url uri("https://maven.pkg.github.com/suhaibkamal/PaymentSDK")
+            credentials{
+                username = "suhaibkamal"
+                password= "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"
+            }
+        }
+
+    }
+}*/
 

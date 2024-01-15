@@ -8,22 +8,19 @@ abstract class StsOnePayErrorHandler {
     if (amount.isEmpty) {
       throw const ErrorStsOnePay(
         code: 2000,
-        message: 'amount is empty',
+        message: 'Amount is empty',
       );
-    }
-    else if (specialCharacters.hasMatch(amount)) {
+    } else if (specialCharacters.hasMatch(amount)) {
       throw const ErrorStsOnePay(
         code: 2001,
         message: 'The amount must be entered without commas or periods',
       );
-    }
-    else if (amountDouble == null) {
+    } else if (amountDouble == null) {
       throw const ErrorStsOnePay(
         code: 2002,
         message: 'Amount Enter incorrectly',
       );
-    }
-    else if (amountDouble <= 0) {
+    } else if (amountDouble <= 0) {
       throw const ErrorStsOnePay(
         code: 2003,
         message: 'Amount must be Greater than zero',
@@ -71,12 +68,13 @@ abstract class StsOnePayErrorHandler {
         code: 2007,
         message: 'currency is empty',
       );
-    } else if (currency.length != 3) {
+    }
+    /*else if (currency.length != 3) {
       throw const ErrorStsOnePay(
         code: 2008,
         message: 'currency consists of only 3 length',
       );
-    }
+    }*/
 
     /// code 2009
     /// Entering 3-digits invalid currency code

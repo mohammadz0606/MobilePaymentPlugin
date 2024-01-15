@@ -39,4 +39,3 @@ include ":app"
 apply from: "${settings.ext.flutterSdkPath}/packages/flutter_tools/gradle/app_plugin_loader.gradle"
 
 //include ':payment_sdk'
-include ':payment_sdk'
