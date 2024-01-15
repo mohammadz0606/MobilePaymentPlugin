@@ -1,0 +1,46 @@
+PODS:
+  - Flutter (1.0.0)
+  - integration_test (0.0.1):
+    - Flutter
+  - MobilePaymentSDK-iOS (1.0.0)
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - sts_one_pay (0.0.1):
+    - Flutter
+    - MobilePaymentSDK-iOS
+    - sts_one_pay/ThreeDS_SDK (= 0.0.1)
+  - sts_one_pay/ThreeDS_SDK (0.0.1):
+    - Flutter
+    - MobilePaymentSDK-iOS
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
+  - sts_one_pay (from `.symlinks/plugins/sts_one_pay/ios`)
+
+SPEC REPOS:
+  trunk:
+    - MobilePaymentSDK-iOS
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
+  sts_one_pay:
+    :path: ".symlinks/plugins/sts_one_pay/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  integration_test: 13825b8a9334a850581300559b8839134b124670
+  MobilePaymentSDK-iOS: 3138673d40b82408e1a10e22dbb14c9bb98f1cd3
+  shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
+  sts_one_pay: f4d2c7da6036bc9f60da8fe3e5b9c6f6603cdc51
+
+PODFILE CHECKSUM: 0d5f3028802fefe23ac2e6c3a3aaa537a20a9123
+
+COCOAPODS: 1.14.3
